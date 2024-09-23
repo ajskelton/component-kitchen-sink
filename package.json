@@ -1,0 +1,24 @@
+{
+	"name": "component-kitchen-sink",
+	"version": "0.1.0",
+	"description": "Exploring all the component tooling available for blocks",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php",
+		"create-block": "cd ./src/blocks/ && npx @wordpress/create-block --namespace=ajs --no-plugin --variant=dynamic"
+	},
+	"devDependencies": {
+		"@wordpress/block-editor": "^14.3.0",
+		"@wordpress/components": "^28.8.0",
+		"@wordpress/element": "^6.8.0",
+		"@wordpress/scripts": "^30.0.2"
+	}
+}

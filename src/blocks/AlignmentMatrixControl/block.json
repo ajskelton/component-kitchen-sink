@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ajs/alignment-matrix-control",
+	"version": "0.1.0",
+	"title": "Alignment Matrix Control",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Testing the AlignmentMatrixControl Block",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"alignmentMatrix": {
+			"type": "string",
+			"default": "center center"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
