@@ -38,8 +38,6 @@ function ajs_component_kitchen_sink_block_init(): void {
 		$blocks
 	);
 
-	ray($blocks);
-
 	foreach ( $blocks as $block ) {
 
 		$block_location = $build_dir . '/' . $block;
