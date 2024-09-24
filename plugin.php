@@ -26,17 +26,9 @@ function ajs_component_kitchen_sink_block_init(): void {
 
 	$build_dir = plugin_dir_path( __FILE__ ) . 'build/blocks';
 
-	$blocks = glob( $build_dir . '/*/block.json', GLOB_BRACE );
-	$child_blocks = glob( $build_dir . '/*/*/block.json', GLOB_BRACE );
-	$blocks = array_merge($blocks, $child_blocks);
-
-	$blocks = array_map(
-		function ( $block_name_path ) use ( $build_dir ) {
-			$block_dir_path = str_replace( 'block.json', '', $block_name_path );
-			return str_replace( $build_dir . '/', '', $block_dir_path );
-		},
-		$blocks
-	);
+	$blocks = [
+		'AlignmentMatrixControl',
+	];
 
 	foreach ( $blocks as $block ) {
 
