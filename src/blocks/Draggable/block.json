@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/draggable",
+	"version": "0.1.0",
+	"title": "Draggable",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Draggable component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"payload": {
+			"type": "string",
+			"default": "hello from Draggable"
+		},
+		"appendToOwnerDocument": {
+			"type": "boolean",
+			"default": false
+		},
+		"cloneClassname": {
+			"type": "string",
+			"default": ""
+		},
+		"useDragComponent": {
+			"type": "boolean",
+			"default": false
+		},
+		"dragStarts": {
+			"type": "number",
+			"default": 0
+		},
+		"drops": {
+			"type": "number",
+			"default": 0
+		},
+		"lastDropped": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

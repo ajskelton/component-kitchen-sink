@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/confirm-dialog",
+	"version": "0.1.0",
+	"title": "ConfirmDialog",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ConfirmDialog component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"message": {
+			"type": "string",
+			"default": "Are you sure? This action cannot be undone."
+		},
+		"title": {
+			"type": "string",
+			"default": "Confirm"
+		},
+		"confirmButtonText": {
+			"type": "string",
+			"default": ""
+		},
+		"cancelButtonText": {
+			"type": "string",
+			"default": ""
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "small", "medium", "large", "fill" ],
+			"default": "medium"
+		},
+		"isBusy": {
+			"type": "boolean",
+			"default": false
+		},
+		"hideHeader": {
+			"type": "boolean",
+			"default": true
+		},
+		"timesOpened": {
+			"type": "number",
+			"default": 0
+		},
+		"result": {
+			"type": "string",
+			"enum": [ "", "confirmed", "cancelled" ],
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

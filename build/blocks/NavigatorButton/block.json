@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/navigator-button",
+  "version": "0.1.0",
+  "title": "NavigatorButton",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the NavigatorButton component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Go to child screen"
+    },
+    "path": {
+      "type": "string",
+      "enum": [
+        "/child",
+        "/child/nested"
+      ],
+      "default": "/child"
+    },
+    "attributeName": {
+      "type": "string",
+      "enum": [
+        "id",
+        "data-nav-target"
+      ],
+      "default": "id"
+    },
+    "variant": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "link"
+      ],
+      "default": "secondary"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

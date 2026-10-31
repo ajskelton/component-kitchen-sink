@@ -1,0 +1,11 @@
+/**
+ * SnackbarList block: styles applied inside the editor only.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ */
+
+// The list is position: absolute; give it a positioned stage in the canvas.
+.wp-block-ajs-snackbar-list .ajs-snackbar-list-stage {
+	position: relative;
+	min-height: 120px;
+}

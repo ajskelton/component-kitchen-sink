@@ -1,0 +1,89 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/popover",
+	"version": "0.1.0",
+	"title": "Popover",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Popover component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"placement": {
+			"type": "string",
+			"enum": [
+				"top",
+				"top-start",
+				"top-end",
+				"right",
+				"right-start",
+				"right-end",
+				"bottom",
+				"bottom-start",
+				"bottom-end",
+				"left",
+				"left-start",
+				"left-end",
+				"overlay"
+			],
+			"default": "bottom-start"
+		},
+		"offset": {
+			"type": "number",
+			"default": 0
+		},
+		"noArrow": {
+			"type": "boolean",
+			"default": true
+		},
+		"animate": {
+			"type": "boolean",
+			"default": true
+		},
+		"flip": {
+			"type": "boolean",
+			"default": true
+		},
+		"shift": {
+			"type": "boolean",
+			"default": false
+		},
+		"resize": {
+			"type": "boolean",
+			"default": true
+		},
+		"variant": {
+			"type": "string",
+			"enum": [ "default", "unstyled", "toolbar" ],
+			"default": "default"
+		},
+		"focusOnMount": {
+			"type": "string",
+			"enum": [ "firstElement", "container", "false" ],
+			"default": "firstElement"
+		},
+		"expandOnMobile": {
+			"type": "boolean",
+			"default": false
+		},
+		"headerTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"inline": {
+			"type": "boolean",
+			"default": false
+		},
+		"timesOpened": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

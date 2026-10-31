@@ -1,0 +1,62 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/modal",
+	"version": "0.1.0",
+	"title": "Modal",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Modal component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Modal title"
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "small", "medium", "large", "fill" ],
+			"default": "medium"
+		},
+		"isDismissible": {
+			"type": "boolean",
+			"default": true
+		},
+		"isFullScreen": {
+			"type": "boolean",
+			"default": false
+		},
+		"shouldCloseOnEsc": {
+			"type": "boolean",
+			"default": true
+		},
+		"shouldCloseOnClickOutside": {
+			"type": "boolean",
+			"default": true
+		},
+		"focusOnMount": {
+			"type": "string",
+			"enum": [ "true", "false", "firstElement", "firstContentElement" ],
+			"default": "true"
+		},
+		"hasHeaderActions": {
+			"type": "boolean",
+			"default": false
+		},
+		"timesOpened": {
+			"type": "number",
+			"default": 0
+		},
+		"lastClosedBy": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/external-link",
+  "version": "0.1.0",
+  "title": "ExternalLink",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ExternalLink component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "href": {
+      "type": "string",
+      "default": "https://wordpress.org"
+    },
+    "text": {
+      "type": "string",
+      "default": "Visit wordpress.org"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

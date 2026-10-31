@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/dropdown",
+	"version": "0.1.0",
+	"title": "Dropdown",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Dropdown component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"placement": {
+			"type": "string",
+			"enum": [
+				"top-start",
+				"top",
+				"top-end",
+				"right-start",
+				"right",
+				"bottom-start",
+				"bottom",
+				"bottom-end",
+				"left-start",
+				"left"
+			],
+			"default": "bottom-start"
+		},
+		"noArrow": {
+			"type": "boolean",
+			"default": true
+		},
+		"expandOnMobile": {
+			"type": "boolean",
+			"default": false
+		},
+		"headerTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"focusOnMount": {
+			"type": "string",
+			"enum": [ "firstElement", "container", "false" ],
+			"default": "firstElement"
+		},
+		"defaultOpen": {
+			"type": "boolean",
+			"default": false
+		},
+		"contentClassName": {
+			"type": "string",
+			"default": ""
+		},
+		"toggles": {
+			"type": "number",
+			"default": 0
+		},
+		"closes": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,75 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/menu-item",
+	"version": "0.1.0",
+	"title": "MenuItem",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the MenuItem component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Menu item"
+		},
+		"info": {
+			"type": "string",
+			"default": ""
+		},
+		"icon": {
+			"type": "string",
+			"enum": [
+				"",
+				"plus",
+				"cog",
+				"check",
+				"trash",
+				"external",
+				"starFilled"
+			],
+			"default": ""
+		},
+		"iconPosition": {
+			"type": "string",
+			"enum": [ "left", "right" ],
+			"default": "right"
+		},
+		"isSelected": {
+			"type": "boolean",
+			"default": false
+		},
+		"role": {
+			"type": "string",
+			"enum": [ "menuitem", "menuitemradio", "menuitemcheckbox" ],
+			"default": "menuitem"
+		},
+		"shortcut": {
+			"type": "string",
+			"default": ""
+		},
+		"hasSuffix": {
+			"type": "boolean",
+			"default": false
+		},
+		"isDestructive": {
+			"type": "boolean",
+			"default": false
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

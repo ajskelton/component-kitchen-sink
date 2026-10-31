@@ -1,0 +1,53 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/drop-zone",
+	"version": "0.1.0",
+	"title": "DropZone",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the DropZone component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"icon": {
+			"type": "string",
+			"enum": [ "upload", "cog" ],
+			"default": "upload"
+		},
+		"isEligible": {
+			"type": "boolean",
+			"default": true
+		},
+		"useHandlers": {
+			"type": "boolean",
+			"default": true
+		},
+		"drops": {
+			"type": "number",
+			"default": 0
+		},
+		"htmlDrops": {
+			"type": "number",
+			"default": 0
+		},
+		"fileDrops": {
+			"type": "number",
+			"default": 0
+		},
+		"lastDrop": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
