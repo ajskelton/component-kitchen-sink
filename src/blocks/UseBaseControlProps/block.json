@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/use-base-control-props",
+	"version": "0.1.0",
+	"title": "useBaseControlProps",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the useBaseControlProps component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": "Custom textarea"
+		},
+		"help": {
+			"type": "string",
+			"default": "Linked by the generated aria-describedby."
+		},
+		"preferredId": {
+			"type": "string",
+			"default": ""
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"value": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

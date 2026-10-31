@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/base-control",
+	"version": "0.1.0",
+	"title": "BaseControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BaseControl component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": "Base control label"
+		},
+		"help": {
+			"type": "string",
+			"default": "Help text associated with aria-describedby."
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"useVisualLabel": {
+			"type": "boolean",
+			"default": false
+		},
+		"inputValue": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

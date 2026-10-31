@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/angle-picker-control",
+  "version": "0.1.0",
+  "title": "AnglePickerControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the AnglePickerControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "angle": {
+      "type": "number",
+      "default": 0
+    },
+    "label": {
+      "type": "string",
+      "default": "Angle"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
