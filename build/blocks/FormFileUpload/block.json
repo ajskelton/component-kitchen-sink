@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/form-file-upload",
+  "version": "0.1.0",
+  "title": "FormFileUpload",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the FormFileUpload component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "fileNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "accept": {
+      "type": "string",
+      "enum": [
+        "",
+        "image/*",
+        "application/pdf",
+        "audio/*"
+      ],
+      "default": ""
+    },
+    "multiple": {
+      "type": "boolean",
+      "default": false
+    },
+    "icon": {
+      "type": "string",
+      "default": "upload"
+    },
+    "text": {
+      "type": "string",
+      "default": "Choose a file"
+    },
+    "useRenderProp": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

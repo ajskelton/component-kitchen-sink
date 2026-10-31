@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/input-control-prefix-wrapper",
+  "version": "0.1.0",
+  "title": "InputControlPrefixWrapper",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the InputControlPrefixWrapper component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "@"
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "default",
+        "small",
+        "compact"
+      ],
+      "default": "default"
+    },
+    "variant": {
+      "type": "string",
+      "enum": [
+        "default",
+        "icon",
+        "control"
+      ],
+      "default": "default"
+    },
+    "value": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
