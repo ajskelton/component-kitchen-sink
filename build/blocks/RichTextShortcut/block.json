@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/rich-text-shortcut",
+  "version": "0.1.0",
+  "title": "RichTextShortcut",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the RichTextShortcut component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": "Select some text here, then press the shortcut."
+    },
+    "character": {
+      "type": "string",
+      "default": "k"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "primaryShift",
+        "primaryAlt",
+        "secondary",
+        "access",
+        "ctrl",
+        "alt",
+        "ctrlShift",
+        "shift",
+        "shiftAlt"
+      ],
+      "default": "primaryShift"
+    },
+    "uses": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

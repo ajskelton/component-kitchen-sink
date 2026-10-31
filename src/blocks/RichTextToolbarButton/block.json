@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/rich-text-toolbar-button",
+	"version": "0.1.0",
+	"title": "RichTextToolbarButton",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the RichTextToolbarButton component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": "Select some text, then use the toolbar button."
+		},
+		"title": {
+			"type": "string",
+			"default": "Highlight (demo)"
+		},
+		"icon": {
+			"type": "string",
+			"enum": [ "starFilled", "code", "check", "plus" ],
+			"default": "starFilled"
+		},
+		"name": {
+			"type": "string",
+			"enum": [ "", "non-breaking-space" ],
+			"default": ""
+		},
+		"shortcutType": {
+			"type": "string",
+			"enum": [
+				"",
+				"primary",
+				"primaryShift",
+				"primaryAlt",
+				"secondary",
+				"access",
+				"ctrl",
+				"alt",
+				"ctrlShift",
+				"shift",
+				"shiftAlt"
+			],
+			"default": ""
+		},
+		"shortcutCharacter": {
+			"type": "string",
+			"default": ""
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
