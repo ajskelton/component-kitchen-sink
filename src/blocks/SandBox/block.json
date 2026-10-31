@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/sand-box",
+	"version": "0.1.0",
+	"title": "SandBox",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the SandBox component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"html": {
+			"type": "string",
+			"default": "<h1>SandBox</h1><p>Static markup rendered in an iframe.</p>"
+		},
+		"title": {
+			"type": "string",
+			"default": "SandBox demo"
+		},
+		"type": {
+			"type": "string",
+			"enum": [ "", "wp-embed", "video" ],
+			"default": ""
+		},
+		"styles": {
+			"type": "string",
+			"default": "body { font-family: sans-serif; }"
+		},
+		"allowSameOrigin": {
+			"type": "boolean",
+			"default": false
+		},
+		"allowPopups": {
+			"type": "boolean",
+			"default": false
+		},
+		"allowForms": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
