@@ -1,0 +1,62 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/snackbar",
+	"version": "0.1.0",
+	"title": "Snackbar",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Snackbar component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": "Snackbar message"
+		},
+		"explicitDismiss": {
+			"type": "boolean",
+			"default": true
+		},
+		"icon": {
+			"type": "string",
+			"enum": [ "", "check", "info" ],
+			"default": ""
+		},
+		"politeness": {
+			"type": "string",
+			"enum": [ "polite", "assertive" ],
+			"default": "polite"
+		},
+		"actionLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"actionUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"openInNewTab": {
+			"type": "boolean",
+			"default": false
+		},
+		"shown": {
+			"type": "number",
+			"default": 0
+		},
+		"dismissals": {
+			"type": "number",
+			"default": 0
+		},
+		"actionClicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

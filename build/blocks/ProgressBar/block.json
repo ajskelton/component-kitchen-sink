@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/progress-bar",
+  "version": "0.1.0",
+  "title": "ProgressBar",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ProgressBar component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "number",
+      "default": 40
+    },
+    "isIndeterminate": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
