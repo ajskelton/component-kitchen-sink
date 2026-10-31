@@ -1,9 +1,5 @@
 import { __ } from '@wordpress/i18n';
-import {
-	InspectorControls,
-	useBackgroundProps,
-	useBlockProps,
-} from '@wordpress/block-editor';
+import * as blockEditor from '@wordpress/block-editor';
 import {
 	Button,
 	PanelBody,
@@ -11,6 +7,46 @@ import {
 	TextControl,
 } from '@wordpress/components';
 import './editor.scss';
+
+const { InspectorControls, useBlockProps } = blockEditor;
+
+/**
+ * Fallback that mirrors `useBackgroundProps` from the block-editor package
+ * (src/hooks/use-background-props.js). The WordPress 7.1.x runtime bundle of
+ * `wp.blockEditor` does not export the hook yet, so a named import resolves to
+ * `undefined` and the block crashes. The real hook is used whenever the
+ * runtime provides it.
+ *
+ * @param {Object} attributes Block attributes.
+ * @return {{className: string|undefined, style: Object}} Class and style.
+ */
+function fallbackUseBackgroundProps( attributes ) {
+	const background = attributes.style?.background || {};
+	const hasImage = !! background.backgroundImage?.url;
+	const style = {};
+	if ( hasImage ) {
+		style.backgroundImage = `url( ${ background.backgroundImage.url } )`;
+		style.backgroundSize = background.backgroundSize || 'cover';
+		if ( background.backgroundSize === 'contain' ) {
+			style.backgroundPosition = background.backgroundPosition || '50% 0';
+		} else if ( background.backgroundPosition ) {
+			style.backgroundPosition = background.backgroundPosition;
+		}
+	}
+	if ( background.backgroundRepeat ) {
+		style.backgroundRepeat = background.backgroundRepeat;
+	}
+	return {
+		className:
+			hasImage || background.gradient ? 'has-background' : undefined,
+		style,
+	};
+}
+
+const hasNativeHook = typeof blockEditor.useBackgroundProps === 'function';
+const useBackgroundProps = hasNativeHook
+	? blockEditor.useBackgroundProps
+	: fallbackUseBackgroundProps;
 
 const SAMPLE_IMAGE =
 	'data:image/svg+xml,' +
@@ -130,6 +166,9 @@ export default function Edit( { attributes, setAttributes } ) {
 					{ JSON.stringify(
 						{
 							'useBackgroundProps( attributes )': backgroundProps,
+							source: hasNativeHook
+								? 'wp.blockEditor.useBackgroundProps'
+								: 'local fallback (runtime does not export the hook)',
 						},
 						null,
 						2

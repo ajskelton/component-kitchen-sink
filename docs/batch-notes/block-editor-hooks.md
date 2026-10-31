@@ -57,3 +57,36 @@ Two exports the brief listed as likely skips were built instead because they do 
 - **`WithColors` / `WithFontSizes` / `CreateCustomColorsHOC`** rely on the theme providing palettes/font sizes. With none, only custom values work (stored in `customBackgroundColor`, `customFontSize`, etc.).
 - **`UseStyleOverride`** injects arbitrary CSS into the editor canvas; the default CSS is scoped to this block's class.
 - Every `<pre>` is capped at 20em with scroll, via a rule scoped to the block's own class in `editor.scss`.
+
+## Verification
+
+- Test page: ID 12, "Kitchen Sink: Block editor hooks", http://kitchen-sink.test/?page_id=12 (editor: http://kitchen-sink.test/wp-admin/post.php?post=12&action=edit). Runtime: WordPress 7.1.4.
+- Blocks checked: all 27 (CreateCustomColorsHOC, UseBackgroundProps, UseBlockBindingsUtils, UseBlockCommands, UseBlockDisplayInformation, UseBlockEditContext, UseBlockEditingMode, UseBlockOverlayActive, UseBlockProps, UseBlockSelectionClearer, UseBorderProps, UseCachedTruthy, UseClipboardHandler, UseColorProps, UseCustomSides, UseGradient, UseMouseMoveTypingReset, UseMultipleOriginColorsAndGradients, UseResizeCanvas, UseSetting, UseSettings, UseStyleOverride, UseTypewriter, UseTypingObserver, WithColorContext, WithColors, WithFontSizes). Each one validates, renders its heading and `<pre>`, and shows an inspector panel titled after the export. Saved attributes (colors, border, gradient, background, font size, sample text, class name) survive a save and reload with no invalid blocks, and the front end prints the heading and attribute JSON for every block with no PHP notices (no PHP error log was created).
+
+### Fixed
+
+- `UseBackgroundProps` crashed the block (`useBackgroundProps is not a function`): the `wp.blockEditor` bundle in WordPress 7.1.4 does not export the hook, although the npm package (19.0.0) does. `edit.js` now uses a namespace import and uses the real hook when the runtime has it, otherwise a local copy of its logic (same `className`/`style` output). The `<pre>` has a `source` field that says which one ran.
+- `UseBlockCommands` removed the editor's own commands: `useBlockCommands()` registers loaders under fixed names (`core/block-editor/blockTransforms`, `core/block-editor/blockQuickActions`), and deleting the block left the Duplicate/Add before/Add after/Group/Delete commands out of the palette (confirmed: `blockQuickActions` was gone). The names are hard-coded in the hook, so they cannot be namespaced. The registrar now remembers the registered loaders after each render and re-registers them in an effect cleanup that runs after the hook's own. After deleting the block (and after toggling `registerLoader` off), both loaders are still registered and the palette lists Duplicate, Add before, Add after, Group, Delete, Hide.
+
+### Behaviour confirmed
+
+- `UseBlockBindingsUtils`: `updateBlockBindings` writes `metadata.bindings`, "Unbind attribute" and `removeAllBlockBindings` clear it. The editor ignores the binding on this block, as expected.
+- `UseBlockEditingMode`: `contentOnly` and `disabled` apply for the configured seconds and revert; the block stays selectable and the inspector stays visible.
+- `UseClipboardHandler`: with `enabled` on, a copy event puts block markup on the clipboard and bumps the counter; a paste event inserts the block once (no double paste seen).
+- `UseBlockSelectionClearer`: a click on the dashed area clears the selection, then the block re-selects itself; the history shows `none` between.
+- `UseTypingObserver` and `UseMouseMoveTypingReset`: `isTyping` goes true on key presses / `startTyping()` and false after the mouse moves.
+- `UseTypewriter`: the box scrolls (scrollTop 501 after 20 Down presses).
+- `UseBlockEditContext`, `UseBlockDisplayInformation`, `UseBlockOverlayActive`, `UseBlockProps`, `UseCachedTruthy`, `UseSetting`, `UseSettings`, `UseStyleOverride`, `UseMultipleOriginColorsAndGradients`, `WithColorContext`, `WithColors`, `CreateCustomColorsHOC`: controls change the `<pre>` as described above.
+- `UseBorderProps`, `UseColorProps`, `UseGradient`: checked by setting `style.border`, `backgroundColor`/`style.color.text`, and `gradient`/`customGradient` (the Styles panel hides most tools behind its menu); the hook output and the box update. The GradientPicker's angle control and Clear button work.
+
+### Remains as is (not bugs in the blocks)
+
+- `UseMultipleOriginColorsAndGradients` with origin `default` returns empty lists: the active theme sets `color.defaultPalette` to false.
+- `WithFontSizes`: picking a preset in the picker stores `customFontSize` (for example `1.38rem`), not the slug. `withFontSizes` compares the picked size to presets with `Number()`, so rem-based theme presets never match. Editing `fontSize` directly (saved as `large`) renders correctly.
+- `UseBackgroundProps`: the theme does not enable background images, so the Background panel is absent and the fallback inspector fields are the way to set it.
+
+### Console messages judged harmless
+
+- Deprecations: `__experimentalUseCustomSides` (6.3), `useResizeCanvas` (7.1, hook is a no-op), `useSetting` (6.5).
+- `Blocked attempt to show a 'beforeunload' confirmation panel` after a reload with unsaved changes (test harness reloads).
+- From other families or core: the API version 2 warning for `ajs/alignment-matrix-control`, and `global-styles-css-custom-properties-inline-css was added to the iframe incorrectly`.

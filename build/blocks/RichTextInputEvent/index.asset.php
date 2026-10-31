@@ -8,5 +8,5 @@
 		'wp-i18n',
 		'wp-rich-text'
 	),
-	'version' => '0f15f5fe17a45d58edab'
+	'version' => 'bee6f9bc748319c8251b'
 );
