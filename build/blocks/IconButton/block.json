@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/icon-button",
+  "version": "0.1.0",
+  "title": "IconButton",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the IconButton component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "enum": [
+        "plus",
+        "cog",
+        "check",
+        "trash",
+        "external",
+        "starFilled"
+      ],
+      "default": "cog"
+    },
+    "label": {
+      "type": "string",
+      "default": "Settings"
+    },
+    "tooltip": {
+      "type": "string",
+      "default": ""
+    },
+    "labelPosition": {
+      "type": "string",
+      "enum": [
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "top center",
+        "bottom center"
+      ],
+      "default": "top"
+    },
+    "size": {
+      "type": "number",
+      "default": 24
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

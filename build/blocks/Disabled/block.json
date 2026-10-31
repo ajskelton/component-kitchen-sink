@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/disabled",
+  "version": "0.1.0",
+  "title": "Disabled",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Disabled component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "isDisabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "disabledClassName": {
+      "type": "string",
+      "default": ""
+    },
+    "sample": {
+      "type": "string",
+      "default": "Sample text"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

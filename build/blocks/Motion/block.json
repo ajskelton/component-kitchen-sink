@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/motion",
+  "version": "0.1.0",
+  "title": "Motion",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Motion component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "x": {
+      "type": "number",
+      "default": 0
+    },
+    "rotate": {
+      "type": "number",
+      "default": 0
+    },
+    "scale": {
+      "type": "number",
+      "default": 1
+    },
+    "opacity": {
+      "type": "number",
+      "default": 1
+    },
+    "duration": {
+      "type": "number",
+      "default": 0.5
+    },
+    "ease": {
+      "type": "string",
+      "enum": [
+        "linear",
+        "easeIn",
+        "easeOut",
+        "easeInOut"
+      ],
+      "default": "easeInOut"
+    },
+    "whileHoverScale": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

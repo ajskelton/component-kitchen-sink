@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/animate",
+  "version": "0.1.0",
+  "title": "Animate",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Animate component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "appear",
+        "slide-in",
+        "loading",
+        "none"
+      ],
+      "default": "appear"
+    },
+    "origin": {
+      "type": "string",
+      "enum": [
+        "top",
+        "top left",
+        "top right",
+        "middle",
+        "middle left",
+        "middle right",
+        "bottom",
+        "bottom left",
+        "bottom right",
+        "left",
+        "right"
+      ],
+      "default": "top"
+    },
+    "replays": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

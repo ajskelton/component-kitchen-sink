@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/animate-presence",
+  "version": "0.1.0",
+  "title": "AnimatePresence",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the AnimatePresence component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "isShown": {
+      "type": "boolean",
+      "default": true
+    },
+    "initial": {
+      "type": "boolean",
+      "default": true
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "sync",
+        "wait",
+        "popLayout"
+      ],
+      "default": "sync"
+    },
+    "duration": {
+      "type": "number",
+      "default": 0.4
+    },
+    "toggles": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
