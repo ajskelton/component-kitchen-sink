@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/color-palette-control",
+  "version": "0.1.0",
+  "title": "ColorPaletteControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ColorPaletteControl component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": "Color"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "clearable": {
+      "type": "boolean",
+      "default": true
+    },
+    "enableAlpha": {
+      "type": "boolean",
+      "default": false
+    },
+    "disableCustomColors": {
+      "type": "boolean",
+      "default": false
+    },
+    "headingLevel": {
+      "type": "string",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "default": "2"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
