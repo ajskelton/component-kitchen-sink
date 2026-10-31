@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/tree-select",
+	"version": "0.1.0",
+	"title": "TreeSelect",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the TreeSelect component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"selectedId": {
+			"type": "string",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"default": "Parent page"
+		},
+		"help": {
+			"type": "string",
+			"default": ""
+		},
+		"noOptionLabel": {
+			"type": "string",
+			"default": "No parent"
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "default", "small", "compact" ],
+			"default": "default"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

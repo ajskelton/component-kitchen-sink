@@ -1,0 +1,56 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/text-control",
+	"version": "0.1.0",
+	"title": "TextControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the TextControl component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": "string",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"default": "Text"
+		},
+		"help": {
+			"type": "string",
+			"default": ""
+		},
+		"type": {
+			"type": "string",
+			"enum": [
+				"text",
+				"date",
+				"datetime-local",
+				"email",
+				"number",
+				"password",
+				"tel",
+				"time",
+				"search",
+				"url"
+			],
+			"default": "text"
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
