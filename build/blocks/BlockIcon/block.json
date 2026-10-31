@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-icon",
+  "version": "0.1.0",
+  "title": "BlockIcon",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockIcon component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "iconKind": {
+      "type": "string",
+      "enum": [
+        "element",
+        "dashicon",
+        "descriptor"
+      ],
+      "default": "element"
+    },
+    "iconKey": {
+      "type": "string",
+      "enum": [
+        "cog",
+        "image",
+        "paragraph",
+        "starFilled",
+        "heading"
+      ],
+      "default": "cog"
+    },
+    "showColors": {
+      "type": "boolean",
+      "default": false
+    },
+    "foreground": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "background": {
+      "type": "string",
+      "default": "#3858e9"
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "context": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
