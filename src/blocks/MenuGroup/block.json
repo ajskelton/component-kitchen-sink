@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/menu-group",
+	"version": "0.1.0",
+	"title": "MenuGroup",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the MenuGroup component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": "Group label"
+		},
+		"hideSeparator": {
+			"type": "boolean",
+			"default": false
+		},
+		"groupClassName": {
+			"type": "string",
+			"default": ""
+		},
+		"lastClicked": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
