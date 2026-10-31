@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/font-family-control",
+  "version": "0.1.0",
+  "title": "FontFamilyControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the FontFamilyControl component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": "Font"
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "default",
+        "small"
+      ],
+      "default": "default"
+    },
+    "showSelectedHint": {
+      "type": "boolean",
+      "default": false
+    },
+    "useCustomOptions": {
+      "type": "boolean",
+      "default": false
+    },
+    "hideLabelFromVision": {
+      "type": "boolean",
+      "default": false
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/color-gradient-settings-dropdown",
+	"version": "0.1.0",
+	"title": "ColorGradientSettingsDropdown",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ColorGradientSettingsDropdown component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"textColor": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundGradient": {
+			"type": "string",
+			"default": ""
+		},
+		"clearable": {
+			"type": "boolean",
+			"default": true
+		},
+		"enableAlpha": {
+			"type": "boolean",
+			"default": false
+		},
+		"disableCustomColors": {
+			"type": "boolean",
+			"default": false
+		},
+		"disableCustomGradients": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

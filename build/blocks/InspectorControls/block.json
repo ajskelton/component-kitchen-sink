@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/inspector-controls",
+  "version": "0.1.0",
+  "title": "InspectorControls",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the InspectorControls component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "group": {
+      "type": "string",
+      "enum": [
+        "default",
+        "advanced",
+        "styles",
+        "typography",
+        "color",
+        "dimensions",
+        "border",
+        "effects",
+        "position",
+        "layout",
+        "bindings",
+        "list"
+      ],
+      "default": "default"
+    },
+    "note": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

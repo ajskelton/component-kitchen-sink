@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-bindings-attribute-control",
+  "version": "0.1.0",
+  "title": "BlockBindingsAttributeControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockBindingsAttributeControl component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "attribute": {
+      "type": "string",
+      "enum": [
+        "text",
+        "href"
+      ],
+      "default": "text"
+    },
+    "text": {
+      "type": "string",
+      "default": "Bound text"
+    },
+    "href": {
+      "type": "string",
+      "default": "https://example.com"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
