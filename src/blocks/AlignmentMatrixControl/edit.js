@@ -1,37 +1,38 @@
-import { __ } from "@wordpress/i18n";
-import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
-import { useState } from "@wordpress/element";
-import "./editor.scss";
-import {
-	__experimentalAlignmentMatrixControl as AlignmentMatrixControl,
-	PanelBody,
-} from "@wordpress/components";
-export default function Edit({ attributes, setAttributes }) {
-	const { alignmentMatrix } = attributes;
-	const [alignment, setAlignment] = useState(alignmentMatrix);
+import { __ } from '@wordpress/i18n';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { AlignmentMatrixControl, PanelBody } from '@wordpress/components';
+import './editor.scss';
 
-	const updateAlignment = (newAlignment) => {
-		setAttributes({ alignmentMatrix: newAlignment });
-		setAlignment(newAlignment);
-	};
+export default function Edit( { attributes, setAttributes } ) {
+	const { alignmentMatrix } = attributes;
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__("AlignmentMatrixControl")}>
+				<PanelBody
+					title={ __(
+						'AlignmentMatrixControl',
+						'component-kitchen-sink'
+					) }
+				>
 					<AlignmentMatrixControl
-						label={__("Alignment Matrix Control")}
-						value={alignment}
-						onChange={updateAlignment}
-						width={248}
+						label={ __(
+							'Alignment Matrix Control',
+							'component-kitchen-sink'
+						) }
+						value={ alignmentMatrix }
+						onChange={ ( nextAlignment ) =>
+							setAttributes( { alignmentMatrix: nextAlignment } )
+						}
+						width={ 248 }
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<div {...useBlockProps()}>
-				{__(
-					"AlignmentMatrixControl test. Select block and update the alignment in the sidebar.",
-					"component-kitchen-sink",
-				)}
+			<div { ...useBlockProps() }>
+				{ __(
+					'AlignmentMatrixControl test. Select block and update the alignment in the sidebar.',
+					'component-kitchen-sink'
+				) }
 			</div>
 		</>
 	);

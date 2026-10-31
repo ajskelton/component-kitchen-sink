@@ -16,9 +16,14 @@
 		"create-block": "cd ./src/blocks/ && npx @wordpress/create-block --namespace=ajs --no-plugin --variant=dynamic"
 	},
 	"devDependencies": {
-		"@wordpress/block-editor": "^14.3.0",
-		"@wordpress/components": "^28.8.0",
-		"@wordpress/element": "^6.8.0",
-		"@wordpress/scripts": "^30.0.2"
+		"@wordpress/block-editor": "^19.0.0",
+		"@wordpress/blocks": "^17.0.0",
+		"@wordpress/components": "^43.0.0",
+		"@wordpress/compose": "^9.0.0",
+		"@wordpress/data": "^11.0.0",
+		"@wordpress/element": "^10.0.0",
+		"@wordpress/i18n": "^7.0.0",
+		"@wordpress/icons": "^19.0.0",
+		"@wordpress/scripts": "^37.0.0"
 	}
 }

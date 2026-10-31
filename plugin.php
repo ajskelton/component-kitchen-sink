@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       Component Kitchen Sink
  * Description:       Exploring all the component tooling available for blocks
- * Requires at least: 6.1
- * Requires PHP:      7.0
+ * Requires at least: 7.0
+ * Requires PHP:      7.4
  * Version:           0.1.0
  * Author:            Anthony Skelton
  * Website:           https://www.anthonyskelton.com
@@ -14,30 +14,53 @@
  * @package           ajs
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
+ * Registers every block found in build/blocks/<Name>/block.json.
+ *
+ * Each block directory is registered from its block.json metadata, which also
+ * registers the block's scripts and styles so they can be enqueued in the
+ * editor and on the front end. Directories are registered in name order.
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-
 function ajs_component_kitchen_sink_block_init(): void {
+	$manifests = glob( __DIR__ . '/build/blocks/*/block.json' );
 
-	$build_dir = plugin_dir_path( __FILE__ ) . 'build/blocks';
+	if ( empty( $manifests ) ) {
+		return;
+	}
 
-	$blocks = [
-		'AlignmentMatrixControl',
-	];
+	sort( $manifests, SORT_STRING | SORT_FLAG_CASE );
 
-	foreach ( $blocks as $block ) {
-
-		$block_location = $build_dir . '/' . $block;
-		if ( ! is_dir( $block_location ) ) {
-			continue;
-		}
-		register_block_type( $block_location );
+	foreach ( $manifests as $manifest ) {
+		register_block_type( dirname( $manifest ) );
 	}
 }
 
 add_action( 'init', 'ajs_component_kitchen_sink_block_init' );
+
+/**
+ * Adds the "Component Kitchen Sink" category that every test block uses.
+ *
+ * @param array[] $categories Registered block categories.
+ * @return array[] Block categories including ajs-kitchen-sink.
+ */
+function ajs_component_kitchen_sink_block_categories( array $categories ): array {
+	foreach ( $categories as $category ) {
+		if ( isset( $category['slug'] ) && 'ajs-kitchen-sink' === $category['slug'] ) {
+			return $categories;
+		}
+	}
+
+	$categories[] = array(
+		'slug'  => 'ajs-kitchen-sink',
+		'title' => __( 'Component Kitchen Sink', 'component-kitchen-sink' ),
+		'icon'  => null,
+	);
+
+	return $categories;
+}
+
+add_filter( 'block_categories_all', 'ajs_component_kitchen_sink_block_categories' );
