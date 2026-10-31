@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/surface",
+  "version": "0.1.0",
+  "title": "Surface",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Surface component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "dotted",
+        "grid"
+      ],
+      "default": "primary"
+    },
+    "backgroundSize": {
+      "type": "number",
+      "default": 12
+    },
+    "borderTop": {
+      "type": "boolean",
+      "default": false
+    },
+    "borderRight": {
+      "type": "boolean",
+      "default": false
+    },
+    "borderBottom": {
+      "type": "boolean",
+      "default": false
+    },
+    "borderLeft": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
