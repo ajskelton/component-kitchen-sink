@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/with-fallback-styles",
+	"version": "0.1.0",
+	"title": "withFallbackStyles",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the withFallbackStyles component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"enum": [ "primary", "secondary", "tertiary" ],
+			"default": "primary"
+		},
+		"measuredBackground": {
+			"type": "string",
+			"default": ""
+		},
+		"measuredColor": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/toolbar-dropdown-menu",
+  "version": "0.1.0",
+  "title": "ToolbarDropdownMenu",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ToolbarDropdownMenu component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Select a direction"
+    },
+    "icon": {
+      "type": "string",
+      "enum": [
+        "moreVertical",
+        "arrowUp",
+        "chevronDown"
+      ],
+      "default": "arrowUp"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "controls",
+        "children"
+      ],
+      "default": "controls"
+    },
+    "selected": {
+      "type": "string",
+      "enum": [
+        "up",
+        "down",
+        "left",
+        "right"
+      ],
+      "default": "up"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/with-notices",
+	"version": "0.1.0",
+	"title": "withNotices",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the withNotices component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"status": {
+			"type": "string",
+			"enum": [ "info", "success", "warning", "error" ],
+			"default": "info"
+		},
+		"message": {
+			"type": "string",
+			"default": "Hello from noticeOperations"
+		},
+		"isDismissible": {
+			"type": "boolean",
+			"default": true
+		},
+		"withAction": {
+			"type": "boolean",
+			"default": false
+		},
+		"created": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

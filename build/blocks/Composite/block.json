@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/composite",
+  "version": "0.1.0",
+  "title": "Composite",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Composite component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "layout": {
+      "type": "string",
+      "enum": [
+        "group",
+        "grid",
+        "hover",
+        "typeahead"
+      ],
+      "default": "group"
+    },
+    "orientation": {
+      "type": "string",
+      "enum": [
+        "both",
+        "horizontal",
+        "vertical"
+      ],
+      "default": "both"
+    },
+    "focusLoop": {
+      "type": "string",
+      "enum": [
+        "false",
+        "true",
+        "horizontal",
+        "vertical",
+        "both"
+      ],
+      "default": "false"
+    },
+    "focusWrap": {
+      "type": "string",
+      "enum": [
+        "false",
+        "true",
+        "horizontal",
+        "vertical"
+      ],
+      "default": "false"
+    },
+    "focusShift": {
+      "type": "boolean",
+      "default": false
+    },
+    "virtualFocus": {
+      "type": "boolean",
+      "default": false
+    },
+    "rtl": {
+      "type": "boolean",
+      "default": false
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "activeKey": {
+      "type": "string",
+      "default": ""
+    },
+    "lastPressed": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

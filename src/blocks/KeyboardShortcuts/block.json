@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/keyboard-shortcuts",
+	"version": "0.1.0",
+	"title": "KeyboardShortcuts",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the KeyboardShortcuts component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"shortcut": {
+			"type": "string",
+			"enum": [ "mod+j", "shift+j", "j", "g i" ],
+			"default": "mod+j"
+		},
+		"bindGlobal": {
+			"type": "boolean",
+			"default": false
+		},
+		"eventName": {
+			"type": "string",
+			"enum": [ "keydown", "keyup", "keypress" ],
+			"default": "keydown"
+		},
+		"target": {
+			"type": "string",
+			"enum": [ "children", "document" ],
+			"default": "children"
+		},
+		"count": {
+			"type": "number",
+			"default": 0
+		},
+		"typed": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
