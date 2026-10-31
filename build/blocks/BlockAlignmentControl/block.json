@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-alignment-control",
+  "version": "0.1.0",
+  "title": "BlockAlignmentControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockAlignmentControl component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "enum": [
+        "",
+        "left",
+        "center",
+        "right",
+        "wide",
+        "full"
+      ],
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": "Align block"
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "controlsSet": {
+      "type": "string",
+      "enum": [
+        "default",
+        "inline",
+        "wide-full"
+      ],
+      "default": "default"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
