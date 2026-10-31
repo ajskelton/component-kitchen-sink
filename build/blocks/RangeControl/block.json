@@ -1,0 +1,129 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/range-control",
+  "version": "0.1.0",
+  "title": "RangeControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the RangeControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "number",
+      "default": 50
+    },
+    "label": {
+      "type": "string",
+      "default": "Range"
+    },
+    "help": {
+      "type": "string",
+      "default": ""
+    },
+    "hideLabelFromVision": {
+      "type": "boolean",
+      "default": false
+    },
+    "min": {
+      "type": "number",
+      "default": 0
+    },
+    "max": {
+      "type": "number",
+      "default": 100
+    },
+    "step": {
+      "type": "number",
+      "default": 1
+    },
+    "allowReset": {
+      "type": "boolean",
+      "default": false
+    },
+    "initialPosition": {
+      "type": "number",
+      "default": 50
+    },
+    "resetFallbackValue": {
+      "type": "number",
+      "default": 50
+    },
+    "marks": {
+      "type": "boolean",
+      "default": false
+    },
+    "withInputField": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTooltip": {
+      "type": "boolean",
+      "default": false
+    },
+    "percentTooltip": {
+      "type": "boolean",
+      "default": false
+    },
+    "isShiftStepEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "shiftStep": {
+      "type": "number",
+      "default": 10
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "default",
+        "compact"
+      ],
+      "default": "default"
+    },
+    "separatorType": {
+      "type": "string",
+      "enum": [
+        "none",
+        "fullWidth",
+        "topFullWidth"
+      ],
+      "default": "none"
+    },
+    "stepperType": {
+      "type": "boolean",
+      "default": false
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "color": {
+      "type": "string",
+      "default": ""
+    },
+    "railColor": {
+      "type": "string",
+      "default": ""
+    },
+    "trackColor": {
+      "type": "string",
+      "default": ""
+    },
+    "beforeIcon": {
+      "type": "string",
+      "default": ""
+    },
+    "afterIcon": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

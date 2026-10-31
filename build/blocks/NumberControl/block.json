@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/number-control",
+  "version": "0.1.0",
+  "title": "NumberControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the NumberControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "default": "10"
+    },
+    "label": {
+      "type": "string",
+      "default": "Number"
+    },
+    "min": {
+      "type": "number",
+      "default": 0
+    },
+    "max": {
+      "type": "number",
+      "default": 100
+    },
+    "step": {
+      "type": "number",
+      "default": 1
+    },
+    "shiftStep": {
+      "type": "number",
+      "default": 10
+    },
+    "isShiftStepEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "spinControls": {
+      "type": "string",
+      "enum": [
+        "none",
+        "native",
+        "custom"
+      ],
+      "default": "native"
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "default",
+        "small",
+        "compact"
+      ],
+      "default": "default"
+    },
+    "isDragEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

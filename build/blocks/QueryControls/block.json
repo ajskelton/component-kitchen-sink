@@ -1,0 +1,88 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/query-controls",
+  "version": "0.1.0",
+  "title": "QueryControls",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the QueryControls component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "order": {
+      "type": "string",
+      "enum": [
+        "asc",
+        "desc"
+      ],
+      "default": "desc"
+    },
+    "orderBy": {
+      "type": "string",
+      "enum": [
+        "date",
+        "title",
+        "menu_order"
+      ],
+      "default": "date"
+    },
+    "numberOfItems": {
+      "type": "number",
+      "default": 5
+    },
+    "minItems": {
+      "type": "number",
+      "default": 1
+    },
+    "maxItems": {
+      "type": "number",
+      "default": 20
+    },
+    "selectedAuthorId": {
+      "type": "string",
+      "default": ""
+    },
+    "selectedCategoryId": {
+      "type": "string",
+      "default": ""
+    },
+    "selectedCategoryNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "categoryMode": {
+      "type": "string",
+      "enum": [
+        "single",
+        "multiple"
+      ],
+      "default": "single"
+    },
+    "showOrder": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAuthor": {
+      "type": "boolean",
+      "default": true
+    },
+    "showNumberOfItems": {
+      "type": "boolean",
+      "default": true
+    },
+    "customOrderByOptions": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

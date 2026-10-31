@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/radio-control",
+	"version": "0.1.0",
+	"title": "RadioControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the RadioControl component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"selected": {
+			"type": "string",
+			"default": "medium"
+		},
+		"label": {
+			"type": "string",
+			"default": "Size"
+		},
+		"help": {
+			"type": "string",
+			"default": ""
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
