@@ -82,13 +82,16 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		rtl,
 		disabled,
 		activeId: activeKey ? idFor( activeKey ) : undefined,
-		setActiveId: ( next ) =>
-			setAttributes( {
-				activeKey:
-					typeof next === 'string' && next.startsWith( prefix )
-						? next.slice( prefix.length )
-						: '',
-			} ),
+		setActiveId: ( next ) => {
+			const nextKey =
+				typeof next === 'string' && next.startsWith( prefix )
+					? next.slice( prefix.length )
+					: '';
+			// Skip no-op writes so merely rendering never dirties the post.
+			if ( nextKey !== activeKey ) {
+				setAttributes( { activeKey: nextKey } );
+			}
+		},
 		render: layout === 'typeahead' ? <Composite.Typeahead /> : undefined,
 	};
 

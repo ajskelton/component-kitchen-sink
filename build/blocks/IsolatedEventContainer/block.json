@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/isolated-event-container",
+  "version": "0.1.0",
+  "title": "IsolatedEventContainer",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the IsolatedEventContainer component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "isolated": {
+      "type": "boolean",
+      "default": true
+    },
+    "outerClicks": {
+      "type": "number",
+      "default": 0
+    },
+    "innerClicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
