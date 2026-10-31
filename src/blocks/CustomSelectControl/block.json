@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/custom-select-control",
+	"version": "0.1.0",
+	"title": "CustomSelectControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the CustomSelectControl component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": "string",
+			"default": "normal"
+		},
+		"label": {
+			"type": "string",
+			"default": "Font size"
+		},
+		"describedBy": {
+			"type": "string",
+			"default": ""
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "default", "small" ],
+			"default": "default"
+		},
+		"showSelectedHint": {
+			"type": "boolean",
+			"default": false
+		},
+		"unconstrainedWidth": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

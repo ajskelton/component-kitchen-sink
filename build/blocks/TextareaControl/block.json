@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/textarea-control",
+  "version": "0.1.0",
+  "title": "TextareaControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the TextareaControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": "Textarea"
+    },
+    "help": {
+      "type": "string",
+      "default": ""
+    },
+    "rows": {
+      "type": "number",
+      "default": 4
+    },
+    "hideLabelFromVision": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

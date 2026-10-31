@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/use-custom-units",
+	"version": "0.1.0",
+	"title": "__experimentalUseCustomUnits",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the __experimentalUseCustomUnits component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"availableUnits": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"enum": [ "px", "%", "em", "rem", "vw", "vh" ]
+			},
+			"default": [ "px", "em", "rem" ]
+		},
+		"defaultPx": {
+			"type": "number",
+			"default": 16
+		},
+		"defaultEm": {
+			"type": "number",
+			"default": 1
+		},
+		"defaultRem": {
+			"type": "number",
+			"default": 1
+		},
+		"value": {
+			"type": "string",
+			"default": "16px"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

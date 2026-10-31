@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/border-box-control",
+	"version": "0.1.0",
+	"title": "BorderBoxControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BorderBoxControl component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"border": {
+			"type": "object",
+			"default": {}
+		},
+		"label": {
+			"type": "string",
+			"default": "Borders"
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"enableStyle": {
+			"type": "boolean",
+			"default": true
+		},
+		"disableCustomColors": {
+			"type": "boolean",
+			"default": false
+		},
+		"enableAlpha": {
+			"type": "boolean",
+			"default": true
+		},
+		"popoverPlacement": {
+			"type": "string",
+			"enum": [
+				"left-start",
+				"left",
+				"left-end",
+				"right-start",
+				"right",
+				"right-end",
+				"bottom-start",
+				"bottom",
+				"top-start"
+			],
+			"default": "left-start"
+		},
+		"popoverOffset": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/checkbox-control",
+  "version": "0.1.0",
+  "title": "CheckboxControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the CheckboxControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "checked": {
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "type": "string",
+      "default": "Checkbox"
+    },
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "help": {
+      "type": "string",
+      "default": ""
+    },
+    "indeterminate": {
+      "type": "boolean",
+      "default": false
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

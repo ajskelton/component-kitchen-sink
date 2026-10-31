@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/toggle-group-control-option-icon",
+	"version": "0.1.0",
+	"title": "ToggleGroupControlOptionIcon",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ToggleGroupControlOptionIcon component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"selected": {
+			"type": "string",
+			"default": "second"
+		},
+		"value": {
+			"type": "string",
+			"default": "second"
+		},
+		"label": {
+			"type": "string",
+			"default": "Align center"
+		},
+		"icon": {
+			"type": "string",
+			"enum": [
+				"alignLeft",
+				"alignCenter",
+				"alignRight",
+				"alignJustify"
+			],
+			"default": "alignCenter"
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

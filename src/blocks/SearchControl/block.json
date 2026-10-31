@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/search-control",
+	"version": "0.1.0",
+	"title": "SearchControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the SearchControl component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": "string",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"default": "Search"
+		},
+		"help": {
+			"type": "string",
+			"default": ""
+		},
+		"placeholder": {
+			"type": "string",
+			"default": "Search…"
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": true
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "default", "compact" ],
+			"default": "default"
+		},
+		"showOnClose": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

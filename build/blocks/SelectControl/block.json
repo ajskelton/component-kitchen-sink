@@ -1,0 +1,88 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/select-control",
+  "version": "0.1.0",
+  "title": "SelectControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the SelectControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "default": "medium"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "small"
+      ]
+    },
+    "label": {
+      "type": "string",
+      "default": "Size"
+    },
+    "help": {
+      "type": "string",
+      "default": ""
+    },
+    "hideLabelFromVision": {
+      "type": "boolean",
+      "default": false
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "multiple": {
+      "type": "boolean",
+      "default": false
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "default",
+        "small",
+        "compact"
+      ],
+      "default": "default"
+    },
+    "variant": {
+      "type": "string",
+      "enum": [
+        "default",
+        "minimal"
+      ],
+      "default": "default"
+    },
+    "labelPosition": {
+      "type": "string",
+      "enum": [
+        "top",
+        "bottom",
+        "side",
+        "edge"
+      ],
+      "default": "top"
+    },
+    "prefix": {
+      "type": "string",
+      "default": ""
+    },
+    "suffix": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
