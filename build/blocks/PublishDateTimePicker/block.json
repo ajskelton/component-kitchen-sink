@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/publish-date-time-picker",
+  "version": "0.1.0",
+  "title": "PublishDateTimePicker",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the PublishDateTimePicker component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "currentDate": {
+      "type": "string",
+      "default": ""
+    },
+    "is12Hour": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Publish"
+    },
+    "showPopoverHeader": {
+      "type": "boolean",
+      "default": true
+    },
+    "closeClicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

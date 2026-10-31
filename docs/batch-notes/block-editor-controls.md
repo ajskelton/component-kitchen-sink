@@ -37,8 +37,19 @@
 - __experimentalTextDecorationControl → TextDecorationControl: decoration toggle group; value, className
 - __experimentalTextTransformControl → TextTransformControl: transform toggle group; value, className
 - __experimentalWritingModeControl → WritingModeControl: writing mode toggle group; value, className
+- HeadingLevelDropdown → HeadingLevelDropdown: toolbar heading level dropdown plus inspector mirror; value, options
+- __experimentalDateFormatPicker → DateFormatPicker: date format switch/select/custom input; format, defaultFormat
+- __experimentalPublishDateTimePicker → PublishDateTimePicker: date and time picker with popover header; currentDate, is12Hour, title, showPopoverHeader, onClose
+- ToolSelector → ToolSelector: smoke test only (deprecated, renders nothing)
+- __experimentalPreviewOptions → PreviewOptions: smoke test only (deprecated, renders nothing)
+- __experimentalResponsiveBlockControl → ResponsiveBlockControl: per-viewport range controls; title, property, toggleLabel, isResponsive, renderDefaultControl, viewports
+- FontSizePicker (block-editor) → BlockEditorFontSizePicker: settings-driven font size picker; fallbackFontSize, size, withSlider, withReset, units
+- BlockBindingsAttributeControl → BlockBindingsAttributeControl: binding row for a chosen attribute inside a ToolsPanel, plus useBlockBindingsUtils reset
+- BlockBindingsSourceFieldsList → BlockBindingsSourceFieldsList: exercised through the attribute control's menu (needs its Menu.Root); see risks
 
 ## Skipped
+
+None: all 44 requested exports have a block. ToolSelector and PreviewOptions are smoke tests (deprecated components that render nothing), and BlockBindingsSourceFieldsList is exercised indirectly.
 
 ## Runtime risks
 
@@ -49,3 +60,10 @@
 - FontFamilyControl renders nothing without font families, so it receives a static fallback list.
 - SpacingSizesControl is remounted via `key` when `sides` changes because its view is initial state.
 - InspectorControls with a non-default group renders in the Styles tab (or Advanced panel), not the Settings tab.
+- ToolSelector and PreviewOptions log a deprecation warning when mounted; the toggle defaults to off so the console stays clean until the verifier turns it on.
+- BlockBindingsSourceFieldsList needs the Menu.Root of @wordpress/ui. This plugin bundles its own copy of @wordpress/ui (it is a bundled package, not an external), so a Menu.Root rendered from the plugin would not share React context with the copy inside wp-block-editor. The block therefore renders the list only through BlockBindingsAttributeControl's menu.
+- BlockBindingsAttributeControl is read-only (shows "No sources available" or a disabled menu) when `canUpdateBlockBindings` is false or no registered source offers a string field for the attribute in the current context. Both bindings blocks render a components ToolsPanel because the control renders a ToolsPanelItem.
+- DateFormatPicker reads `window.wp.date` for the canvas example and falls back to toLocaleDateString if it is missing.
+- ColorGradientControl, ColorGradientSettingsDropdown, PanelColorGradientSettings and DuotoneControl store cleared values as an empty string, so a cleared swatch returns to its default.
+- BlockEditorFontSizePicker: the block-editor FontSizePicker takes font sizes from `typography.fontSizes`; with a theme that defines none only the custom input appears.
+- HeadingLevelDropdown with the "with paragraph" options passes 0 as a level; the canvas renders a `p` for it.
