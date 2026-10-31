@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/tabbable-container",
+	"version": "0.1.0",
+	"title": "TabbableContainer",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the TabbableContainer component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"cycle": {
+			"type": "boolean",
+			"default": true
+		},
+		"useArrowKeys": {
+			"type": "boolean",
+			"default": false
+		},
+		"lastIndex": {
+			"type": "number",
+			"default": -1
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

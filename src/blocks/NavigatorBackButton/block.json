@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/navigator-back-button",
+	"version": "0.1.0",
+	"title": "NavigatorBackButton",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the NavigatorBackButton component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Go back"
+		},
+		"variant": {
+			"type": "string",
+			"enum": [ "primary", "secondary", "tertiary", "link" ],
+			"default": "secondary"
+		},
+		"showIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
