@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-variation-transforms",
+  "version": "0.1.0",
+  "title": "BlockVariationTransforms",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockVariationTransforms component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "variations": [
+    {
+      "name": "red",
+      "title": "Red",
+      "description": "Red accent",
+      "icon": "star-filled",
+      "attributes": {
+        "accent": "red"
+      },
+      "scope": [
+        "transform"
+      ],
+      "isActive": [
+        "accent"
+      ]
+    },
+    {
+      "name": "green",
+      "title": "Green",
+      "description": "Green accent",
+      "icon": "yes-alt",
+      "attributes": {
+        "accent": "green"
+      },
+      "scope": [
+        "transform"
+      ],
+      "isActive": [
+        "accent"
+      ]
+    },
+    {
+      "name": "blue",
+      "title": "Blue",
+      "description": "Blue accent",
+      "icon": "cloud",
+      "attributes": {
+        "accent": "blue"
+      },
+      "scope": [
+        "transform"
+      ],
+      "isActive": [
+        "accent"
+      ]
+    }
+  ],
+  "attributes": {
+    "accent": {
+      "type": "string",
+      "enum": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "default": "red"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
