@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-context-provider",
+  "version": "0.1.0",
+  "title": "BlockContextProvider",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockContextProvider component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "blockCount": {
+      "type": "number",
+      "default": 2
+    },
+    "contextText": {
+      "type": "string",
+      "default": "hello from the provider"
+    },
+    "contextNumber": {
+      "type": "number",
+      "default": 42
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
