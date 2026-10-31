@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/navigable-toolbar",
+	"version": "0.1.0",
+	"title": "NavigableToolbar",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the NavigableToolbar component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"orientation": {
+			"type": "string",
+			"enum": [ "horizontal", "vertical" ],
+			"default": "horizontal"
+		},
+		"ariaLabel": {
+			"type": "string",
+			"default": "Kitchen sink toolbar"
+		},
+		"focusEditorOnEscape": {
+			"type": "boolean",
+			"default": false
+		},
+		"shouldUseKeyboardFocusShortcut": {
+			"type": "boolean",
+			"default": false
+		},
+		"initialIndex": {
+			"type": "number",
+			"default": 0
+		},
+		"buttonCount": {
+			"type": "number",
+			"default": 3
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

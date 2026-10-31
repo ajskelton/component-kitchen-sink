@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-editor-provider",
+  "version": "0.1.0",
+  "title": "BlockEditorProvider",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockEditorProvider component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "blockCount": {
+      "type": "number",
+      "default": 2
+    },
+    "seedText": {
+      "type": "string",
+      "default": "Nested editor"
+    },
+    "hasFixedToolbar": {
+      "type": "boolean",
+      "default": false
+    },
+    "useSubRegistry": {
+      "type": "boolean",
+      "default": true
+    },
+    "changeCount": {
+      "type": "number",
+      "default": 0
+    },
+    "inputCount": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
