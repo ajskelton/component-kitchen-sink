@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/toolbar-button",
+  "version": "0.1.0",
+  "title": "ToolbarButton",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ToolbarButton component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": "Bold"
+    },
+    "icon": {
+      "type": "string",
+      "enum": [
+        "",
+        "formatBold",
+        "formatItalic",
+        "link",
+        "trash"
+      ],
+      "default": "formatBold"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": false
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "isDestructive": {
+      "type": "boolean",
+      "default": false
+    },
+    "showTooltip": {
+      "type": "boolean",
+      "default": true
+    },
+    "subscript": {
+      "type": "string",
+      "default": ""
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

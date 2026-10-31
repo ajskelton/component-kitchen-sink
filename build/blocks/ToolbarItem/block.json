@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/toolbar-item",
+  "version": "0.1.0",
+  "title": "ToolbarItem",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ToolbarItem component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "as": {
+      "type": "string",
+      "enum": [
+        "render-prop",
+        "button-as",
+        "input-as"
+      ],
+      "default": "render-prop"
+    },
+    "text": {
+      "type": "string",
+      "default": "ToolbarItem"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
