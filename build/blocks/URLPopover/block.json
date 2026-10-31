@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/url-popover",
+  "version": "0.1.0",
+  "title": "URLPopover",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the URLPopover component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "default": "https://wordpress.org"
+    },
+    "opensInNewWindow": {
+      "type": "boolean",
+      "default": false
+    },
+    "placement": {
+      "type": "string",
+      "enum": [
+        "bottom",
+        "bottom-start",
+        "bottom-end",
+        "top",
+        "top-start",
+        "right",
+        "left"
+      ],
+      "default": "bottom"
+    },
+    "focusOnMount": {
+      "type": "string",
+      "enum": [
+        "firstElement",
+        "firstContentElement",
+        "false"
+      ],
+      "default": "firstElement"
+    },
+    "withSettings": {
+      "type": "boolean",
+      "default": true
+    },
+    "withAdditionalControls": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

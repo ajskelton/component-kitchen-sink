@@ -1,0 +1,73 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/media-placeholder",
+	"version": "0.1.0",
+	"title": "MediaPlaceholder",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the MediaPlaceholder component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"mediaId": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"allowedTypes": {
+			"type": "string",
+			"enum": [ "image", "video", "audio", "all" ],
+			"default": "image"
+		},
+		"multiple": {
+			"type": "boolean",
+			"default": false
+		},
+		"isAppender": {
+			"type": "boolean",
+			"default": false
+		},
+		"disableDropZone": {
+			"type": "boolean",
+			"default": false
+		},
+		"dropZoneUIOnly": {
+			"type": "boolean",
+			"default": false
+		},
+		"disableMediaButtons": {
+			"type": "boolean",
+			"default": false
+		},
+		"labelTitle": {
+			"type": "string",
+			"default": "Media placeholder"
+		},
+		"labelInstructions": {
+			"type": "string",
+			"default": "Upload, pick from the library, or paste a URL."
+		},
+		"accept": {
+			"type": "string",
+			"default": ""
+		},
+		"withSelectURL": {
+			"type": "boolean",
+			"default": true
+		},
+		"withPreview": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

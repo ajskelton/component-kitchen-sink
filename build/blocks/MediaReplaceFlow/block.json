@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/media-replace-flow",
+  "version": "0.1.0",
+  "title": "MediaReplaceFlow",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the MediaReplaceFlow component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "mediaId": {
+      "type": "number",
+      "default": 0
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "allowedTypes": {
+      "type": "string",
+      "enum": [
+        "image",
+        "video",
+        "audio",
+        "all"
+      ],
+      "default": "image"
+    },
+    "accept": {
+      "type": "string",
+      "default": ""
+    },
+    "name": {
+      "type": "string",
+      "default": "Replace"
+    },
+    "variant": {
+      "type": "string",
+      "enum": [
+        "",
+        "toolbar"
+      ],
+      "default": ""
+    },
+    "withSelectURL": {
+      "type": "boolean",
+      "default": true
+    },
+    "withReset": {
+      "type": "boolean",
+      "default": true
+    },
+    "withChildren": {
+      "type": "boolean",
+      "default": false
+    },
+    "handleUpload": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
