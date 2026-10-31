@@ -1,0 +1,68 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/link-control-search-item",
+	"version": "0.1.0",
+	"title": "LinkControlSearchItem",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the LinkControlSearchItem component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "About us"
+		},
+		"url": {
+			"type": "string",
+			"default": "https://example.com/about"
+		},
+		"type": {
+			"type": "string",
+			"enum": [
+				"post",
+				"page",
+				"post_tag",
+				"category",
+				"attachment",
+				"custom"
+			],
+			"default": "page"
+		},
+		"typeLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"isFrontPage": {
+			"type": "boolean",
+			"default": false
+		},
+		"isBlogHome": {
+			"type": "boolean",
+			"default": false
+		},
+		"searchTerm": {
+			"type": "string",
+			"default": "ab"
+		},
+		"isURL": {
+			"type": "boolean",
+			"default": false
+		},
+		"shouldShowType": {
+			"type": "boolean",
+			"default": true
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

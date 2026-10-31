@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/link-control-search-results",
+  "version": "0.1.0",
+  "title": "LinkControlSearchResults",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the LinkControlSearchResults component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "searchTerm": {
+      "type": "string",
+      "default": "a"
+    },
+    "selectedSuggestion": {
+      "type": "number",
+      "default": 0
+    },
+    "isLoading": {
+      "type": "boolean",
+      "default": false
+    },
+    "isInitialSuggestions": {
+      "type": "boolean",
+      "default": false
+    },
+    "withCreateSuggestion": {
+      "type": "boolean",
+      "default": true
+    },
+    "createSuggestionButtonText": {
+      "type": "string",
+      "default": ""
+    },
+    "suggestionsQueryType": {
+      "type": "string",
+      "enum": [
+        "",
+        "post"
+      ],
+      "default": ""
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

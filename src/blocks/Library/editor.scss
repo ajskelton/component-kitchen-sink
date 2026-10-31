@@ -1,0 +1,10 @@
+/**
+ * Library block: styles applied inside the editor only.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ */
+.wp-block-ajs-library .ajs-library-frame {
+	height: 420px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
