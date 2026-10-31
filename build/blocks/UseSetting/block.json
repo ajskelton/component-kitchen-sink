@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/use-setting",
+  "version": "0.1.0",
+  "title": "useSetting",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the useSetting component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "path": {
+      "type": "string",
+      "default": "typography.dropCap"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

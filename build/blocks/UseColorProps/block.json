@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/use-color-props",
+  "version": "0.1.0",
+  "title": "__experimentalUseColorProps",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the __experimentalUseColorProps component from @wordpress/block-editor",
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true,
+      "link": false,
+      "__experimentalSkipSerialization": true
+    }
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Box styled by useColorProps"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

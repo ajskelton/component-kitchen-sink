@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/use-border-props",
+	"version": "0.1.0",
+	"title": "__experimentalUseBorderProps",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the __experimentalUseBorderProps component from @wordpress/block-editor",
+	"supports": {
+		"html": false,
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalSkipSerialization": true
+		}
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": "Box styled by useBorderProps"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
