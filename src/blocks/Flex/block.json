@@ -1,0 +1,65 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/flex",
+	"version": "0.1.0",
+	"title": "Flex",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Flex component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"direction": {
+			"type": "string",
+			"enum": [ "row", "row-reverse", "column", "column-reverse" ],
+			"default": "row"
+		},
+		"align": {
+			"type": "string",
+			"enum": [
+				"normal",
+				"flex-start",
+				"center",
+				"flex-end",
+				"stretch",
+				"baseline"
+			],
+			"default": "center"
+		},
+		"justify": {
+			"type": "string",
+			"enum": [
+				"flex-start",
+				"center",
+				"flex-end",
+				"space-between",
+				"space-around",
+				"space-evenly"
+			],
+			"default": "space-between"
+		},
+		"gap": {
+			"type": "number",
+			"default": 2
+		},
+		"wrap": {
+			"type": "boolean",
+			"default": false
+		},
+		"expanded": {
+			"type": "boolean",
+			"default": true
+		},
+		"itemCount": {
+			"type": "number",
+			"default": 4
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

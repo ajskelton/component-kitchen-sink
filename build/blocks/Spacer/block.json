@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/spacer",
+  "version": "0.1.0",
+  "title": "Spacer",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Spacer component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "margin": {
+      "type": "string",
+      "default": ""
+    },
+    "marginTop": {
+      "type": "string",
+      "default": ""
+    },
+    "marginBottom": {
+      "type": "string",
+      "default": ""
+    },
+    "marginLeft": {
+      "type": "string",
+      "default": ""
+    },
+    "marginRight": {
+      "type": "string",
+      "default": ""
+    },
+    "marginX": {
+      "type": "string",
+      "default": ""
+    },
+    "marginY": {
+      "type": "string",
+      "default": ""
+    },
+    "padding": {
+      "type": "string",
+      "default": ""
+    },
+    "paddingTop": {
+      "type": "string",
+      "default": ""
+    },
+    "paddingBottom": {
+      "type": "string",
+      "default": ""
+    },
+    "paddingLeft": {
+      "type": "string",
+      "default": ""
+    },
+    "paddingRight": {
+      "type": "string",
+      "default": ""
+    },
+    "paddingX": {
+      "type": "string",
+      "default": ""
+    },
+    "paddingY": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
