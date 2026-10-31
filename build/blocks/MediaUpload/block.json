@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/media-upload",
+  "version": "0.1.0",
+  "title": "MediaUpload",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the MediaUpload component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "mediaId": {
+      "type": "number",
+      "default": 0
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "allowedTypes": {
+      "type": "string",
+      "enum": [
+        "image",
+        "video",
+        "audio",
+        "all"
+      ],
+      "default": "image"
+    },
+    "multiple": {
+      "type": "boolean",
+      "default": false
+    },
+    "gallery": {
+      "type": "boolean",
+      "default": false
+    },
+    "addToGallery": {
+      "type": "boolean",
+      "default": false
+    },
+    "modalTitle": {
+      "type": "string",
+      "default": "Select or Upload Media"
+    },
+    "modalClass": {
+      "type": "string",
+      "default": ""
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "",
+        "browse",
+        "upload"
+      ],
+      "default": ""
+    },
+    "closes": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

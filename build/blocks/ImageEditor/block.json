@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/image-editor",
+  "version": "0.1.0",
+  "title": "ImageEditor",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ImageEditor component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "mediaId": {
+      "type": "number",
+      "default": 0
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "width": {
+      "type": "number",
+      "default": 0
+    },
+    "height": {
+      "type": "number",
+      "default": 0
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 0
+    },
+    "borderColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

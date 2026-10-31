@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/image-url-input-ui",
+  "version": "0.1.0",
+  "title": "ImageURLInputUI",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ImageURLInputUI component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "href": {
+      "type": "string",
+      "default": ""
+    },
+    "linkDestination": {
+      "type": "string",
+      "enum": [
+        "none",
+        "custom",
+        "media",
+        "attachment"
+      ],
+      "default": "none"
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": ""
+    },
+    "rel": {
+      "type": "string",
+      "default": ""
+    },
+    "linkClass": {
+      "type": "string",
+      "default": ""
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": "https://example.com/wp-content/uploads/image.jpg"
+    },
+    "mediaLink": {
+      "type": "string",
+      "default": "https://example.com/image/"
+    },
+    "mediaType": {
+      "type": "string",
+      "enum": [
+        "image",
+        "video"
+      ],
+      "default": "image"
+    },
+    "showLightboxSetting": {
+      "type": "boolean",
+      "default": false
+    },
+    "lightboxEnabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

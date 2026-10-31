@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-preview",
+  "version": "0.1.0",
+  "title": "BlockPreview",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockPreview component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "preset": {
+      "type": "string",
+      "enum": [
+        "paragraph",
+        "heading-paragraph",
+        "buttons",
+        "quote"
+      ],
+      "default": "heading-paragraph"
+    },
+    "viewportWidth": {
+      "type": "number",
+      "default": 1200
+    },
+    "minHeight": {
+      "type": "number",
+      "default": 0
+    },
+    "withAdditionalStyles": {
+      "type": "boolean",
+      "default": false
+    },
+    "paddingPx": {
+      "type": "number",
+      "default": 16
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

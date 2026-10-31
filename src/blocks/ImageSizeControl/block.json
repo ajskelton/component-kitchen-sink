@@ -1,0 +1,53 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/image-size-control",
+	"version": "0.1.0",
+	"title": "ImageSizeControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ImageSizeControl component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"width": {
+			"type": "number",
+			"default": 0
+		},
+		"height": {
+			"type": "number",
+			"default": 0
+		},
+		"slug": {
+			"type": "string",
+			"enum": [ "thumbnail", "medium", "large", "full" ],
+			"default": "large"
+		},
+		"imageWidth": {
+			"type": "number",
+			"default": 600
+		},
+		"imageHeight": {
+			"type": "number",
+			"default": 400
+		},
+		"isResizable": {
+			"type": "boolean",
+			"default": true
+		},
+		"withSizeOptions": {
+			"type": "boolean",
+			"default": true
+		},
+		"imageSizeHelp": {
+			"type": "string",
+			"default": "Select the size of the source image."
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

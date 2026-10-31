@@ -1,0 +1,13 @@
+/**
+ * ImageSizeControl block: styles applied inside the editor only.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ */
+.wp-block-ajs-image-size-control .ajs-image-size-preview {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 8px;
+	background: #ddd;
+	color: #1e1e1e;
+}

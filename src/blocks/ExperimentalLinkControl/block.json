@@ -1,0 +1,91 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/experimental-link-control",
+	"version": "0.1.0",
+	"title": "__experimentalLinkControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the __experimentalLinkControl component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"opensInNewTab": {
+			"type": "boolean",
+			"default": false
+		},
+		"noFollow": {
+			"type": "boolean",
+			"default": false
+		},
+		"settings": {
+			"type": "string",
+			"enum": [ "default", "none", "custom" ],
+			"default": "default"
+		},
+		"showSuggestions": {
+			"type": "boolean",
+			"default": true
+		},
+		"showInitialSuggestions": {
+			"type": "boolean",
+			"default": false
+		},
+		"noDirectEntry": {
+			"type": "boolean",
+			"default": false
+		},
+		"noURLSuggestion": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasTextControl": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasRichPreviews": {
+			"type": "boolean",
+			"default": false
+		},
+		"handleEntities": {
+			"type": "boolean",
+			"default": false
+		},
+		"withCreateSuggestion": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasRemove": {
+			"type": "boolean",
+			"default": true
+		},
+		"forceIsEditingLink": {
+			"type": "string",
+			"enum": [ "auto", "true", "false" ],
+			"default": "auto"
+		},
+		"searchInputPlaceholder": {
+			"type": "string",
+			"default": "Search or type URL"
+		},
+		"suggestionsQuerySubtype": {
+			"type": "string",
+			"enum": [ "", "page", "post" ],
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

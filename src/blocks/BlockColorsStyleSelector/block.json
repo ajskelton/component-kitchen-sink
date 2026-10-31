@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-colors-style-selector",
+	"version": "0.1.0",
+	"title": "BlockColorsStyleSelector",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BlockColorsStyleSelector component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"textColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#3858e9"
+		},
+		"popoverText": {
+			"type": "string",
+			"default": "Content rendered inside the selector popover."
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

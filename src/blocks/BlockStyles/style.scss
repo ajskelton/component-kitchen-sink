@@ -1,0 +1,21 @@
+/**
+ * BlockStyles block: styles applied on the front end and in the editor.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ * The is-style-* classes come from the styles declared in block.json.
+ */
+.wp-block-ajs-block-styles {
+	&.is-style-fancy {
+		border: 2px dashed #8c5bd6;
+		border-radius: 12px;
+	}
+
+	&.is-style-outline {
+		border: 2px solid currentColor;
+	}
+
+	&.is-style-inverted {
+		background: #1e1e1e;
+		color: #fff;
+	}
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-patterns-list",
+  "version": "0.1.0",
+  "title": "BlockPatternsList",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockPatternsList component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "patternCount": {
+      "type": "number",
+      "default": 3
+    },
+    "isDraggable": {
+      "type": "boolean",
+      "default": false
+    },
+    "orientation": {
+      "type": "string",
+      "enum": [
+        "",
+        "vertical",
+        "horizontal"
+      ],
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": "Sample patterns"
+    },
+    "showTitlesAsTooltip": {
+      "type": "boolean",
+      "default": false
+    },
+    "category": {
+      "type": "string",
+      "default": ""
+    },
+    "lastClicked": {
+      "type": "string",
+      "default": ""
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
