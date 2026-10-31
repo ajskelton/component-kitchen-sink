@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-mover",
+	"version": "0.1.0",
+	"title": "BlockMover",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BlockMover component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"blockCount": {
+			"type": "number",
+			"default": 3
+		},
+		"targetIndex": {
+			"type": "number",
+			"default": 1
+		},
+		"moveLength": {
+			"type": "number",
+			"default": 1
+		},
+		"hideDragHandle": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

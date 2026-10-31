@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-canvas",
+	"version": "0.1.0",
+	"title": "BlockCanvas",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BlockCanvas component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"blockCount": {
+			"type": "number",
+			"default": 3
+		},
+		"height": {
+			"type": "string",
+			"default": "260px"
+		},
+		"applyStyles": {
+			"type": "boolean",
+			"default": false
+		},
+		"paragraphColor": {
+			"type": "string",
+			"default": "#cc1818"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

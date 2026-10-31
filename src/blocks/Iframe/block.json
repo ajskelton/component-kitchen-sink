@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/iframe",
+	"version": "0.1.0",
+	"title": "Iframe",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Iframe component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"blockCount": {
+			"type": "number",
+			"default": 3
+		},
+		"height": {
+			"type": "string",
+			"default": "240px"
+		},
+		"scale": {
+			"type": "number",
+			"default": 1
+		},
+		"frameSize": {
+			"type": "number",
+			"default": 0
+		},
+		"readonly": {
+			"type": "boolean",
+			"default": false
+		},
+		"title": {
+			"type": "string",
+			"default": "Nested editor iframe"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

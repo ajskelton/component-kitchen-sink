@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-settings-menu",
+	"version": "0.1.0",
+	"title": "BlockSettingsMenu",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BlockSettingsMenu component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"blockCount": {
+			"type": "number",
+			"default": 3
+		},
+		"targetIndex": {
+			"type": "number",
+			"default": 0
+		},
+		"label": {
+			"type": "string",
+			"default": "Nested block options"
+		},
+		"withExtraItem": {
+			"type": "boolean",
+			"default": true
+		},
+		"selectOnAction": {
+			"type": "boolean",
+			"default": false
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
