@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/color-indicator",
+  "version": "0.1.0",
+  "title": "ColorIndicator",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ColorIndicator component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "colorValue": {
+      "type": "string",
+      "default": "#0073aa"
+    },
+    "size": {
+      "type": "number",
+      "default": 24
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

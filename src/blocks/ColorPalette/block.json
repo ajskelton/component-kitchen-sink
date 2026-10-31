@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/color-palette",
+	"version": "0.1.0",
+	"title": "ColorPalette",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ColorPalette component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": "string",
+			"default": ""
+		},
+		"selectedSlug": {
+			"type": "string",
+			"default": ""
+		},
+		"clearable": {
+			"type": "boolean",
+			"default": true
+		},
+		"disableCustomColors": {
+			"type": "boolean",
+			"default": false
+		},
+		"enableAlpha": {
+			"type": "boolean",
+			"default": false
+		},
+		"presentation": {
+			"type": "string",
+			"enum": [ "listbox", "toggle-buttons", "command-buttons" ],
+			"default": "listbox"
+		},
+		"headingLevel": {
+			"type": "number",
+			"enum": [ 1, 2, 3, 4, 5, 6 ],
+			"default": 2
+		},
+		"loop": {
+			"type": "boolean",
+			"default": true
+		},
+		"multiplePalettes": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
