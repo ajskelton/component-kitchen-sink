@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/responsive-wrapper",
+  "version": "0.1.0",
+  "title": "ResponsiveWrapper",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ResponsiveWrapper component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "naturalWidth": {
+      "type": "number",
+      "default": 1600
+    },
+    "naturalHeight": {
+      "type": "number",
+      "default": 900
+    },
+    "isInline": {
+      "type": "boolean",
+      "default": false
+    },
+    "containerWidth": {
+      "type": "number",
+      "default": 360
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
