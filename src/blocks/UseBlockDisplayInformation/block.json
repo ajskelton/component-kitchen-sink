@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/use-block-display-information",
+	"version": "0.1.0",
+	"title": "useBlockDisplayInformation",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the useBlockDisplayInformation component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"target": {
+			"type": "string",
+			"enum": [ "self", "parent", "firstBlock", "none" ],
+			"default": "self"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
