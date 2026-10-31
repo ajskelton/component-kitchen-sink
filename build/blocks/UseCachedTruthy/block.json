@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/use-cached-truthy",
+  "version": "0.1.0",
+  "title": "useCachedTruthy",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the useCachedTruthy component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "input": {
+      "type": "string",
+      "default": "first truthy value"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

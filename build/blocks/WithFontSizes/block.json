@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/with-font-sizes",
+  "version": "0.1.0",
+  "title": "withFontSizes",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the withFontSizes component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "fontSize": {
+      "type": "string"
+    },
+    "customFontSize": {
+      "type": [
+        "number",
+        "string"
+      ]
+    },
+    "label": {
+      "type": "string",
+      "default": "Text sized through withFontSizes"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

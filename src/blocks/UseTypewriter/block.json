@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/use-typewriter",
+	"version": "0.1.0",
+	"title": "__unstableUseTypewriter",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the __unstableUseTypewriter component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"lines": {
+			"type": "number",
+			"default": 30
+		},
+		"enabled": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
