@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/use-slot",
+  "version": "0.1.0",
+  "title": "__experimentalUseSlot",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the __experimentalUseSlot component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "slotName": {
+      "type": "string",
+      "default": "ajs-use-slot"
+    },
+    "bubblesVirtually": {
+      "type": "boolean",
+      "default": true
+    },
+    "slotMounted": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

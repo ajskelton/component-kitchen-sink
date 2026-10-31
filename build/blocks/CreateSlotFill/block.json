@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/create-slot-fill",
+  "version": "0.1.0",
+  "title": "createSlotFill",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the createSlotFill component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "slotName": {
+      "type": "string",
+      "default": "ajs-created-slot"
+    },
+    "bubblesVirtually": {
+      "type": "boolean",
+      "default": false
+    },
+    "fillVisible": {
+      "type": "boolean",
+      "default": true
+    },
+    "fillText": {
+      "type": "string",
+      "default": "Fill created by createSlotFill"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
