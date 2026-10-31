@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/v-stack",
+  "version": "0.1.0",
+  "title": "VStack",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the VStack component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "alignment": {
+      "type": "string",
+      "enum": [
+        "stretch",
+        "edge",
+        "top",
+        "topLeft",
+        "topRight",
+        "left",
+        "center",
+        "right",
+        "bottom",
+        "bottomLeft",
+        "bottomRight"
+      ],
+      "default": "stretch"
+    },
+    "direction": {
+      "type": "string",
+      "enum": [
+        "column",
+        "column-reverse"
+      ],
+      "default": "column"
+    },
+    "spacing": {
+      "type": "number",
+      "default": 2
+    },
+    "justify": {
+      "type": "string",
+      "enum": [
+        "",
+        "flex-start",
+        "center",
+        "flex-end",
+        "space-between",
+        "space-around",
+        "space-evenly"
+      ],
+      "default": ""
+    },
+    "wrap": {
+      "type": "boolean",
+      "default": false
+    },
+    "expanded": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

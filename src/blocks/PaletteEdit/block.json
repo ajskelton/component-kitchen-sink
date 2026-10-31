@@ -1,0 +1,100 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/palette-edit",
+	"version": "0.1.0",
+	"title": "PaletteEdit",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the PaletteEdit component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"kind": {
+			"type": "string",
+			"enum": [ "colors", "gradients", "duotones" ],
+			"default": "colors"
+		},
+		"colors": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Ocean",
+					"slug": "ocean",
+					"color": "#0073aa"
+				},
+				{
+					"name": "Sunset",
+					"slug": "sunset",
+					"color": "#e8590c"
+				},
+				{
+					"name": "Forest",
+					"slug": "forest",
+					"color": "#2b8a3e"
+				}
+			]
+		},
+		"gradients": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Dusk",
+					"slug": "dusk",
+					"gradient": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%)"
+				},
+				{
+					"name": "Ember",
+					"slug": "ember",
+					"gradient": "linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%)"
+				}
+			]
+		},
+		"duotones": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Midnight",
+					"slug": "midnight",
+					"colors": [ "#000097", "#ff4747" ]
+				},
+				{
+					"name": "Grayscale",
+					"slug": "grayscale",
+					"colors": [ "#000000", "#ffffff" ]
+				}
+			]
+		},
+		"paletteLabel": {
+			"type": "string",
+			"default": "Palette"
+		},
+		"paletteLabelHeadingLevel": {
+			"type": "number",
+			"enum": [ 1, 2, 3, 4, 5, 6 ],
+			"default": 2
+		},
+		"canOnlyChangeValues": {
+			"type": "boolean",
+			"default": false
+		},
+		"canReset": {
+			"type": "boolean",
+			"default": true
+		},
+		"slugPrefix": {
+			"type": "string",
+			"default": "custom-"
+		},
+		"emptyMessage": {
+			"type": "string",
+			"default": "Nothing to edit."
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

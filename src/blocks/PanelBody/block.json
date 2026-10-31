@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/panel-body",
+	"version": "0.1.0",
+	"title": "PanelBody",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the PanelBody component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Panel body"
+		},
+		"initialOpen": {
+			"type": "boolean",
+			"default": true
+		},
+		"openedMode": {
+			"type": "string",
+			"enum": [ "uncontrolled", "opened", "closed" ],
+			"default": "uncontrolled"
+		},
+		"icon": {
+			"type": "string",
+			"enum": [ "", "cog", "check", "starFilled", "wordpress" ],
+			"default": ""
+		},
+		"scrollAfterOpen": {
+			"type": "boolean",
+			"default": true
+		},
+		"toggles": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

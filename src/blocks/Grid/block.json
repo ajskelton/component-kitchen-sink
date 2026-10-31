@@ -1,0 +1,92 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/grid",
+	"version": "0.1.0",
+	"title": "Grid",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Grid component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"rows": {
+			"type": "number",
+			"default": 0
+		},
+		"gap": {
+			"type": "number",
+			"default": 3
+		},
+		"columnGap": {
+			"type": "string",
+			"default": ""
+		},
+		"rowGap": {
+			"type": "string",
+			"default": ""
+		},
+		"align": {
+			"type": "string",
+			"enum": [ "", "start", "center", "end", "stretch" ],
+			"default": ""
+		},
+		"justify": {
+			"type": "string",
+			"enum": [
+				"",
+				"start",
+				"center",
+				"end",
+				"space-between",
+				"space-around",
+				"space-evenly"
+			],
+			"default": ""
+		},
+		"alignment": {
+			"type": "string",
+			"enum": [
+				"",
+				"bottom",
+				"bottomLeft",
+				"bottomRight",
+				"center",
+				"spaced",
+				"left",
+				"right",
+				"stretch",
+				"top",
+				"topLeft",
+				"topRight"
+			],
+			"default": ""
+		},
+		"isInline": {
+			"type": "boolean",
+			"default": false
+		},
+		"templateColumns": {
+			"type": "string",
+			"default": ""
+		},
+		"templateRows": {
+			"type": "string",
+			"default": ""
+		},
+		"itemCount": {
+			"type": "number",
+			"default": 6
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/truncate",
+  "version": "0.1.0",
+  "title": "Truncate",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Truncate component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Truncate shortens long text with an ellipsis. This sentence is deliberately long enough to overflow a narrow container."
+    },
+    "ellipsizeMode": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "head",
+        "tail",
+        "middle",
+        "none"
+      ],
+      "default": "auto"
+    },
+    "limit": {
+      "type": "number",
+      "default": 40
+    },
+    "numberOfLines": {
+      "type": "number",
+      "default": 0
+    },
+    "ellipsis": {
+      "type": "string",
+      "default": "…"
+    },
+    "width": {
+      "type": "number",
+      "default": 280
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

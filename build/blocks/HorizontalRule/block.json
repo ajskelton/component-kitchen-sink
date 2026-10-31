@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/horizontal-rule",
+  "version": "0.1.0",
+  "title": "HorizontalRule",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the HorizontalRule component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "color": {
+      "type": "string",
+      "default": "#1e1e1e"
+    },
+    "thickness": {
+      "type": "number",
+      "default": 2
+    },
+    "widthPercent": {
+      "type": "number",
+      "default": 100
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

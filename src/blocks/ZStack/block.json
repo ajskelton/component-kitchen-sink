@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/z-stack",
+	"version": "0.1.0",
+	"title": "ZStack",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ZStack component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"isLayered": {
+			"type": "boolean",
+			"default": true
+		},
+		"isReversed": {
+			"type": "boolean",
+			"default": false
+		},
+		"offset": {
+			"type": "number",
+			"default": 20
+		},
+		"itemCount": {
+			"type": "number",
+			"default": 4
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

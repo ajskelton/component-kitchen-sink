@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/card",
+	"version": "0.1.0",
+	"title": "Card",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Card component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"size": {
+			"type": "string",
+			"enum": [ "none", "xSmall", "small", "medium", "large" ],
+			"default": "medium"
+		},
+		"variant": {
+			"type": "string",
+			"enum": [ "primary", "secondary", "tertiary", "dotted", "grid" ],
+			"default": "primary"
+		},
+		"elevation": {
+			"type": "number",
+			"default": 0
+		},
+		"isBorderless": {
+			"type": "boolean",
+			"default": false
+		},
+		"isRounded": {
+			"type": "boolean",
+			"default": true
+		},
+		"title": {
+			"type": "string",
+			"default": "Card title"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

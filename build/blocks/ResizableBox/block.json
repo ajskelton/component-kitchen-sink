@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/resizable-box",
+  "version": "0.1.0",
+  "title": "ResizableBox",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ResizableBox component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "width": {
+      "type": "number",
+      "default": 320
+    },
+    "height": {
+      "type": "number",
+      "default": 160
+    },
+    "showHandle": {
+      "type": "boolean",
+      "default": true
+    },
+    "lockAspectRatio": {
+      "type": "boolean",
+      "default": false
+    },
+    "minWidth": {
+      "type": "number",
+      "default": 80
+    },
+    "minHeight": {
+      "type": "number",
+      "default": 60
+    },
+    "enableRight": {
+      "type": "boolean",
+      "default": true
+    },
+    "enableBottom": {
+      "type": "boolean",
+      "default": true
+    },
+    "enableBottomRight": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTooltip": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
