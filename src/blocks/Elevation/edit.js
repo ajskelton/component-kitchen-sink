@@ -46,7 +46,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				>
 					<p>
 						{ __(
-							'Elevation is deprecated in this version of the package, so it logs a deprecation notice.',
+							'Elevation is deprecated in recent versions of the package and may log a deprecation notice.',
 							'component-kitchen-sink'
 						) }
 					</p>

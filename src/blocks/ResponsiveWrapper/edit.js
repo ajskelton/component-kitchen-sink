@@ -38,7 +38,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				>
 					<p>
 						{ __(
-							'ResponsiveWrapper is deprecated in this version of the package, so it logs a deprecation notice.',
+							'ResponsiveWrapper is deprecated in recent versions of the package and may log a deprecation notice.',
 							'component-kitchen-sink'
 						) }
 					</p>

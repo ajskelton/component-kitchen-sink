@@ -71,3 +71,37 @@ The editor loads `wp.components` from the site (WordPress 7.1.4), not from `node
 - `PanelBody` in the canvas: styled for the sidebar. The block wraps it in a `Panel` but its spacing in the canvas may look off.
 - `Text`/`Heading` `highlightWords` splits on commas; an empty trailing word (for example `fox,`) highlights nothing.
 - The inventory (`node scripts/inventory.mjs`) leaves `SVG`, `Path`, `Circle`, `G`, `Rect`, `Polygon` and `Line` as `todo` with the note "cover in one SvgPrimitives block". It flips only rows whose description matches an export name, so these seven rows stay `todo` even though `SvgPrimitives` uses all of them. The block description is the exact string requested.
+
+## Verification
+
+Test page: "Kitchen Sink: Color and layout", page ID 27. Editor: http://kitchen-sink.test/wp-admin/post.php?post=27&action=edit. Front end: http://kitchen-sink.test/?page_id=27.
+
+Checked in the editor against WordPress 7.1.4's bundled `wp.components`: all 46 blocks. Every block loads and validates, none hit an error boundary or a "Block contains unexpected or invalid content" notice, and the console shows no errors from this page. Each block's inspector panel appeared, at least one control per block changed the `<pre>` JSON and the canvas demo, and the saved page reloaded with the same attributes and no block validation errors. The front end prints a heading and the attribute JSON for all 46 blocks. The PHP error log does not exist (nothing logged). `npm run build` and `npm run lint:js` pass.
+
+### Fixed
+
+- `ColorIndicator`: the canvas and inspector swatches rendered empty (the "no colour" diagonal) because the component spreads `style` after its own `style={ { background: colorValue } }`, so passing `style` for the size replaced the background. The block now repeats `background: colorValue` in its own `style`.
+- `Elevation`, `Scrollable`, `ResponsiveWrapper`: the inspector help text claimed the component "is deprecated in this version of the package, so it logs a deprecation notice". The runtime copy logs nothing, so the text now says "may log a deprecation notice".
+
+### Runtime findings (no code change)
+
+- `PaletteEdit`: colours mode works (add colour appended `Color 1` / `custom-color-1`), gradients mode lists the two gradients. `duotones` mode shows only the empty message ("Nothing to edit.") and an add button, as predicted: the runtime has no duotone handling. The `duotones` attribute is still stored.
+- `presentation` is not a prop of the runtime `ColorPalette`, `GradientPicker` or `DuotonePicker` (the string is absent from `components.js`; the 43.0.0 source has it). Switching between listbox, toggle-buttons and command-buttons stores the attribute but changes nothing: the DOM roles and classes are identical. The runtime `DuotonePicker` only knows `asButtons`. The author's note that `presentation` is in the runtime bundle was wrong.
+- `selectedSlug` works for `ColorPalette` (stores `sunset`) and `GradientPicker` (stores `ember`). It is not a `DuotonePicker` prop at runtime: choosing a duotone leaves `selectedSlug` empty.
+- `FontSizePicker` `valueMode="slug"` exists at runtime; presets still store the slug and the resolved size.
+- `Card`, `CardHeader`, `CardFooter` `size="none"` and `"xSmall"` work at runtime (padding 0px and 8px).
+- `StyleProvider`: no throw in either toggle state; the Button renders with the canvas `ownerDocument` and with `window.document`.
+- `Dashicon`, and `Icon` with `dashicon:*` names: the span gets the right classes (`dashicons dashicons-heart`) but the iframed canvas does not load the dashicons stylesheet, so `::before` has `content: none` and the glyph is blank. The Block tab has no Dashicon preview in the sidebar either. Left alone, as the template forbids extra stylesheets.
+- `Elevation`, `Scrollable`, `ResponsiveWrapper`: no deprecation warnings at runtime, and all three work (Elevation shadow grows with `value`, Scrollable scrolls on x with a 200px max width, ResponsiveWrapper keeps the 4:1 ratio at a 200px container: 200 x 50).
+- `ResizableBox`: dragging the bottom-right handle (synthetic mouse events) changed 320 x 160 to 420 x 210 and persisted. `toggleSelection` is not passed to block edit functions in this editor, so `toggleSelection?.()` is a no-op; the block body is not draggable by itself, so nothing is dragged while resizing.
+- `Spacer`, `Divider`, `CardDivider`: typing `10px` as `margin` gives computed 10px margins. A bare number such as `3` for Spacer `padding` gives 12px (4px multiples).
+- `Heading` / `Text` `highlightWords` with a trailing comma (`Heading,`, `weights,`): no error; the real word is highlighted and the empty word is ignored.
+- Other blocks exercised: `Flex` (direction column, gap), `FlexBlock`, `FlexItem` (display), `Grid` (columns), `HStack` and `VStack` (direction, spacing, alignment), `ZStack` (offset, child count), `Surface` (variant, backgroundSize), `View` (`as` section), `Truncate` (middle mode, limit, ellipsis), `Item` (click counter, size), `ItemGroup`, `Panel`, `PanelBody` (title, opened, icon, toggle counter), `PanelHeader`, `PanelRow`, `Placeholder`, `HorizontalRule`, `SvgPrimitives`, `CustomGradientPicker` (radial type, set null), `ColorPicker`, `DuotoneSwatch`, `BlockQuotation`, `CardBody`, `CardMedia`.
+
+### Still broken
+
+Nothing fails. Cosmetic: the Dashicon glyph is blank in the editor canvas (see above), and `presentation` and duotone mode in `PaletteEdit` have no effect at runtime.
+
+### Console warnings judged harmless
+
+The only deprecation warnings in the console on this page come from other families' blocks (`FormTokenField`, `RadioGroup`, `CheckboxControl`, `SearchControl`) and the generic "global-styles-css-custom-properties-inline-css was added to the iframe incorrectly" notice.

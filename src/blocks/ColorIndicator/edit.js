@@ -13,10 +13,12 @@ export default function Edit( { attributes, setAttributes } ) {
 	const { colorValue, size } = attributes;
 
 	// Shared by the inspector preview and the canvas. ColorIndicator has no
-	// size prop, so the size is applied through `style`.
+	// size prop, so the size is applied through `style`. A `style` prop
+	// replaces the component's own `style`, which is where `colorValue` ends
+	// up as `background`, so the background is repeated here.
 	const indicatorProps = {
 		colorValue,
-		style: { width: size, height: size },
+		style: { background: colorValue, width: size, height: size },
 	};
 
 	return (
