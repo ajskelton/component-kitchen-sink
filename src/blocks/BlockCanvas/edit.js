@@ -4,6 +4,7 @@ import {
 	BlockEditorProvider,
 	BlockList,
 	InspectorControls,
+	store as blockEditorStore,
 	useBlockProps,
 } from '@wordpress/block-editor';
 import { createBlock } from '@wordpress/blocks';
@@ -13,10 +14,9 @@ import {
 	TextControl,
 	ToggleControl,
 } from '@wordpress/components';
+import { useSelect } from '@wordpress/data';
 import { useMemo, useState } from '@wordpress/element';
 import './editor.scss';
-
-const EDITOR_SETTINGS = {};
 
 function createSampleBlocks( count ) {
 	const blocks = [
@@ -30,7 +30,7 @@ function createSampleBlocks( count ) {
 	return blocks;
 }
 
-function NestedEditor( { blockCount, children } ) {
+function NestedEditor( { blockCount, settings, children } ) {
 	const [ blocks, setBlocks ] = useState( () =>
 		createSampleBlocks( blockCount )
 	);
@@ -39,7 +39,7 @@ function NestedEditor( { blockCount, children } ) {
 			value={ blocks }
 			onInput={ setBlocks }
 			onChange={ setBlocks }
-			settings={ EDITOR_SETTINGS }
+			settings={ settings }
 		>
 			{ children }
 		</BlockEditorProvider>
@@ -48,6 +48,18 @@ function NestedEditor( { blockCount, children } ) {
 
 export default function Edit( { attributes, setAttributes } ) {
 	const { blockCount, height, applyStyles, paragraphColor } = attributes;
+
+	// Hand the nested canvas iframe the real editor's resolved assets so it
+	// gets the theme and block styles; with empty settings it is unstyled.
+	const resolvedAssets = useSelect(
+		( select ) =>
+			select( blockEditorStore ).getSettings().__unstableResolvedAssets,
+		[]
+	);
+	const settings = useMemo(
+		() => ( { __unstableResolvedAssets: resolvedAssets } ),
+		[ resolvedAssets ]
+	);
 
 	// `styles` is injected into the canvas iframe; keep its identity stable.
 	const styles = useMemo(
@@ -108,7 +120,11 @@ export default function Edit( { attributes, setAttributes } ) {
 			</InspectorControls>
 			<div { ...useBlockProps() }>
 				<h3>BlockCanvas</h3>
-				<NestedEditor key={ blockCount } blockCount={ blockCount }>
+				<NestedEditor
+					key={ blockCount }
+					blockCount={ blockCount }
+					settings={ settings }
+				>
 					<BlockCanvas height={ height } styles={ styles }>
 						<BlockList />
 					</BlockCanvas>

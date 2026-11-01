@@ -38,10 +38,16 @@ const STATIC_ATTRIBUTES = {
 // Renders BlockEdit for one block. The block also lives in a nested store so
 // the edit function can resolve its clientId; BlockList is deliberately not
 // used, so BlockEdit is what draws the block.
-function EditForBlock( { name, clientId, isSelected, onAttributes } ) {
-	const [ attributes, setLocalAttributes ] = useState(
-		() => STATIC_ATTRIBUTES[ name ]
-	);
+function EditForBlock( {
+	name,
+	clientId,
+	initialAttributes,
+	isSelected,
+	onAttributes,
+} ) {
+	// `initialAttributes` come from createBlock, so they include the block's
+	// attribute defaults (separator's edit needs `tagName`, for example).
+	const [ attributes, setLocalAttributes ] = useState( initialAttributes );
 	return (
 		<BlockEdit
 			name={ name }
@@ -122,6 +128,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							key={ blockName }
 							name={ blockName }
 							clientId={ blocks[ 0 ].clientId }
+							initialAttributes={ blocks[ 0 ].attributes }
 							isSelected={ isSelected }
 							onAttributes={ () =>
 								setAttributes( {

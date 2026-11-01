@@ -62,6 +62,41 @@ Nothing was run in an editor; check these first.
 13. **`Typewriter`/`WritingFlow`/`ObserveTyping`** add key and selection listeners inside an outer block that already has its own writing flow; behaviour may be doubled and is only checkable by hand.
 14. `BlockEditorKeyboardShortcuts.Register` re-registers shortcuts the editor already registered; this should be idempotent (no unregister on unmount).
 
+## Verification
+
+Test page: "Kitchen Sink: Editor internals", ID 30. Editor: http://kitchen-sink.test/wp-admin/post.php?post=30&action=edit, front end: http://kitchen-sink.test/?page_id=30. Checked in WordPress 7.1.4's bundled packages (not node_modules).
+
+All 32 blocks were loaded, selected and given a changed attribute (some through the inspector, most through `updateBlockAttributes`, which the canvas `<pre>` JSON confirms). No block is invalid after saving and reloading, the editor console shows no errors, and the front end prints 32 headings plus 32 attribute `<pre>` blocks. Default attributes are not serialised, so the saved page comments are mostly empty.
+
+### Fixes
+
+- `BlockCanvas`: the nested iframe was 300x150 whatever `height` said (the wrapper sizing CSS lives in the block-editor package stylesheet, which is not loaded inside the editor canvas iframe) and had no theme/block styles (empty settings). Added scoped sizing rules in `editor.scss` and passed the real editor's `__unstableResolvedAssets` as settings, as the `Iframe` block already does.
+- `BlockEdit`: choosing `core/separator` crashed (React error #130). The static attributes given to the edit function had no block defaults, so separator's `tagName` was undefined and it rendered an undefined element type. The edit function now starts from the attributes `createBlock` returns, which include defaults.
+- `ExperimentalRecursionProvider`: the front-end heading read "RecursionProvider"; it now prints the directory name like the other prefixed blocks.
+
+### Runtime risks, as observed
+
+1. Nested editors: `core/paragraph`, `core/heading` and `core/group` render and edit with `settings` of `{}`. No crash. Typing in a nested paragraph works and fires `onChange`.
+2. `BlockEdit`: paragraph, heading, separator and spacer all render. `useBlockProps` inside the rendered edit picks up the outer block's props (the `hr`/`h3` gets the outer block's `id`, `wp-block-ajs-block-edit` class and `draggable`), so the DOM has the outer block's id on it. Harmless, left as is.
+3. `BlockCanvas`/`Iframe`: both render a nested iframe; see the `BlockCanvas` fix. Inside the nested iframes the theme font differs from the outer canvas (Times, no global-styles font); cosmetic. The nested `BlockCanvas` iframe also has `name="editor-canvas"`, which is only a problem for code that searches the outer iframe's document.
+4. Slots: nested `BlockInspector` draws inline and does not add panels to the real sidebar (every block shows only its own panel plus Advanced). Nested `BlockToolbar`, `BlockTools` and `BlockPopover` render inside the canvas iframe, next to the nested blocks, not in the real editor's toolbar. Because the block-editor package CSS is not loaded in the canvas iframe, those nested toolbars and popovers are unstyled (stacked vertically, overlapping neighbouring text) while open. The real editor toolbar is unaffected. Not fixed: needs the package stylesheet inside the iframe.
+5. Selection helpers: pre-selection works (`BlockInspector` shows the heading's settings, `SkipToSelectedBlock` button renders).
+6. Fills: with one block selected, the real three-dots menu shows "First item from kitchen sink" first and "Kitchen sink menu control (<block name>)" near the end, and the star button sits at the end of the real toolbar. Clicking the first item and the star incremented their click counters. A nested `BlockSettingsMenu` also lists the fills plus its own child item.
+7. Deprecation warnings appear for `BlockNavigationDropdown`, `CopyHandler`, `__experimentalRecursionProvider`, `__experimentalUseHasRecursion` and `MultiSelectScrollIntoView`, and only warn. Harmless.
+8. `ajs/context-probe` renders two consumers with the provider values and produces no unregistered block message.
+9. `NavigableToolbar` renders in the outer context; not exercised with Alt+F10.
+10. `EditorStyles`: scope on colours only the dashed box. With scope off every paragraph in the editor canvas turns red italic. Turning scope back on reverts immediately. Removing the block was not tested separately (the same unmount path).
+11. `BlockEditorProvider`: editing the nested paragraph sets `onChange` to 1; whether it adds outer undo steps was not checked.
+12. `BlockMover` moved the second block down and the nested list reordered; `BlockSettingsMenu` opens.
+13. `Typewriter`, `WritingFlow`, `ObserveTyping`: Enter in a nested Typewriter paragraph adds a block, `isTyping` turns true after a key press in ObserveTyping, and in the real editor typing, Enter and Cmd+Z behave normally with all 32 blocks on the page.
+14. `BlockEditorKeyboardShortcuts.Register`: Shift+Cmd+D duplicates the block in the nested editor and does not touch the outer block list.
+
+Also confirmed: `BlockBreadcrumb` follows nested selection (Nested document, Group, Paragraph), `BlockSelectionClearer` goes from a selected id to "none" when its padding is clicked, `ListView` and `BlockNavigationDropdown` open their popovers, and `BlockCanvas` `styles` colours the nested canvas paragraphs.
+
+### Not exercised
+
+Alt+F10 on `NavigableToolbar`, drag and drop (`BlockMover` drag handle, `ListView`), copy/cut/paste through `CopyHandler`, multi-select with Shift+arrow, and every inspector control on every block in the UI (many were set through the data API instead). Visual layout was only screenshot-checked for a few blocks in a narrow (800px) browser pane.
+
 ## Process notes
 
 - The worktree was first created from the wrong commit; the coordinator reset it to 073149f. Everything here was built from that commit.
