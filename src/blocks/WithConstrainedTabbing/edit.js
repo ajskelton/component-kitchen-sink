@@ -35,6 +35,9 @@ export default function Edit( { attributes, setAttributes } ) {
 		</div>
 	);
 
+	const renderForm = () =>
+		constrained ? <ConstrainedTabbing>{ form }</ConstrainedTabbing> : form;
+
 	return (
 		<>
 			<InspectorControls>
@@ -56,14 +59,24 @@ export default function Edit( { attributes, setAttributes } ) {
 						}
 					/>
 				</PanelBody>
+				<PanelBody
+					title={ __(
+						'withConstrainedTabbing (sidebar copy)',
+						'component-kitchen-sink'
+					) }
+				>
+					<p>
+						{ __(
+							'In the canvas, WritingFlow handles Tab at the edge of the block and moves focus to the next block, so the trap only holds here.',
+							'component-kitchen-sink'
+						) }
+					</p>
+					{ renderForm() }
+				</PanelBody>
 			</InspectorControls>
 			<div { ...useBlockProps() }>
 				<h3>withConstrainedTabbing</h3>
-				{ constrained ? (
-					<ConstrainedTabbing>{ form }</ConstrainedTabbing>
-				) : (
-					form
-				) }
+				{ renderForm() }
 				<pre>{ JSON.stringify( attributes, null, 2 ) }</pre>
 			</div>
 		</>

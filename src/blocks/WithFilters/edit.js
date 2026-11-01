@@ -73,18 +73,23 @@ function createFilter( mode ) {
 		};
 }
 
-export default function Edit( { attributes, setAttributes } ) {
+export default function Edit( { attributes, setAttributes, clientId } ) {
 	const { filterEnabled, mode, filteredTitle } = attributes;
 
 	// Register (or re-register) the filter while enabled. withFilters listens
-	// for hookAdded/hookRemoved and re-renders after a short debounce.
+	// for hookAdded/hookRemoved and re-renders after a short debounce. The
+	// hook is global, so every withFilters block on the page shows the
+	// filtered output; the namespace is per block so that one block removing
+	// its filter does not remove the others' (removeFilter works per
+	// namespace).
 	useEffect( () => {
 		if ( ! filterEnabled ) {
 			return undefined;
 		}
-		addFilter( HOOK_NAME, NAMESPACE, createFilter( mode ) );
-		return () => removeFilter( HOOK_NAME, NAMESPACE );
-	}, [ filterEnabled, mode ] );
+		const namespace = `${ NAMESPACE }/${ clientId }`;
+		addFilter( HOOK_NAME, namespace, createFilter( mode ) );
+		return () => removeFilter( HOOK_NAME, namespace );
+	}, [ filterEnabled, mode, clientId ] );
 
 	return (
 		<>

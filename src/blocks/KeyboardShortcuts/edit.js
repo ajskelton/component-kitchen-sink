@@ -65,7 +65,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						label="bindGlobal"
 						checked={ bindGlobal }
 						help={ __(
-							'Also fire while typing in an editable field.',
+							'Also fire while typing in an editable field outside the wrapper (fields inside the children wrapper always fire).',
 							'component-kitchen-sink'
 						) }
 						onChange={ ( next ) =>
@@ -113,7 +113,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						</Button>
 						<TextControl
 							label={ __(
-								'Type here (blocked unless bindGlobal)',
+								'Type here (inside the wrapper, so Mousetrap does not skip it)',
 								'component-kitchen-sink'
 							) }
 							value={ typed }

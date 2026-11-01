@@ -83,3 +83,38 @@ HOCs (each creates its HOC once at module level and wraps a small inner componen
 - `withNotices`: the HOC keeps notices in component state, so they are not persisted (only the `created` counter is).
 - `navigateRegions` / `useNavigateRegions`: the default shortcuts (Ctrl+`, Ctrl+Shift+`, Alt+Shift+N/P) may be intercepted by the editor or the OS; the custom shortcuts are Ctrl+. and Ctrl+,.
 - Toolbar family: `ToolbarItem as="input"` passes `value`/`onChange` through Ariakit's `ToolbarItem` render path and is the most likely to need a tweak. `ToolbarContext` shows `store.getState()` at render time, which is not reactive.
+
+## Verification
+
+Page: "Kitchen Sink: Toolbar, SlotFill and HOCs", ID 37. Editor: `http://kitchen-sink.test/wp-admin/post.php?post=37&action=edit`. Front end: `http://kitchen-sink.test/?page_id=37`. Checked against the bundled WordPress 7.1.4 packages.
+
+All 38 blocks load without a block-error boundary or invalid-content notice, show their inspector panel, render the canvas demo, change attributes from their controls, and survive save and reload (page saved with `composite.activeKey` set; the saved page leaves `ScrollLock` off). The front end prints 38 headings and attribute dumps with no PHP notices; the PHP-FPM log has no new lines.
+
+### Fixes (block -> fix)
+
+- `Composite`: the demo is also rendered in the inspector ("keyboard demo" panel, item ids prefixed `inspector-`). In the canvas, WritingFlow handles arrow keys on non-text elements in a native listener that runs before React's delegated handlers, so arrow keys moved focus to the next block and the Ariakit composite never navigated. The inspector copy shares `activeKey` and works: `focusLoop` (`true` wraps from last to first), `focusWrap` (`true` in the grid layout wraps to the next row), `Composite.Typeahead` (typing `ch` focuses Cherry) and `Composite.Hover` (hover moves `activeId`) were verified there. `activeKey` restores after reload.
+- `WithFocusReturn`: the panel used `autoFocus`, which React applies in the commit phase before `useFocusReturn`'s ref records the previously focused element, so the HOC remembered the input itself and focus ended on the body after closing. The panel now focuses from an effect; focus returns to "Open panel" and the `{ onFocusReturn }` form counts custom returns.
+- `WithConstrainedTabbing`: added a sidebar copy of the form. In the canvas, WritingFlow's Tab handler moves focus to the next block from the last element before the HOC's trap element takes effect, so the trap only holds in the sidebar (verified there).
+- `WithFilters`: the filter namespace is now per block (`.../<clientId>`). Before, `removeFilter( hook, namespace )` from one block removed the filter registered by every block (verified with two blocks). The hook itself is still global, so every `withFilters` block on a page shows the filtered output.
+- `KeyboardShortcuts`: corrected the labels. Mousetrap does not skip editable fields that live inside the bound wrapper, so the text field inside the children wrapper fires the shortcut even without `bindGlobal` (verified: typing `j` fired it and typed the character).
+
+### Runtime differences (not rewritten)
+
+- `ToolsPanelItem` `onShownChange` and `defaultShown` do not exist in WordPress 7.1.4's `components` package (they are in 43.0.0). Optional items shown from the panel menu are therefore not remembered: `enabledItems` stays `[]` and the `onShownChange` readout stays false. Items with a value re-appear after reload through `hasValue`, `onSelect` fires, and `onDeselect` only fires when hiding an item that has a value. The two ToolsPanel copies (inspector and canvas) have independent menus and do not fight over `enabledItems`.
+- `ToolbarButton` `subscript` reaches the DOM as a plain `subscript` attribute at runtime (43.0.0 maps it to `data-subscript`).
+- `TreeGrid` keyboard navigation reads the global `document.activeElement`, so it only works in the main document (inspector copy: Up/Down/Left/Right, `onFocusRow` verified). In the canvas iframe it does nothing; the canvas copy still handles expand/collapse by click.
+- Arrow-key navigation of the legacy `__unstableComposite*` blocks (canvas only, no sidebar copy) is expected to hit the same WritingFlow interception as `Composite`; click behaviour, `role`, `disabled`/`focusable` and the `useCompositeState` options were verified, keyboard navigation was not. The same applies to roving focus in the Toolbar canvas copies (the Toolbar blocks also render in the inspector; arrow-key roving there was not exercised).
+- Default `navigateRegions` shortcuts (Ctrl+`) also trigger the editor's own region navigation, so focus ends outside the demo. The custom shortcuts work: Ctrl+. and Ctrl+, move between regions for both `navigateRegions` and `useNavigateRegions`.
+- `ScrollLock` with a persisted `locked: true` adds `lockscroll` to the top document on load, but the editor canvas and sidebar still scroll (verified with wheel scroll after reload). The saved page has it off.
+
+### Verified without changes
+
+`Toolbar` (variant, orientation, label, pressed persists), `ToolbarButton`, `ToolbarGroup` (controls, split, collapsed), `ToolbarItem` (all three `as` forms; typing into `as="input"` updates `text`), `ToolbarDropdownMenu` (controls and children modes), `ToolbarContext`, `ToolsPanel` (both copies have distinct panel ids, reset all), `ToolsPanelItem`, `ToolsPanelContext`, `TreeGrid` family, `DisclosureContent`, `Slot` (both `bubblesVirtually` modes keep the fill), `Fill`, `SlotFillProvider` (nested provider hides the nested fill without `passthrough`, shows both with it), `createSlotFill`, `useSlot`, `useSlotFills` (0 to 5 fills), `KeyboardShortcuts` (children mode fires; no-children mode fires on the top document only), `IsolatedEventContainer` (outer mousedown count stays 0 when isolated), `FocusReturnProvider`, `withFocusOutside`, `withNotices`, `withSpokenMessages` (live regions updated), `withFallbackStyles` (measured values written once per variant, no render loop), `navigateRegions`, `useNavigateRegions`.
+
+### Console
+
+Only deprecation warnings from this page: `__unstableUseCompositeState`, `__unstableComposite`, `__unstableCompositeItem`, `__unstableCompositeGroup`, `IsolatedEventContainer`, `FocusReturnProvider`. No TreeGrid structure warning. The shared console buffer also held React error #130 and a `components.min.js` "reading '0'" TypeError from other families' blocks; neither appeared on this page.
+
+### Not exercised
+
+Real hardware-style Tab/arrow behaviour for `withConstrainedTabbing` and the legacy composites inside the canvas (see above); Cmd-based `mod+j` (tested with the plain `j` option); the `WithFocusReturn` default form with a mouse click (tested with keyboard Enter).

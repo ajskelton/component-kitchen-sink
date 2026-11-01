@@ -68,41 +68,48 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		lastPressed,
 	} = attributes;
 
-	// Item ids are scoped by clientId; only the suffix is stored.
-	const idFor = ( key ) => `${ clientId }-${ key }`;
-	const prefix = `${ clientId }-`;
+	// Item ids are scoped by clientId (and by location, because the demo is
+	// rendered twice); only the suffix is stored.
+	const prefixFor = ( location ) =>
+		location === 'inspector'
+			? `inspector-${ clientId }-`
+			: `${ clientId }-`;
 
-	const compositeProps = {
-		'aria-label': __( 'Composite demo', 'component-kitchen-sink' ),
-		orientation,
-		focusLoop: toFlag( focusLoop ),
-		focusWrap: toFlag( focusWrap ),
-		focusShift,
-		virtualFocus,
-		rtl,
-		disabled,
-		activeId: activeKey ? idFor( activeKey ) : undefined,
-		setActiveId: ( next ) => {
-			const nextKey =
-				typeof next === 'string' && next.startsWith( prefix )
-					? next.slice( prefix.length )
-					: '';
-			// Skip no-op writes so merely rendering never dirties the post.
-			if ( nextKey !== activeKey ) {
-				setAttributes( { activeKey: nextKey } );
-			}
-		},
-		render: layout === 'typeahead' ? <Composite.Typeahead /> : undefined,
+	const compositePropsFor = ( location ) => {
+		const prefix = prefixFor( location );
+		return {
+			'aria-label': __( 'Composite demo', 'component-kitchen-sink' ),
+			orientation,
+			focusLoop: toFlag( focusLoop ),
+			focusWrap: toFlag( focusWrap ),
+			focusShift,
+			virtualFocus,
+			rtl,
+			disabled,
+			activeId: activeKey ? `${ prefix }${ activeKey }` : undefined,
+			setActiveId: ( next ) => {
+				const nextKey =
+					typeof next === 'string' && next.startsWith( prefix )
+						? next.slice( prefix.length )
+						: '';
+				// Skip no-op writes so merely rendering never dirties the post.
+				if ( nextKey !== activeKey ) {
+					setAttributes( { activeKey: nextKey } );
+				}
+			},
+			render:
+				layout === 'typeahead' ? <Composite.Typeahead /> : undefined,
+		};
 	};
 
 	const itemButton = (
 		<Button variant="secondary" size="compact" accessibleWhenDisabled />
 	);
 
-	const renderItem = ( name, index ) => {
+	const renderItem = ( name, index, location ) => {
 		const key = `item-${ index }`;
 		const common = {
-			id: idFor( key ),
+			id: `${ prefixFor( location ) }${ key }`,
 			onClick: () => setAttributes( { lastPressed: name } ),
 		};
 		if ( layout === 'hover' ) {
@@ -123,13 +130,13 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		);
 	};
 
-	const renderContent = () => {
+	const renderContent = ( location ) => {
 		if ( layout === 'grid' ) {
 			return [ FRUIT.slice( 0, 3 ), FRUIT.slice( 3 ) ].map(
 				( row, rowIndex ) => (
 					<Composite.Row key={ rowIndex }>
 						{ row.map( ( name, index ) =>
-							renderItem( name, rowIndex * 3 + index )
+							renderItem( name, rowIndex * 3 + index, location )
 						) }
 					</Composite.Row>
 				)
@@ -141,16 +148,20 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 					<Composite.GroupLabel>
 						{ __( 'Fruit', 'component-kitchen-sink' ) }
 					</Composite.GroupLabel>
-					{ FRUIT.slice( 0, 3 ).map( renderItem ) }
+					{ FRUIT.slice( 0, 3 ).map( ( name, index ) =>
+						renderItem( name, index, location )
+					) }
 				</Composite.Group>
 			);
 		}
-		return FRUIT.slice( 0, 3 ).map( renderItem );
+		return FRUIT.slice( 0, 3 ).map( ( name, index ) =>
+			renderItem( name, index, location )
+		);
 	};
 
-	const renderComposite = () => (
-		<Composite { ...compositeProps }>
-			{ renderContent() }
+	const renderComposite = ( location ) => (
+		<Composite { ...compositePropsFor( location ) }>
+			{ renderContent( location ) }
 			<ActiveIdReader />
 		</Composite>
 	);
@@ -220,10 +231,24 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 						}
 					/>
 				</PanelBody>
+				<PanelBody
+					title={ __(
+						'Composite (keyboard demo)',
+						'component-kitchen-sink'
+					) }
+				>
+					<p>
+						{ __(
+							'The block editor canvas intercepts arrow keys (WritingFlow) before Composite sees them, so use this copy to test keyboard navigation.',
+							'component-kitchen-sink'
+						) }
+					</p>
+					{ renderComposite( 'inspector' ) }
+				</PanelBody>
 			</InspectorControls>
 			<div { ...useBlockProps() }>
 				<h3>Composite</h3>
-				{ renderComposite() }
+				{ renderComposite( 'canvas' ) }
 				<p>
 					{ __( 'Last pressed:', 'component-kitchen-sink' ) }{ ' ' }
 					<code>{ lastPressed || '-' }</code>

@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import { useState } from '@wordpress/element';
+import { useEffect, useRef, useState } from '@wordpress/element';
 import {
 	Button,
 	PanelBody,
@@ -25,12 +25,19 @@ const MODE_OPTIONS = [
  * @param {() => void} props.onClose Unmounts the panel.
  */
 function Panel( { onClose } ) {
+	const wrapperRef = useRef( null );
+
+	// Focus from an effect rather than `autoFocus`: React applies autoFocus in
+	// the commit phase, before withFocusReturn's ref has recorded which element
+	// had focus, so the HOC would remember the input itself.
+	useEffect( () => {
+		wrapperRef.current?.querySelector( 'input' )?.focus();
+	}, [] );
+
 	return (
-		<div style={ { padding: 8, border: '1px solid' } }>
+		<div ref={ wrapperRef } style={ { padding: 8, border: '1px solid' } }>
 			<TextControl
 				label={ __( 'Focused on mount', 'component-kitchen-sink' ) }
-				// eslint-disable-next-line jsx-a11y/no-autofocus
-				autoFocus
 				value=""
 				onChange={ () => {} }
 			/>
