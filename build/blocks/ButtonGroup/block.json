@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/button-group",
+  "version": "0.1.0",
+  "title": "ButtonGroup",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ButtonGroup component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "selected": {
+      "type": "string",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ],
+      "default": "left"
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "default",
+        "compact",
+        "small"
+      ],
+      "default": "default"
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
