@@ -9,7 +9,8 @@ import {
 	__unstableUseAutocompleteProps as useAutocompleteProps,
 } from '@wordpress/components';
 /* eslint-enable @wordpress/no-unsafe-wp-apis */
-import { useEffect, useMemo, useState } from '@wordpress/element';
+import { useMergeRefs } from '@wordpress/compose';
+import { useEffect, useMemo, useRef, useState } from '@wordpress/element';
 import './editor.scss';
 
 const SETS = {
@@ -114,9 +115,12 @@ export default function Edit( { attributes, setAttributes } ) {
 	);
 
 	// The hook returns a `ref` (it owns the popover anchor), the ARIA props and,
-	// once the user has typed, the popover element as `children`.
+	// once the user has typed, the popover element as `children`. That `ref` is
+	// a merged callback ref, not a ref object, so keep our own object ref to the
+	// element and merge both onto it.
+	const elementRef = useRef( null );
 	const {
-		ref,
+		ref: hookRef,
 		children: popover,
 		...ariaProps
 	} = useAutocompleteProps( {
@@ -125,7 +129,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		onChange: ( next ) => {
 			setAttributes( { text: next.text } );
 			setCaret( next.start );
-			const element = ref.current;
+			const element = elementRef.current;
 			if ( element ) {
 				element.textContent = next.text;
 				setCaretOffset( element, next.start );
@@ -134,13 +138,15 @@ export default function Edit( { attributes, setAttributes } ) {
 		onReplace: () => {},
 	} );
 
+	const mergedRef = useMergeRefs( [ hookRef, elementRef ] );
+
 	// Keep the editable element in sync when the attribute changes elsewhere.
 	useEffect( () => {
-		const element = ref.current;
+		const element = elementRef.current;
 		if ( element && element.textContent !== text ) {
 			element.textContent = text;
 		}
-	}, [ text, ref ] );
+	}, [ text ] );
 
 	const syncFromElement = ( event ) => {
 		const element = event.currentTarget;
@@ -198,7 +204,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					) }
 				</p>
 				<div
-					ref={ ref }
+					ref={ mergedRef }
 					{ ...ariaProps }
 					role="textbox"
 					tabIndex={ 0 }

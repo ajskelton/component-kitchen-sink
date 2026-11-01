@@ -43,7 +43,9 @@ export default function Edit( { attributes, setAttributes } ) {
 	// Every prop exercised by this block, shared by the inspector and canvas.
 	const fieldProps = {
 		label,
-		help: help || undefined,
+		// `__experimentalShowHowTo` is deprecated since 7.1: an empty `help`
+		// hides the default how-to text instead.
+		help: help || ( showHowTo ? undefined : '' ),
 		placeholder: placeholder || undefined,
 		suggestions: SUGGESTIONS,
 		maxSuggestions,
@@ -53,7 +55,6 @@ export default function Edit( { attributes, setAttributes } ) {
 		tokenizeOnSpace,
 		tokenizeOnBlur,
 		__experimentalExpandOnFocus: expandOnFocus,
-		__experimentalShowHowTo: showHowTo,
 		__experimentalAutoSelectFirstMatch: autoSelectFirstMatch,
 		__experimentalValidateInput: onlySuggestions
 			? ( token ) =>
@@ -158,7 +159,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						}
 					/>
 					<ToggleControl
-						label="__experimentalShowHowTo"
+						label="show default help (was __experimentalShowHowTo)"
 						checked={ showHowTo }
 						onChange={ ( next ) =>
 							setAttributes( { showHowTo: next } )

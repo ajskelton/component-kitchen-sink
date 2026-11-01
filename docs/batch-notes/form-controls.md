@@ -59,3 +59,41 @@ None.
 - `DatePicker` / `DateTimePicker` / `TimePicker`: values are ISO strings; the displayed time may shift near midnight depending on the site timezone setting.
 - `UseCustomUnits`: with every unit toggled off the hook returns `[]` and `UnitControl` gets an empty `units` list; this has not been checked against the component.
 - `useBaseControlProps`, `__experimentalUseCustomUnits`, `__unstableUseAutocompleteProps`: `block.json` `title` and `description` carry the exact export name so the inventory matches them.
+
+## Verification
+
+Test page: "Kitchen Sink: Form controls", page ID 23, editor `http://kitchen-sink.test/wp-admin/post.php?post=23&action=edit`, front end `http://kitchen-sink.test/?page_id=23`. All 38 blocks were loaded in WordPress 7.1.4 (components bundled with core, not the 43.0.0 in `node_modules`). `npm run build` and `npm run lint:js` pass.
+
+Checks per block: the page loads with 38 valid blocks and no "block has encountered an error" or invalid-content states; each block's inspector panel appears; every text, number, range, select and checkbox control (inspector and canvas copy) was driven and the attribute JSON followed; the page was saved, reloaded (38 valid blocks, attributes identical to the saved state) and the front end printed every heading and attribute JSON with no PHP notices. `logs/php/error.log` was never created, so nothing was logged.
+
+### Fixed
+
+- `UseAutocompleteProps`: selecting a completion (Enter or click) updated the `text` attribute but not the editable div, and the next `onInput`/`onKeyUp` sync then read the stale DOM text back, so nothing appeared to be inserted. Cause: `useAutocompleteProps` returns a merged callback `ref`, not a ref object, so `ref.current` was `undefined` in `onChange` and in the sync effect. The block now keeps its own `elementRef` and merges it with the hook's `ref` through `useMergeRefs` from `@wordpress/compose` (already a dependency).
+- `FormTokenField`: `__experimentalShowHowTo` is deprecated since 7.1 and logged a console warning on every load. The `showHowTo` attribute is kept (so saved content still validates) but now maps to the `help` prop: an empty `help` hides the default how-to text. The inspector label reads "show default help (was __experimentalShowHowTo)".
+
+### Checked and working
+
+- `Autocomplete`: typing `~ap` opens the popover; Enter inserts "Apple " and the attribute updates.
+- `UseAutocompleteProps`: typing `#re` opens the popover; Enter inserts "Red " (after the fix above).
+- `RadioGroup` / `Radio`: clicking another radio changes `checked` in both blocks; the group's context reaches `Radio`.
+- `FocalPointPicker`: the inline SVG placeholder renders (600x400) and a drag (synthetic mouse events, since a real drag was not available) updates `x` / `y`; 0.8 / 0.71 survived save and reload.
+- `BoxControl`: a value entered in the control, then "Unlink sides", then changing `sides` and `units` in the inspector (the `key` remount) kept the saved `values`; they persisted across save and reload.
+- `QueryControls`: switching `categoryMode` between single and multiple remounts cleanly; an author, a category id and a "News" token persisted across save and reload. The token field only accepts names present in `categorySuggestions`.
+- `BorderBoxControl`: a flat `{ width }` value, "Unlink sides", then a changed top width gives a split `{ top, right, bottom, left }` value that saved and reloaded.
+- `BorderControl`: width and unit changes update `border`.
+- `DatePicker` / `DateTimePicker` / `TimePicker`: day clicks and hour/minute edits write ISO strings (`2026-11-15T19:25:47`, `2026-03-04T15:45:00`); both reloaded unchanged. The values carry no timezone suffix.
+- `UseCustomUnits`: with all six units toggled off the hook returns `[]`; the canvas shows "Returned units: []" and the `UnitControl` renders with a single `px` fallback, no error.
+- `FormFileUpload`: file names set through the inspector persist and print on the front end; no error on save. Picking a real file was not exercised (it opens the OS file dialog).
+- `ComboboxControl`: typing "Lar" filters to Large; selecting it sets `value` to `large`. `CustomSelectControl`, `ToggleGroupControl*`, `TreeSelect`, `FormTokenField`, `SearchControl`, `NumberControl`, `RangeControl`, `UnitControl` and the remaining text-like controls all update their attributes.
+
+### Harmless console output
+
+- `wp.components.__experimentalRadioGroup is deprecated since version 6.8` on every load (expected, see Runtime risks).
+- `heading` on `CheckboxControl` (deprecated 5.8) and `onClose` on `SearchControl` (deprecated 6.8) warn only while those props are switched on; the blocks exist to exercise them.
+- `global-styles-css-custom-properties-inline-css was added to the iframe incorrectly`: core, unrelated to this plugin.
+
+### Remaining quirks (not fixed)
+
+- Object attributes whose `block.json` default is `{}` (`border` in `BorderBoxControl` / `BorderControl`, `values` in `BoxControl`) read as an empty array `[]` until first edited, both in the editor and in the `render.php` JSON, because PHP serialises an empty array as `[]`. The controls treat it as empty, and edits replace it with a real object.
+- `FormFileUpload` does not store the files, only their names, as noted above.
+- The `popoverPlacement` enum values of `BorderBoxControl` were not tried one by one; the default `left-start` works.
