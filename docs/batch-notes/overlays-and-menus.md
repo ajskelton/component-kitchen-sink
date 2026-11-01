@@ -69,3 +69,39 @@ None.
 - AnimatePresence `mode="popLayout"` needs a positioned parent; it is only a visual quirk if not.
 - Attribute names `title`, `type` (SandBox) and `size` are plain attributes; `className` is deliberately avoided (renamed `groupClassName`, `disabledClassName`).
 - The worktree for this batch was created from `main`, which lacks the template, scripts, Button reference and docs. I fast-forwarded this branch to `feature/component-test-blocks` (commit 073149f) before starting, so the branch history now includes that commit.
+
+## Verification
+
+Test page: ID 15, "Kitchen Sink: Overlays and menus", http://kitchen-sink.test/?page_id=15 (editor: http://kitchen-sink.test/wp-admin/post.php?post=15&action=edit). All 44 blocks were loaded in the editor (WordPress 7.1.4 bundled packages), saved, reloaded and rendered on the front end with no PHP notices (the PHP log only holds php-fpm start-up lines).
+
+Blocks checked: all 44. Every block renders without an error boundary or invalid-content notice, shows an inspector panel titled after the component, and persists its attributes through save and reload. The front end prints each block's heading and attribute JSON.
+
+### Checked in detail
+
+- Overlays opened once, shown above the editor chrome (modal screen z-index 100000, popovers 1000000), closed with Escape, persisted counter changed, focus returned to the trigger: Modal (`timesOpened`, `lastClosedBy` = onRequestClose), ConfirmDialog (`result` = cancelled), Popover, Dropdown (`toggles` 2, `closes` 1), DropdownMenu (`selections`, `activeControl`), Guide (`timesOpened`, `timesFinished`), GuidePage. Tooltip shows on hover and closes on Escape.
+- Draggable: dragging the handle fires `onDragStart` and the transfer payload arrives at the drop target (`dragStarts`, `drops`, `lastDropped`); the clone is removed on dragend; no block is inserted. The drag was driven with synthetic DragEvents because the automation's native drag never delivers `drop`/`dragend`.
+- DropZone and DropZoneProvider: `useDropZone` activates inside the iframed canvas; text, HTML and file drops reach `onDrop`, `onHTMLDrop`, `onFilesDrop` (synthetic DragEvents).
+- Navigator family (Navigator, NavigatorProvider, NavigatorScreen incl. `/item/:id` params, NavigatorButton, NavigatorBackButton, NavigatorToParentButton, useNavigator, __experimentalUseNavigator): navigation works, counters persist, no errors. The legacy NavigatorProvider honours `style.height`.
+- SnackbarList: the scoped `editor.scss` stage positions the list correctly. A snackbar without `explicitDismiss` removed itself after about 6 seconds and rewrote the persisted `notices` array, as the risks section predicted.
+- TextHighlight: text containing `<` and `>` does not throw. `createInterpolateElement` fails on it and the string is shown literally, including the literal `<mark>` tags, so no highlight is drawn for that text. Plain text highlights normally.
+- ExternalLink renders the anchor with the external icon (not clicked).
+- Disabled: `isDisabled` makes the child field inert (typing is ignored) and toggling it off restores typing. The component adds no visual dimming in 7.1.4.
+- Notice, NoticeList, Snackbar, Motion, MenuItemsChoice, NavigableMenu (`lastIndex` from onNavigate), TabPanel, ClipboardButton, AnimatePresence, Animate, TabbableContainer, Spinner, ProgressBar, SandBox, Tip, VisuallyHidden, IconButton, MenuGroup, MenuItem, FocusableIframe, DropdownContentWrapper: render and respond as designed.
+
+### Fixes
+
+- Popover → `src/blocks/Popover/edit.js`: the popover content had no focusable element, so `focusOnMount="firstElement"` had no target, focus stayed on the trigger and Escape did not close it (Popover only handles Escape from inside itself). Added a small "Close" button to the popover content; now focus moves into the popover, Escape closes it and focus returns to the trigger.
+
+### Still imperfect, not fixed
+
+- DropdownMenu: opening the menu with the ArrowDown key from the toggle also lets the editor's writing flow act on the key, and after Escape the selection had moved to the next block. Opening it by click, then Escape, keeps selection and returns focus to the toggle. Editor behaviour for arrow keys on a button inside a block; left as is.
+- Guide: closing with Escape counts as finishing (`timesFinished` increments), because Guide calls `onFinish` when it closes. Component behaviour.
+- The Draggable clone position was only checked through its inline transform (translate matches the handle's box); no visual drag could be captured, so `appendToOwnerDocument` was not needed but was not stress-tested.
+
+### Limits of this verification
+
+The browser JavaScript tool was declined by the user partway through (during the NavigatorScreen params check). Before that, JavaScript was used for the all-blocks render and inspector sweep, the overlay open/Escape/focus-return checks, the Draggable and DropZone drag simulation and the Navigator family clicks. Everything after it (the second pass over Animate, AnimatePresence, ClipboardButton, Disabled, MenuItemsChoice, Motion, NavigableMenu, Notice, NoticeList, Snackbar, SnackbarList, TabPanel, TextHighlight, plus save, reload and the front end) used screenshots, clicks, form input and page text only. Blocks not listed there (for example FocusableIframe's focus button, IconButton, MenuGroup and MenuItem clicks, SandBox toggles, ProgressBar, Spinner, Tip, VisuallyHidden, TabbableContainer's key handling) were confirmed to render with their inspector panel and attribute JSON, but their controls were not each exercised.
+
+### Console
+
+Judged harmless: the deprecation warnings listed in "Runtime risks" (Animate, Tip, ClipboardButton, IconButton, DropZoneProvider, FocusableIframe, GuidePage, NavigatorToParentButton); block-editor deprecation warnings from other families' blocks sharing the same browser console buffer. Errors from `UseBackgroundProps` and `UseBlockCommands` (other families, not on this page) and one 403 for an unnamed resource appeared in the shared console buffer; none came from a block in this family.

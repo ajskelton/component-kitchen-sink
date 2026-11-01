@@ -206,6 +206,16 @@ export default function Edit( { attributes, setAttributes } ) {
 								'This is the Popover content.',
 								'component-kitchen-sink'
 							) }
+							{ /* A focusable child, so focusOnMount has a target and Escape (handled by the popover dialog) closes it. */ }
+							<div style={ { marginTop: 8 } }>
+								<Button
+									variant="tertiary"
+									size="compact"
+									onClick={ () => setIsOpen( false ) }
+								>
+									{ __( 'Close', 'component-kitchen-sink' ) }
+								</Button>
+							</div>
 						</div>
 					</Popover>
 				) }
