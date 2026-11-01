@@ -30,7 +30,7 @@
         "all",
         "titleContains"
       ],
-      "default": "all"
+      "default": "titleContains"
     },
     "blockName": {
       "type": "string",
@@ -38,7 +38,7 @@
     },
     "titleFilter": {
       "type": "string",
-      "default": ""
+      "default": "large"
     },
     "replaceBlock": {
       "type": "boolean",

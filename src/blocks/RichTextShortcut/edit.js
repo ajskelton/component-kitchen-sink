@@ -39,7 +39,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						value={ character }
 						maxLength={ 1 }
 						help={ __(
-							'The key that triggers the shortcut.',
+							'The key that triggers the shortcut. Avoid keys core already binds (b, i, k with primary or primaryShift, u, x): both handlers run and the later one overwrites this one.',
 							'component-kitchen-sink'
 						) }
 						onChange={ ( next ) =>

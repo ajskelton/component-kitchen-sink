@@ -13,18 +13,19 @@
   "attributes": {
     "content": {
       "type": "string",
-      "default": "Focus here, then press Cmd/Ctrl+B or Cmd/Ctrl+I."
+      "default": "Focus here, then press Backspace (deleteContentBackward)."
     },
     "inputType": {
       "type": "string",
       "enum": [
+        "deleteContentBackward",
         "formatBold",
         "formatItalic",
         "formatUnderline",
         "insertFromPaste",
         "deleteByCut"
       ],
-      "default": "formatBold"
+      "default": "deleteContentBackward"
     },
     "handled": {
       "type": "number",

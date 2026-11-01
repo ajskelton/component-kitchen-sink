@@ -8,6 +8,7 @@ import { Button, PanelBody, SelectControl } from '@wordpress/components';
 import './editor.scss';
 
 const INPUT_TYPE_OPTIONS = [
+	'deleteContentBackward',
 	'formatBold',
 	'formatItalic',
 	'formatUnderline',
@@ -32,7 +33,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						value={ inputType }
 						options={ INPUT_TYPE_OPTIONS }
 						help={ __(
-							'The InputEvent.inputType the component listens for.',
+							'The InputEvent.inputType the component listens for (beforeinput). deleteContentBackward (Backspace) fires reliably; the format* types rarely reach it because the editor handles those shortcuts itself.',
 							'component-kitchen-sink'
 						) }
 						onChange={ ( next ) =>

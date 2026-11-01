@@ -24,7 +24,7 @@
 		},
 		"isAppender": {
 			"type": "boolean",
-			"default": false
+			"default": true
 		},
 		"isQuick": {
 			"type": "boolean",

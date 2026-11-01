@@ -17,7 +17,7 @@
 		},
 		"character": {
 			"type": "string",
-			"default": "k"
+			"default": "y"
 		},
 		"type": {
 			"type": "string",

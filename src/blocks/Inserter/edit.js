@@ -64,6 +64,10 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 					/>
 					<ToggleControl
 						label="isAppender"
+						help={ __(
+							'On inserts into this block (rootClientId). Off inserts after the selected block, beside this one.',
+							'component-kitchen-sink'
+						) }
 						checked={ isAppender }
 						onChange={ ( next ) =>
 							setAttributes( { isAppender: next } )

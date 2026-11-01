@@ -63,3 +63,45 @@ None. All 40 requested exports have a block.
 - BlockStyles renders its own ToolsPanel in the inspector (not in the canvas). The `is-style-*` rules are scoped in `style.scss`.
 - BlockPreview and BlockPatternsList render iframes; with many previews the editor may be slow. UseBlockPreview renders in place, without an iframe.
 - Worktree note: the worktree branch started from an older commit than `feature/component-test-blocks`; it was fast-forwarded to 073149f so the docs and scripts exist.
+
+## Verification
+
+Test page: "Kitchen Sink: Content, links and media", page ID 41, http://kitchen-sink.test/?page_id=41 (editor: http://kitchen-sink.test/wp-admin/post.php?post=41&action=edit). It holds all 40 blocks. Checked against WordPress 7.1.4's bundled packages. Build and `npm run lint:js` pass. After a save and reload all 40 blocks validate, the inner blocks persist, and the front end prints every block heading and attribute JSON (inner blocks included) with no PHP notices; the PHP error log gained no lines.
+
+Blocks checked (all 40): BlockColorsStyleSelector, BlockEditorAutocomplete, BlockIcon, BlockPatternSetup, BlockPatternsList, BlockPreview, BlockStyles, BlockTitle, BlockVariationPicker, BlockVariationTransforms, ButtonBlockAppender, ButtonBlockerAppender, DefaultBlockAppender, ExperimentalLinkControl, ImageEditor, ImageSizeControl, ImageURLInputUI, InnerBlocks, Inserter, InserterMenuExtension, Library, LinkControl, LinkControlSearchInput, LinkControlSearchItem, LinkControlSearchResults, MediaPlaceholder, MediaReplaceFlow, MediaUpload, MediaUploadCheck, PlainText, RichText, RichTextInputEvent, RichTextShortcut, RichTextToolbarButton, URLInput, URLInputButton, URLPopover, UseBlockPreview, UseInnerBlocksProps, Warning.
+
+### Fixes
+
+- BlockPatternSetup: with the default `all` pattern source it rendered one preview iframe per pattern (103 here), a 36,000 px tall block that exhausted the browser's resource limit (`ERR_INSUFFICIENT_RESOURCES`) for the whole editor. The default is now `filterPatternsFn (title contains)` with "large" (4 patterns), and `editor.scss` caps the setup at 480 px with scrolling. Choosing "all allowed patterns" in the inspector still works but is slow.
+- Inserter: it did not insert into its own inner blocks. With `isAppender` off, Inserter inserts after the selected block at its parent (the new paragraph landed beside the block, not inside it). `isAppender` now defaults to true, and the toggle has help text explaining the difference.
+- RichTextShortcut: the default shortcut `primaryShift + k` collides with core's "unlink" shortcut. Both handlers run and core's, working from the same stale value, overwrote the `<mark>` format (the use count rose but the text never changed). Default character is now `y`, and the inspector help warns about keys core already binds.
+- RichTextInputEvent: the format* input types (formatBold, formatItalic, ...) never arrive, because the editor handles the Cmd/Ctrl+B and Cmd/Ctrl+I shortcuts itself and calls `preventDefault`, so no `beforeinput` event is produced. Added `deleteContentBackward` (Backspace), which is delivered reliably, made it the default, and changed the sample text to match. The format* options remain for comparison.
+- Test page only: UseInnerBlocksProps' `save` returns a wrapper `<div>`, so a bare self-closing comment is invalid in the editor ("Block contains unexpected or invalid content") until it is recovered and saved. The page content now carries the wrapper. A block inserted from the inserter is saved correctly.
+
+### Works on this site
+
+- RichText (bold, italic, link, More menu), PlainText, URLInput (static list suggestions, selected title stored), URLInputButton, URLPopover (LinkViewer shown), LinkControl and ExperimentalLinkControl (editor link suggestions list the site's pages; picking one or typing a URL persists), LinkControlSearchInput/Item/Results (static data, clicks counted).
+- RichTextShortcut (after the fix), RichTextToolbarButton ("Highlight (demo)" appears under the format toolbar's More menu and toggles a `<mark>`), RichTextInputEvent (after the fix). A core paragraph's More menu shows no "(demo)" entries and is otherwise unchanged, so the global format types do not leak.
+- BlockEditorAutocomplete: typing `~app` opens the popover, Enter inserts the emoji and the caret is restored (typing continues after it); the `#` colors completer added through the `editor.Autocomplete.completers` filter works too.
+- InnerBlocks, UseInnerBlocksProps, ButtonBlockAppender (single allowed type changes the label to "Add paragraph" and inserts directly), DefaultBlockAppender, Inserter (popover opens, inserts into the block): inner blocks persist across save and reload and render.php prints them on the front end.
+- Library (blocks tab, clicking a block adds to the nested editor), InserterMenuExtension (fill shows under the global inserter's results and echoes the search term), BlockPreview and UseBlockPreview presets, BlockPatternsList (hover and click handlers fire, pattern count control works), BlockPatternSetup with the default `onBlockPatternSelect` toggle off (selection stored in `lastSelected`; the block stays), BlockStyles (the Styles tab in the inspector lists the four styles; selecting "Fancy" adds `is-style-fancy` and the dashed border appears), BlockTitle, BlockIcon, BlockVariationPicker, BlockVariationTransforms, BlockColorsStyleSelector, Warning, ImageSizeControl, ImageURLInputUI (toolbar Link button offers "Link to image file"), MediaUploadCheck (fallback shows when the simulate toggle is on).
+- MediaUpload opens the media modal (`editor.MediaUpload` filter is present); MediaReplaceFlow's Replace menu lists Open Media Library, Upload and the URL field; MediaPlaceholder "Insert from URL" stores `mediaUrl`.
+
+### Not exercised
+
+- The media library has no attachment ("no attachment"), so nothing was uploaded, picked or replaced through MediaUpload, MediaReplaceFlow or MediaPlaceholder's Upload/Library buttons.
+- ImageEditor: its crop UI was rendered once with a core image URL (`/wp-includes/images/w-logo-blue.png`, media id 0) to confirm it mounts; the save path was never used. The attributes were cleared afterwards.
+- BlockPatternSetup with "default onBlockPatternSelect" on (it replaces the block), the dropdown and button-row paths of BlockVariationTransforms, creating a post through LinkControl's "Create" suggestion, and InnerBlocks `template` changes after the area already has content (the template is only applied on first insertion).
+
+### Still broken or noisy
+
+- Every preview iframe (BlockPatternSetup, BlockPatternsList, BlockPreview) loads the editor assets of all the plugin's blocks, about 629 stylesheet links each. With 8 iframes Chrome logs hundreds of `ERR_INSUFFICIENT_RESOURCES` errors on load and some preview iframes may come up partly unstyled. This is a consequence of registering hundreds of blocks with their own `style`/`editorStyle`, not of these blocks; it was reduced here (11 iframes down to 8) but not removed. A couple of 404 resource errors also appear on load that could not be traced to a block.
+- BlockVariationTransforms shows its transform buttons twice in the inspector (Gutenberg's own plus the block's panel), as predicted. No fix needed.
+- The BlockColorsStyleSelector toolbar icon takes a moment to paint its colors; it is a deprecated export.
+
+### Console warnings judged harmless
+
+- Deprecation notices, on purpose: `ButtonBlockerAppender` (5.9), `__experimentalLinkControl`, `__experimentalLinkControlSearchInput/Item/Results` (6.8), `BlockColorsStyleSelector` (6.1) and `__experimentalImageEditor` (7.1).
+- `global-styles-css-custom-properties-inline-css was added to the iframe incorrectly`: core, not this plugin.
+- The `beforeunload` "never had a user gesture" message when navigating away from the editor.
+- "Block validation failed" for ajs/use-inner-blocks-props on the first load of the page before its content carried the wrapper `<div>` (see Fixes).
