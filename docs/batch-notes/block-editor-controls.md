@@ -67,3 +67,36 @@ None: all 44 requested exports have a block. ToolSelector and PreviewOptions are
 - ColorGradientControl, ColorGradientSettingsDropdown, PanelColorGradientSettings and DuotoneControl store cleared values as an empty string, so a cleared swatch returns to its default.
 - BlockEditorFontSizePicker: the block-editor FontSizePicker takes font sizes from `typography.fontSizes`; with a theme that defines none only the custom input appears.
 - HeadingLevelDropdown with the "with paragraph" options passes 0 as a level; the canvas renders a `p` for it.
+
+## Verification
+
+Page ID 34, "Kitchen Sink: Block editor controls": editor `http://kitchen-sink.test/wp-admin/post.php?post=34&action=edit`, front end `http://kitchen-sink.test/?page_id=34`. All 44 blocks checked against WordPress 7.1.4's bundled packages: each loads without a validation or error-boundary notice, shows its inspector panel, its controls write the attribute and the canvas `<pre>` JSON follows, the page saves, reloads with no invalid blocks and the saved attributes intact, and the front end prints every block's heading and JSON. No PHP log entries.
+
+### Fixed
+
+- FontFamilyControl: the inspector panel failed to render (TypeError "Cannot read properties of undefined (reading '0')" from CustomSelectControl, so the block showed no controls). The WordPress 7.1 FontFamilyControl spreads unknown props after its computed `options`, so passing `options: undefined` blanked the list. The `options` key is now only passed when the custom-options toggle is on.
+- BlockBindingsAttributeControl and BlockBindingsSourceFieldsList: added `usesContext: [ "postId", "postType" ]` so the bindings sources receive the post context. This does not change what shows on this site (see below) but lets post meta sources work where meta is registered.
+
+### Runtime risks, as observed
+
+- Block alignment: BlockAlignmentControl and BlockAlignmentToolbar both show an "Align" toolbar button at the top level with this theme, with none/wide/full/left/center/right options; choosing Wide wrote `wide`.
+- BlockControls (default group) and BlockFormatControls (inline group) both put their button in the block toolbar. The inline button shows for these non-text blocks too.
+- Colour pickers: ColorPalette, ColorGradientControl (colour and gradient tabs), ColorPaletteControl, ContrastChecker, ColorGradientSettingsDropdown, PanelColorSettings and PanelColorGradientSettings all show the theme palette (10 swatches, 12 gradients). Picking then Clear returns the attribute to an empty string. The ToolsPanel items and the panel menu ("Reset all", show/hide items) work.
+- BlockBindingsAttributeControl: its ToolsPanel item is hidden until added with the panel's "+" menu; once shown it reads "No sources available" with a disabled trigger. Registered sources are core/pattern-overrides, core/post-data (only for core/post-date), core/post-meta (no meta registered here) and core/term-data, so none offer a string field. Expected on this site; no meta was registered.
+- FontFamilyControl lists the theme fonts (Inter, Cardo, System Sans-serif, System Serif); custom options work. BlockEditorFontSizePicker shows the theme sizes (S, M, L, XL, XXL).
+- SpacingSizesControl: values set through the slider and through attributes persist across save and reload.
+- InspectorControls groups: `default` shows in the Settings tab; styles, typography, color, dimensions, border and layout show in the Styles tab under their own section; `advanced` shows in the Advanced panel; `bindings` shows in the Settings tab. `effects` and `position` rendered nothing for this block (those group slots only render for blocks with matching supports), and `list` renders nothing because the block has no inner blocks.
+- ToolSelector and PreviewOptions: mounting logs only deprecation warnings ("wp.blockEditor.PreviewOptions is deprecated…", "wp.blockEditor.ToolSelector is deprecated since version 6.9…").
+- HeadingLevelDropdown level 0 renders a `p` in the canvas and saves as `"level":0`.
+- DateFormatPicker: the canvas example renders through `wp.date` (`Nov 1, 2026`, and `2026-11-01` for `Y-m-d`).
+
+### Harmless console output
+
+- HeightControl logs "deprecated since version 7.0 and will be removed in version 7.2. Please use wp.blockEditor.DimensionControl" (the block exists to exercise the deprecated component). Consider retiring it when WordPress 7.2 lands.
+- The `values` attributes with an `{}` default (SpacingSizesControl, BorderRadiusControl) arrive in the editor as `[]` because the PHP-registered default is an empty array; the controls handle it.
+
+### Not exercised
+
+- ToolbarDropdown menus beyond BlockAlignmentControl (alignment, justify, vertical alignment, duotone and heading-level toolbar dropdowns) were confirmed present in the toolbar and wired through their inspector mirrors, not each opened.
+- BlockBindingsSourceFieldsList's submenus could not be opened because no source offers fields here.
+- The `block` and `other` groups of BlockControls and the `controls` prop were checked only as inspector attributes.

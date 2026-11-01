@@ -89,9 +89,12 @@ export default function Edit( { attributes, setAttributes } ) {
 		label,
 		size,
 		showSelectedHint,
-		options: useCustomOptions ? CUSTOM_OPTIONS : undefined,
 		hideLabelFromVision,
 		disabled,
+		// FontFamilyControl spreads unknown props over its computed options
+		// list, so an `options: undefined` key would blank the list and crash
+		// the underlying CustomSelectControl. Only pass the key when set.
+		...( useCustomOptions ? { options: CUSTOM_OPTIONS } : {} ),
 	};
 
 	return (
