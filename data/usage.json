@@ -1,6 +1,6 @@
 {
 	"blockLibraryVersion": "12.0.0",
-	"generatedAt": "2026-11-02T21:30:43.243Z",
+	"generatedAt": "2026-11-02T23:41:30.595Z",
 	"components": {
 		"block-editor:AlignmentControl": [
 			{
@@ -9297,5 +9297,5500 @@
 		"components:ToolbarButton": [
 			"utils/caption.jsx"
 		]
+	},
+	"blocks": {
+		"core/accordion": {
+			"name": "core/accordion",
+			"title": "Accordion",
+			"description": "Displays a foldable layout that groups content in collapsible sections.",
+			"category": "design",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:HeadingLevelDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/accordion-heading": {
+			"name": "core/accordion-heading",
+			"title": "Accordion Heading",
+			"description": "Displays a heading that toggles the accordion panel.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/accordion-item"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetSpacingClassesAndStyles": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:getTypographyClassesAndStyles": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/accordion-item": {
+			"name": "core/accordion-item",
+			"title": "Accordion Item",
+			"description": "Wraps the heading and panel in one unit.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/accordion"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/accordion-panel": {
+			"name": "core/accordion-panel",
+			"title": "Accordion Panel",
+			"description": "Contains the hidden or revealed content beneath the heading.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/accordion-item"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		},
+		"core/archives": {
+			"name": "core/archives",
+			"title": "Archives",
+			"description": "Display a date archive of your posts.",
+			"category": "widgets",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/audio": {
+			"name": "core/audio",
+			"title": "Audio",
+			"description": "Embed a simple audio player.",
+			"category": "media",
+			"keywords": [
+				"music",
+				"sound",
+				"podcast",
+				"recording"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetElementClassName": [
+					"save.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/avatar": {
+			"name": "core/avatar",
+			"title": "Avatar",
+			"description": "Add a user’s avatar.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ComboboxControl": [
+					"user-control.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:ResizableBox": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/block": {
+			"name": "core/block",
+			"title": "Pattern",
+			"description": "Reuse this design across your site.",
+			"category": "reusable",
+			"keywords": [
+				"reusable"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit.jsx"
+				],
+				"block-editor:RecursionProvider": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useHasRecursion": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/breadcrumbs": {
+			"name": "core/breadcrumbs",
+			"title": "Breadcrumbs",
+			"description": "Display a breadcrumb trail showing the path to the current page.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:CheckboxControl": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/button": {
+			"name": "core/button",
+			"title": "Button",
+			"description": "Prompt visitors to take action with a button-style link.",
+			"category": "design",
+			"keywords": [
+				"link"
+			],
+			"parent": [
+				"core/buttons"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetBorderClassesAndStyles": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetColorClassesAndStyles": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetDimensionsClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalGetElementClassName": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetGradientClass": [
+					"deprecated.jsx"
+				],
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetSpacingClassesAndStyles": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseColorProps": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"deprecated.jsx"
+				],
+				"block-editor:getTypographyClassesAndStyles": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:LinkControl": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBackgroundProps": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit.jsx"
+				],
+				"components:Popover": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/buttons": {
+			"name": "core/buttons",
+			"title": "Buttons",
+			"description": "Prompt visitors to take action with a group of button-style links.",
+			"category": "design",
+			"keywords": [
+				"link"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		},
+		"core/calendar": {
+			"name": "core/calendar",
+			"title": "Calendar",
+			"description": "A calendar of your site’s posts.",
+			"category": "widgets",
+			"keywords": [
+				"posts",
+				"archive"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/categories": {
+			"name": "core/categories",
+			"title": "Terms List",
+			"description": "Display a list of all terms of a given taxonomy.",
+			"category": "widgets",
+			"keywords": [
+				"categories"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/code": {
+			"name": "core/code",
+			"title": "Code",
+			"description": "Display code snippets that respect your spacing and tabs.",
+			"category": "text",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:RichText": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		},
+		"core/column": {
+			"name": "core/column",
+			"title": "Column",
+			"description": "A single column within a columns block.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/columns"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockVerticalAlignmentToolbar": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx",
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:__experimentalUnitControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalUseCustomUnits": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/columns": {
+			"name": "core/columns",
+			"title": "Columns",
+			"description": "Display content in multiple columns, with blocks added to each column.",
+			"category": "design",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalBlockVariationPicker": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockVerticalAlignmentToolbar": [
+					"edit.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"deprecated.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Path": [
+					"variations.jsx"
+				],
+				"components:SVG": [
+					"variations.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comment-author-avatar": {
+			"name": "core/comment-author-avatar",
+			"title": "Comment Author Avatar (deprecated)",
+			"description": "This block is deprecated. Please use the Avatar block instead.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/comment-template"
+			],
+			"components": {
+				"block-editor:__experimentalGetSpacingClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:PanelBody": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:ResizableBox": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comment-author-name": {
+			"name": "core/comment-author-name",
+			"title": "Comment Author Name",
+			"description": "Displays the name of the author of the comment.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/comment-template"
+			],
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comment-content": {
+			"name": "core/comment-content",
+			"title": "Comment Content",
+			"description": "Displays the contents of a comment.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/comment-template"
+			],
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Disabled": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comment-date": {
+			"name": "core/comment-date",
+			"title": "Comment Date",
+			"description": "Displays the date on which the comment was posted.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/comment-template"
+			],
+			"components": {
+				"block-editor:__experimentalDateFormatPicker": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comment-edit-link": {
+			"name": "core/comment-edit-link",
+			"title": "Comment Edit Link",
+			"description": "Displays a link to edit the comment in the WordPress Dashboard. This link is only visible to users with the edit comment capability.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/comment-template"
+			],
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comment-reply-link": {
+			"name": "core/comment-reply-link",
+			"title": "Comment Reply Link",
+			"description": "Displays a link to reply to a comment.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/comment-template"
+			],
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comment-template": {
+			"name": "core/comment-template",
+			"title": "Comment Template",
+			"description": "Contains the block elements used to display a comment, like the title, date, author, avatar and more.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/comments"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalUseBlockPreview": [
+					"edit.jsx"
+				],
+				"block-editor:BlockContextProvider": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"hooks.js"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comments": {
+			"name": "core/comments",
+			"title": "Comments",
+			"description": "An advanced block that allows displaying post comments using different visual configurations.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:AlignmentControl": [
+					"edit/comments-legacy.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit/comments-legacy.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit/comments-inspector-controls.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit/comments-inspector-controls.jsx"
+				],
+				"block-editor:store": [
+					"edit/placeholder.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit/comments-legacy.jsx",
+					"edit/index.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit/index.jsx",
+					"save.jsx"
+				],
+				"block-editor:Warning": [
+					"edit/comments-legacy.jsx"
+				],
+				"components:Button": [
+					"edit/comments-legacy.jsx"
+				]
+			}
+		},
+		"core/comments-pagination": {
+			"name": "core/comments-pagination",
+			"title": "Comments Pagination",
+			"description": "Displays a paginated navigation to next/previous set of comments, when applicable.",
+			"category": "theme",
+			"keywords": [],
+			"parent": [
+				"core/comments"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:InnerBlocks": [
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"comments-pagination-arrow-controls.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"comments-pagination-arrow-controls.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comments-pagination-next": {
+			"name": "core/comments-pagination-next",
+			"title": "Comments Next Page",
+			"description": "Displays the next comment's page link.",
+			"category": "theme",
+			"keywords": [],
+			"parent": [
+				"core/comments-pagination"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:PlainText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comments-pagination-numbers": {
+			"name": "core/comments-pagination-numbers",
+			"title": "Comments Page Numbers",
+			"description": "Displays a list of page numbers for comments pagination.",
+			"category": "theme",
+			"keywords": [],
+			"parent": [
+				"core/comments-pagination"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comments-pagination-previous": {
+			"name": "core/comments-pagination-previous",
+			"title": "Comments Previous Page",
+			"description": "Displays the previous comment's page link.",
+			"category": "theme",
+			"keywords": [],
+			"parent": [
+				"core/comments-pagination"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:PlainText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/comments-title": {
+			"name": "core/comments-title",
+			"title": "Comments Title",
+			"description": "Displays a title with the number of comments.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/comments"
+			],
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:HeadingLevelDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/cover": {
+			"name": "core/cover",
+			"title": "Cover",
+			"description": "Add an image or video with a text overlay.",
+			"category": "media",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalBlockAlignmentMatrixControl": [
+					"edit/block-controls.jsx"
+				],
+				"block-editor:__experimentalBlockFullHeightAligmentControl": [
+					"edit/block-controls.jsx"
+				],
+				"block-editor:__experimentalColorGradientSettingsDropdown": [
+					"edit/inspector-controls.jsx"
+				],
+				"block-editor:__experimentalGetGradientClass": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalUseGradient": [
+					"edit/index.jsx",
+					"edit/inspector-controls.jsx"
+				],
+				"block-editor:__experimentalUseMultipleOriginColorsAndGradients": [
+					"edit/inspector-controls.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit/block-controls.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit/cover-placeholder.jsx"
+				],
+				"block-editor:ColorPalette": [
+					"edit/index.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit/inspector-controls.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit/cover-placeholder.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit/block-controls.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit/block-controls.jsx",
+					"edit/index.jsx",
+					"edit/inspector-controls.jsx",
+					"edit/resizable-cover-popover.jsx",
+					"transforms.js"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx"
+				],
+				"block-editor:store": [
+					"edit/index.jsx",
+					"edit/inspector-controls.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit/index.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit/index.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"deprecated.jsx",
+					"edit/index.jsx",
+					"save.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit/inspector-controls.jsx"
+				],
+				"block-editor:withColors": [
+					"edit/index.jsx"
+				],
+				"components:__experimentalConfirmDialog": [
+					"edit/embed-video-url-input.jsx"
+				],
+				"components:__experimentalParseQuantityAndUnitFromRawValue": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:__experimentalUnitControl": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:__experimentalUseCustomUnits": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:FocalPointPicker": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:MenuItem": [
+					"edit/block-controls.jsx"
+				],
+				"components:Notice": [
+					"edit/embed-video-url-input.jsx"
+				],
+				"components:Placeholder": [
+					"edit/index.jsx"
+				],
+				"components:RangeControl": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:SandBox": [
+					"edit/index.jsx"
+				],
+				"components:Spinner": [
+					"edit/index.jsx"
+				],
+				"components:TextareaControl": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:TextControl": [
+					"edit/embed-video-url-input.jsx"
+				],
+				"components:ToggleControl": [
+					"edit/inspector-controls.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit/block-controls.jsx"
+				]
+			}
+		},
+		"core/details": {
+			"name": "core/details",
+			"title": "Details",
+			"description": "Hide and show additional content.",
+			"category": "text",
+			"keywords": [
+				"summary",
+				"toggle",
+				"disclosure"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InnerBlocks": [
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/embed": {
+			"name": "core/embed",
+			"title": "Embed",
+			"description": "Add a block that displays content pulled from other sites, like Twitter or YouTube.",
+			"category": "embed",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetElementClassName": [
+					"save.jsx"
+				],
+				"block-editor:BlockControls": [
+					"embed-controls.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"embed-placeholder.jsx",
+					"embed-preview.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"embed-controls.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalInputControl": [
+					"embed-placeholder.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"embed-controls.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"embed-controls.jsx"
+				],
+				"components:Button": [
+					"embed-placeholder.jsx"
+				],
+				"components:G": [
+					"icons.jsx"
+				],
+				"components:Path": [
+					"icons.jsx"
+				],
+				"components:Placeholder": [
+					"embed-placeholder.jsx",
+					"embed-preview.jsx"
+				],
+				"components:SandBox": [
+					"embed-preview.jsx"
+				],
+				"components:Spinner": [
+					"embed-loading.jsx"
+				],
+				"components:SVG": [
+					"icons.jsx"
+				],
+				"components:ToggleControl": [
+					"embed-controls.jsx"
+				],
+				"components:ToolbarButton": [
+					"embed-controls.jsx"
+				],
+				"components:ToolbarGroup": [
+					"embed-controls.jsx"
+				]
+			}
+		},
+		"core/file": {
+			"name": "core/file",
+			"title": "File",
+			"description": "Add a link to a downloadable file.",
+			"category": "media",
+			"keywords": [
+				"document",
+				"pdf",
+				"download"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetElementClassName": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"inspector.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"inspector.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"inspector.jsx"
+				],
+				"components:__unstableGetAnimateClassName": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"inspector.jsx"
+				],
+				"components:ResizableBox": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"inspector.jsx"
+				],
+				"components:ToggleControl": [
+					"inspector.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/footnotes": {
+			"name": "core/footnotes",
+			"title": "Footnotes",
+			"description": "Display footnotes added to the page.",
+			"category": "text",
+			"keywords": [
+				"references"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"format.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:RichTextToolbarButton": [
+					"format.jsx"
+				],
+				"block-editor:store": [
+					"format.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/freeform": {
+			"name": "core/freeform",
+			"title": "Classic",
+			"description": "Use the classic WordPress editor.",
+			"category": "text",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"convert-to-blocks-button.jsx",
+					"edit.jsx",
+					"modal.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx",
+					"modal.jsx"
+				],
+				"components:Flex": [
+					"modal.jsx"
+				],
+				"components:FlexItem": [
+					"modal.jsx"
+				],
+				"components:Modal": [
+					"modal.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"convert-to-blocks-button.jsx",
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/gallery": {
+			"name": "core/gallery",
+			"title": "Gallery",
+			"description": "Display multiple images in a rich gallery.",
+			"category": "media",
+			"keywords": [
+				"images",
+				"photos"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetElementClassName": [
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetGapCSSValue": [
+					"gallery-styles.js"
+				],
+				"block-editor:__experimentalUseBlockPreview": [
+					"dynamic-gallery.jsx"
+				],
+				"block-editor:BlockContextProvider": [
+					"dynamic-gallery.jsx"
+				],
+				"block-editor:BlockControls": [
+					"dynamic-gallery.jsx",
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"shared-icon.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"gallery-styles.js"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"gallery-styles.js",
+					"use-dynamic-gallery.js"
+				],
+				"block-editor:useBlockEditingMode": [
+					"dynamic-gallery.jsx",
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit.jsx",
+					"gallery-styles.js"
+				],
+				"block-editor:useStyleOverride": [
+					"gallery-styles.js"
+				],
+				"components:__experimentalConfirmDialog": [
+					"dynamic-gallery.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"dynamic-gallery.jsx",
+					"edit.jsx"
+				],
+				"components:MenuGroup": [
+					"edit.jsx"
+				],
+				"components:MenuItem": [
+					"edit.jsx"
+				],
+				"components:Notice": [
+					"dynamic-gallery.jsx"
+				],
+				"components:PanelBody": [
+					"dynamic-gallery.jsx"
+				],
+				"components:Placeholder": [
+					"dynamic-gallery.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx",
+					"order-controls.tsx"
+				],
+				"components:Spinner": [
+					"dynamic-gallery.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"dynamic-gallery.jsx"
+				],
+				"components:ToolbarDropdownMenu": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/group": {
+			"name": "core/group",
+			"title": "Group",
+			"description": "Gather blocks in a layout container.",
+			"category": "design",
+			"keywords": [
+				"container",
+				"wrapper",
+				"row",
+				"section"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:getColorClassName": [
+					"deprecated.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx",
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"placeholder.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:Button": [
+					"placeholder.jsx"
+				],
+				"components:Path": [
+					"placeholder.jsx"
+				],
+				"components:Placeholder": [
+					"placeholder.jsx"
+				],
+				"components:SVG": [
+					"placeholder.jsx"
+				]
+			}
+		},
+		"core/heading": {
+			"name": "core/heading",
+			"title": "Heading",
+			"description": "Introduce new sections and organize content to help visitors (and search engines) understand the structure of your content.",
+			"category": "text",
+			"keywords": [
+				"title",
+				"subtitle"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:getColorClassName": [
+					"deprecated.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		},
+		"core/home-link": {
+			"name": "core/home-link",
+			"title": "Home Link",
+			"description": "Create a link that always points to the homepage of the site. Usually not necessary if there is already a site title link present in the header.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/navigation"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:InnerBlocks": [
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:CheckboxControl": [
+					"edit.jsx"
+				],
+				"components:TextareaControl": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/html": {
+			"name": "core/html",
+			"title": "Custom HTML",
+			"description": "Add custom HTML code and preview it as you edit.",
+			"category": "widgets",
+			"keywords": [
+				"embed"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:PlainText": [
+					"modal.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit.jsx",
+					"modal.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"modal.jsx",
+					"preview.jsx"
+				],
+				"block-editor:transformStyles": [
+					"preview.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalHStack": [
+					"modal.jsx"
+				],
+				"components:__experimentalVStack": [
+					"edit.jsx",
+					"modal.jsx"
+				],
+				"components:Button": [
+					"edit.jsx",
+					"modal.jsx"
+				],
+				"components:Flex": [
+					"modal.jsx"
+				],
+				"components:Modal": [
+					"modal.jsx"
+				],
+				"components:Notice": [
+					"modal.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:privateApis": [
+					"modal.jsx"
+				],
+				"components:SandBox": [
+					"preview.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/icon": {
+			"name": "core/icon",
+			"title": "Icon",
+			"description": "Insert an SVG icon.",
+			"category": "media",
+			"keywords": [
+				"icon",
+				"svg"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalGetSpacingClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseColorProps": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:getDimensionsClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBackgroundProps": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"components/custom-inserter/icon-grid.jsx"
+				],
+				"components:DropdownMenu": [
+					"edit.jsx"
+				],
+				"components:Modal": [
+					"components/custom-inserter/index.jsx"
+				],
+				"components:Path": [
+					"icon.jsx"
+				],
+				"components:SearchControl": [
+					"components/custom-inserter/index.jsx"
+				],
+				"components:Spinner": [
+					"components/custom-inserter/index.jsx"
+				],
+				"components:SVG": [
+					"icon.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/image": {
+			"name": "core/image",
+			"title": "Image",
+			"description": "Insert an image to make a visual statement.",
+			"category": "media",
+			"keywords": [
+				"img",
+				"photo",
+				"picture"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetBorderClassesAndStyles": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetElementClassName": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"image.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalImageURLInputUI": [
+					"image.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx",
+					"image.jsx"
+				],
+				"block-editor:BlockControls": [
+					"image.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:BlockSettingsMenuControls": [
+					"image.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"image.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"image.jsx"
+				],
+				"block-editor:privateApis": [
+					"image.jsx",
+					"use-open-image-media-editor-modal.js"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"image.jsx",
+					"use-open-image-media-editor-modal.js"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useSettings": [
+					"image.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"image.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"image.jsx"
+				],
+				"components:__experimentalUseCustomUnits": [
+					"image.jsx"
+				],
+				"components:CheckboxControl": [
+					"image.jsx"
+				],
+				"components:DropdownMenu": [
+					"image.jsx"
+				],
+				"components:ExternalLink": [
+					"image.jsx"
+				],
+				"components:FocalPointPicker": [
+					"image.jsx"
+				],
+				"components:MenuItem": [
+					"image.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx",
+					"image.jsx"
+				],
+				"components:Popover": [
+					"image.jsx"
+				],
+				"components:ResizableBox": [
+					"image.jsx"
+				],
+				"components:Spinner": [
+					"image.jsx"
+				],
+				"components:TextareaControl": [
+					"image.jsx"
+				],
+				"components:TextControl": [
+					"image.jsx"
+				],
+				"components:ToolbarButton": [
+					"image.jsx"
+				],
+				"components:ToolbarGroup": [
+					"image.jsx"
+				],
+				"components:ToolbarItem": [
+					"image.jsx"
+				]
+			}
+		},
+		"core/latest-comments": {
+			"name": "core/latest-comments",
+			"title": "Latest Comments",
+			"description": "Display a list of your most recent comments.",
+			"category": "widgets",
+			"keywords": [
+				"recent comments"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/latest-posts": {
+			"name": "core/latest-posts",
+			"title": "Latest Posts",
+			"description": "Display a list of your most recent posts.",
+			"category": "widgets",
+			"keywords": [
+				"recent posts"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalImageSizeControl": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControlOptionIcon": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:QueryControls": [
+					"edit.jsx"
+				],
+				"components:RadioControl": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/list": {
+			"name": "core/list",
+			"title": "List",
+			"description": "An organized collection of items displayed in a specific order.",
+			"category": "text",
+			"keywords": [
+				"bullet list",
+				"ordered list",
+				"numbered list"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"ordered-list-settings.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"ordered-list-settings.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"ordered-list-settings.jsx"
+				],
+				"components:SelectControl": [
+					"ordered-list-settings.jsx"
+				],
+				"components:TextControl": [
+					"ordered-list-settings.jsx"
+				],
+				"components:ToggleControl": [
+					"ordered-list-settings.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/list-item": {
+			"name": "core/list-item",
+			"title": "List Item",
+			"description": "An individual item within a list.",
+			"category": "text",
+			"keywords": [],
+			"parent": [
+				"core/list"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"save.jsx"
+				],
+				"block-editor:privateApis": [
+					"index.js"
+				],
+				"block-editor:RichText": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"hooks/use-enter.js",
+					"hooks/use-merge.js",
+					"hooks/use-multi-select-tab.js",
+					"hooks/use-tab.js",
+					"utils.js"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/loginout": {
+			"name": "core/loginout",
+			"title": "Login/out",
+			"description": "Show login & logout links.",
+			"category": "theme",
+			"keywords": [
+				"login",
+				"logout",
+				"form"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/math": {
+			"name": "core/math",
+			"title": "Math",
+			"description": "Display mathematical notation using LaTeX.",
+			"category": "text",
+			"keywords": [
+				"equation",
+				"formula",
+				"latex",
+				"mathematics"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:Popover": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/media-text": {
+			"name": "core/media-text",
+			"title": "Media & Text",
+			"description": "Set media and words side-by-side for a richer layout.",
+			"category": "media",
+			"keywords": [
+				"image",
+				"video"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalImageURLInputUI": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx",
+					"media-container.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"media-container.jsx"
+				],
+				"block-editor:BlockVerticalAlignmentControl": [
+					"edit.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"deprecated.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"media-container.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"media-container.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"media-container.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ExternalLink": [
+					"edit.jsx"
+				],
+				"components:FocalPointPicker": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"media-container.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:ResizableBox": [
+					"media-container.jsx"
+				],
+				"components:Spinner": [
+					"media-container.jsx"
+				],
+				"components:TextareaControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/missing": {
+			"name": "core/missing",
+			"title": "Unsupported",
+			"description": "Your site doesn’t include support for this block.",
+			"category": "text",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/more": {
+			"name": "core/more",
+			"title": "More",
+			"description": "Content before this block is shown in the excerpt on blog and archive pages. Where a theme shows the full content instead, visitors get a “Read more” link to the rest of the post.",
+			"category": "design",
+			"keywords": [
+				"read more"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:PlainText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/navigation": {
+			"name": "core/navigation",
+			"title": "Navigation",
+			"description": "A collection of blocks that allow visitors to get around your site.",
+			"category": "theme",
+			"keywords": [
+				"menu",
+				"navigation",
+				"links"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalColorGradientSettingsDropdown": [
+					"edit/index.jsx"
+				],
+				"block-editor:__experimentalUseMultipleOriginColorsAndGradients": [
+					"edit/index.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit/index.jsx"
+				],
+				"block-editor:BlockPreview": [
+					"edit/overlay-preview.jsx"
+				],
+				"block-editor:BlockTitle": [
+					"edit/leaf-more-menu.jsx"
+				],
+				"block-editor:ContrastChecker": [
+					"edit/index.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"edit/index.jsx",
+					"edit/responsive-wrapper.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx",
+					"edit/inner-blocks.jsx",
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit/index.jsx",
+					"edit/menu-inspector-controls.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit/index.jsx",
+					"edit/menu-inspector-controls.jsx",
+					"edit/navigation-list-view-header.jsx"
+				],
+				"block-editor:RecursionProvider": [
+					"edit/index.jsx"
+				],
+				"block-editor:store": [
+					"edit/index.jsx",
+					"edit/inner-blocks.jsx",
+					"edit/leaf-more-menu.jsx",
+					"edit/menu-inspector-controls.jsx",
+					"edit/navigation-link-ui.jsx",
+					"edit/use-create-overlay.js",
+					"edit/use-inner-blocks.js",
+					"use-template-part-area-label.js"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit/index.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit/index.jsx"
+				],
+				"block-editor:useHasRecursion": [
+					"edit/index.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit/inner-blocks.jsx",
+					"edit/unsaved-inner-blocks.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit/use-layout-custom-properties.js"
+				],
+				"block-editor:useStyleOverride": [
+					"edit/use-layout-custom-properties.js"
+				],
+				"block-editor:Warning": [
+					"edit/deleted-navigation-warning.jsx",
+					"edit/index.jsx"
+				],
+				"block-editor:withColors": [
+					"edit/index.jsx"
+				],
+				"components:__experimentalConfirmDialog": [
+					"edit/navigation-menu-delete-control.jsx"
+				],
+				"components:__experimentalHeading": [
+					"edit/navigation-list-view-header.jsx"
+				],
+				"components:__experimentalHStack": [
+					"edit/navigation-list-view-header.jsx",
+					"edit/overlay-template-part-selector.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit/index.jsx",
+					"edit/overlay-menu-preview-controls.jsx",
+					"edit/overlay-menu-preview.jsx",
+					"edit/overlay-visibility-control.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"edit/index.jsx",
+					"edit/overlay-menu-preview-controls.jsx",
+					"edit/overlay-menu-preview.jsx",
+					"edit/overlay-visibility-control.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit/index.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit/index.jsx",
+					"edit/overlay-menu-preview.jsx"
+				],
+				"components:__experimentalVStack": [
+					"edit/overlay-menu-preview-button.jsx",
+					"edit/overlay-menu-preview-controls.jsx",
+					"edit/overlay-panel.jsx"
+				],
+				"components:Button": [
+					"edit/deleted-navigation-warning.jsx",
+					"edit/deleted-overlay-warning.jsx",
+					"edit/manage-menus-button.jsx",
+					"edit/navigation-menu-delete-control.jsx",
+					"edit/overlay-menu-preview-button.jsx",
+					"edit/overlay-template-part-selector.jsx",
+					"edit/placeholder/index.jsx",
+					"edit/responsive-wrapper.jsx"
+				],
+				"components:Disabled": [
+					"edit/unsaved-inner-blocks.jsx",
+					"edit/use-generate-default-navigation-title.js"
+				],
+				"components:DropdownMenu": [
+					"edit/leaf-more-menu.jsx",
+					"edit/navigation-menu-selector.jsx"
+				],
+				"components:FlexBlock": [
+					"edit/overlay-template-part-selector.jsx"
+				],
+				"components:FlexItem": [
+					"edit/overlay-template-part-selector.jsx"
+				],
+				"components:MenuGroup": [
+					"edit/leaf-more-menu.jsx",
+					"edit/navigation-menu-selector.jsx"
+				],
+				"components:MenuItem": [
+					"edit/leaf-more-menu.jsx",
+					"edit/manage-menus-button.jsx",
+					"edit/navigation-menu-selector.jsx"
+				],
+				"components:MenuItemsChoice": [
+					"edit/navigation-menu-selector.jsx"
+				],
+				"components:Notice": [
+					"edit/deleted-navigation-warning.jsx",
+					"edit/deleted-overlay-warning.jsx",
+					"edit/index.jsx"
+				],
+				"components:PanelBody": [
+					"edit/menu-inspector-controls.jsx",
+					"edit/overlay-panel.jsx"
+				],
+				"components:Placeholder": [
+					"edit/placeholder/index.jsx"
+				],
+				"components:SelectControl": [
+					"edit/overlay-template-part-selector.jsx"
+				],
+				"components:Spinner": [
+					"edit/index.jsx",
+					"edit/menu-inspector-controls.jsx",
+					"edit/overlay-preview.jsx",
+					"edit/placeholder/index.jsx"
+				],
+				"components:TextControl": [
+					"edit/navigation-menu-name-control.jsx"
+				],
+				"components:ToggleControl": [
+					"edit/index.jsx",
+					"edit/overlay-menu-preview-controls.jsx",
+					"edit/overlay-menu-preview.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit/index.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit/index.jsx"
+				]
+			}
+		},
+		"core/navigation-link": {
+			"name": "core/navigation-link",
+			"title": "Navigation Link",
+			"description": "Add a page, link, or another item to your navigation.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/navigation"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"shared/use-block-suggestions.js"
+				],
+				"block-editor:getColorClassName": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.tsx",
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:LinkControl": [
+					"link-ui/index.jsx"
+				],
+				"block-editor:privateApis": [
+					"link-ui/block-inserter.jsx",
+					"shared/controls.jsx",
+					"shared/use-block-suggestions.js",
+					"shared/use-link-preview.js"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"link-ui/block-inserter.jsx",
+					"shared/controls.jsx",
+					"shared/use-block-suggestions.js",
+					"shared/use-enable-link-status-validation.js",
+					"shared/use-handle-link-change.js"
+				],
+				"block-editor:useBlockBindingsUtils": [
+					"shared/use-entity-binding.js"
+				],
+				"block-editor:useBlockEditingMode": [
+					"link-ui/index.jsx",
+					"shared/use-entity-binding.js",
+					"shared/use-is-invalid-link.js"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalHStack": [
+					"link-ui/page-creator.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"shared/controls.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"shared/controls.jsx"
+				],
+				"components:__experimentalVStack": [
+					"link-ui/index.jsx",
+					"link-ui/page-creator.jsx"
+				],
+				"components:Button": [
+					"link-ui/dialog-wrapper.jsx",
+					"link-ui/index.jsx",
+					"link-ui/page-creator.jsx",
+					"shared/controls.jsx"
+				],
+				"components:CheckboxControl": [
+					"link-ui/page-creator.jsx",
+					"shared/controls.jsx"
+				],
+				"components:Notice": [
+					"link-ui/page-creator.jsx"
+				],
+				"components:Path": [
+					"icons.jsx"
+				],
+				"components:Popover": [
+					"link-ui/index.jsx"
+				],
+				"components:SVG": [
+					"icons.jsx"
+				],
+				"components:TextareaControl": [
+					"shared/controls.jsx"
+				],
+				"components:TextControl": [
+					"link-ui/page-creator.jsx",
+					"shared/controls.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/navigation-overlay-close": {
+			"name": "core/navigation-overlay-close",
+			"title": "Navigation Overlay Close",
+			"description": "A customizable button to close overlays.",
+			"category": "design",
+			"keywords": [
+				"close",
+				"overlay",
+				"navigation",
+				"menu"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/navigation-submenu": {
+			"name": "core/navigation-submenu",
+			"title": "Submenu",
+			"description": "Add a submenu to your navigation.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/navigation"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:Path": [
+					"icons.jsx"
+				],
+				"components:SVG": [
+					"icons.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/nextpage": {
+			"name": "core/nextpage",
+			"title": "Page Break",
+			"description": "Separate your content into a multi-page experience.",
+			"category": "design",
+			"keywords": [
+				"next page",
+				"pagination"
+			],
+			"parent": [
+				"core/post-content"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/page-list": {
+			"name": "core/page-list",
+			"title": "Page List",
+			"description": "Display a list of all pages.",
+			"category": "widgets",
+			"keywords": [
+				"menu",
+				"navigation"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"use-convert-to-navigation-links.js"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"edit.jsx"
+				],
+				"components:__experimentalConfirmDialog": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:ComboboxControl": [
+					"edit.jsx"
+				],
+				"components:Notice": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/page-list-item": {
+			"name": "core/page-list-item",
+			"title": "Page List Item",
+			"description": "Displays a page inside a list of all pages.",
+			"category": "widgets",
+			"keywords": [
+				"page",
+				"menu",
+				"navigation"
+			],
+			"parent": [
+				"core/page-list"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/paragraph": {
+			"name": "core/paragraph",
+			"title": "Paragraph",
+			"description": "Start with the basic building block of all narrative.",
+			"category": "text",
+			"keywords": [
+				"text"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"deprecated.jsx"
+				],
+				"block-editor:getFontSizeClass": [
+					"deprecated.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"deprecated-attributes.js",
+					"edit.jsx",
+					"use-enter.js"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/pattern": {
+			"name": "core/pattern",
+			"title": "Pattern Placeholder",
+			"description": "Show a block pattern.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/playlist": {
+			"name": "core/playlist",
+			"title": "Playlist",
+			"description": "Embed a simple playlist.",
+			"category": "media",
+			"keywords": [
+				"music",
+				"sound"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalColorGradientSettingsDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalGetElementClassName": [
+					"save.jsx"
+				],
+				"block-editor:__experimentalUseMultipleOriginColorsAndGradients": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Disabled": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/playlist-track": {
+			"name": "core/playlist-track",
+			"title": "Playlist track",
+			"description": "Playlist track.",
+			"category": "media",
+			"keywords": [
+				"music",
+				"sound"
+			],
+			"parent": [
+				"core/playlist"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit.jsx"
+				],
+				"block-editor:MediaUpload": [
+					"edit.jsx"
+				],
+				"block-editor:MediaUploadCheck": [
+					"edit.jsx"
+				],
+				"block-editor:PlainText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:BaseControl": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:PanelBody": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:TextareaControl": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-author": {
+			"name": "core/post-author",
+			"title": "Author (deprecated)",
+			"description": "This block is deprecated. Please use the Avatar block, the Author Name block, and the Author Biography block instead.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:AlignmentControl": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit.jsx",
+					"utils.js"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalText": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:__experimentalVStack": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:ComboboxControl": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-author-biography": {
+			"name": "core/post-author-biography",
+			"title": "Author Biography",
+			"description": "The author biography.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-author-name": {
+			"name": "core/post-author-name",
+			"title": "Author Name",
+			"description": "The author name.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-comment": {
+			"name": "core/post-comment",
+			"title": "Comment (deprecated)",
+			"description": "This block is deprecated. Please use the Comments block instead.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-comments-count": {
+			"name": "core/post-comments-count",
+			"title": "Comments Count",
+			"description": "Display a post's comments count.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-comments-form": {
+			"name": "core/post-comments-form",
+			"title": "Comments Form",
+			"description": "Display a post's comments form.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetElementClassName": [
+					"form.jsx"
+				],
+				"block-editor:store": [
+					"form.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"form.jsx"
+				],
+				"components:Button": [
+					"form.jsx"
+				]
+			}
+		},
+		"core/post-comments-link": {
+			"name": "core/post-comments-link",
+			"title": "Comments Link",
+			"description": "Displays the link to the current post comments.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-content": {
+			"name": "core/post-content",
+			"title": "Content",
+			"description": "Displays the contents of a post or page.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalUseBlockPreview": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit.jsx"
+				],
+				"block-editor:RecursionProvider": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useHasRecursion": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-date": {
+			"name": "core/post-date",
+			"title": "Date",
+			"description": "Display a custom date.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalDateFormatPicker": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalPublishDateTimePicker": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Dropdown": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-excerpt": {
+			"name": "core/post-excerpt",
+			"title": "Excerpt",
+			"description": "Display the excerpt.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-featured-image": {
+			"name": "core/post-featured-image",
+			"title": "Featured Image",
+			"description": "Display a post's featured image.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalColorGradientSettingsDropdown": [
+					"overlay-controls.jsx"
+				],
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx",
+					"overlay.jsx"
+				],
+				"block-editor:__experimentalUseGradient": [
+					"overlay-controls.jsx",
+					"overlay.jsx"
+				],
+				"block-editor:__experimentalUseMultipleOriginColorsAndGradients": [
+					"overlay-controls.jsx",
+					"overlay.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"dimension-controls.jsx",
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useSettings": [
+					"dimension-controls.jsx"
+				],
+				"block-editor:withColors": [
+					"overlay-controls.jsx",
+					"overlay.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx",
+					"overlay-controls.jsx"
+				],
+				"components:__experimentalUseCustomUnits": [
+					"dimension-controls.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:ExternalLink": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"overlay-controls.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-navigation-link": {
+			"name": "core/post-navigation-link",
+			"title": "Post Navigation Link",
+			"description": "Displays the next or previous post link that is adjacent to the current post.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetDimensionsClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalGetSpacingClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:useBackgroundProps": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-template": {
+			"name": "core/post-template",
+			"title": "Post Template",
+			"description": "Contains the block elements used to render a post, like the title, date, featured image, content or excerpt, and more.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/query"
+			],
+			"components": {
+				"block-editor:__experimentalUseBlockPreview": [
+					"edit.jsx"
+				],
+				"block-editor:BlockContextProvider": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-terms": {
+			"name": "core/post-terms",
+			"title": "Post Terms",
+			"description": "Post terms.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockDisplayInformation": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-time-to-read": {
+			"name": "core/post-time-to-read",
+			"title": "Time to Read",
+			"description": "Show minutes required to finish reading the post. Can also show a word count.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/post-title": {
+			"name": "core/post-title",
+			"title": "Title",
+			"description": "Displays the title of a post, page, or any other content-type.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:HeadingLevelDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:PlainText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ExternalLink": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/preformatted": {
+			"name": "core/preformatted",
+			"title": "Preformatted",
+			"description": "Add text that respects your spacing and tabs, and also allows styling.",
+			"category": "text",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:RichText": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		},
+		"core/pullquote": {
+			"name": "core/pullquote",
+			"title": "Pullquote",
+			"description": "Give special visual emphasis to a quote from your text.",
+			"category": "text",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:getColorClassName": [
+					"deprecated.jsx"
+				],
+				"block-editor:getColorObjectByAttributeValues": [
+					"deprecated.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"deprecated.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		},
+		"core/query": {
+			"name": "core/query",
+			"title": "Query Loop",
+			"description": "An advanced block that allows displaying post types based on different query parameters and visual configurations.",
+			"category": "theme",
+			"keywords": [
+				"posts",
+				"list",
+				"blog",
+				"blogs",
+				"custom post types"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalBlockPatternsList": [
+					"edit/pattern-selection.jsx"
+				],
+				"block-editor:__experimentalBlockVariationPicker": [
+					"edit/query-placeholder.jsx"
+				],
+				"block-editor:BlockContextProvider": [
+					"edit/pattern-selection.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit/query-toolbar.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit/query-content.jsx"
+				],
+				"block-editor:privateApis": [
+					"deprecated.jsx",
+					"edit/query-content.jsx"
+				],
+				"block-editor:store": [
+					"edit/index.jsx",
+					"edit/pattern-selection.jsx",
+					"edit/query-content.jsx",
+					"edit/query-placeholder.jsx",
+					"edit/query-toolbar.jsx",
+					"utils.js"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit/query-content.jsx",
+					"edit/query-placeholder.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"deprecated.jsx",
+					"edit/query-content.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalDropdownContentWrapper": [
+					"edit/query-toolbar.jsx"
+				],
+				"components:__experimentalNumberControl": [
+					"edit/inspector-controls/offset-controls.jsx",
+					"edit/inspector-controls/pages-control.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:__experimentalVStack": [
+					"edit/inspector-controls/index.jsx",
+					"edit/inspector-controls/taxonomy-controls.jsx"
+				],
+				"components:Button": [
+					"edit/query-placeholder.jsx"
+				],
+				"components:Dropdown": [
+					"edit/query-toolbar.jsx"
+				],
+				"components:FormTokenField": [
+					"edit/inspector-controls/author-control.jsx",
+					"edit/inspector-controls/format-controls.jsx",
+					"edit/inspector-controls/parent-control.jsx"
+				],
+				"components:Modal": [
+					"edit/pattern-selection.jsx"
+				],
+				"components:Notice": [
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:Path": [
+					"icons.jsx"
+				],
+				"components:Placeholder": [
+					"edit/query-placeholder.jsx"
+				],
+				"components:RangeControl": [
+					"edit/inspector-controls/per-page-control.jsx"
+				],
+				"components:SearchControl": [
+					"edit/pattern-selection.jsx"
+				],
+				"components:SelectControl": [
+					"edit/inspector-controls/index.jsx",
+					"edit/inspector-controls/order-control.jsx",
+					"edit/inspector-controls/sticky-control.jsx"
+				],
+				"components:SVG": [
+					"icons.jsx"
+				],
+				"components:TextControl": [
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:ToggleControl": [
+					"edit/inspector-controls/enhanced-pagination-control.jsx",
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit/query-toolbar.jsx"
+				]
+			}
+		},
+		"core/query-no-results": {
+			"name": "core/query-no-results",
+			"title": "No Results",
+			"description": "Contains the block elements used to render content when no query results are found.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/query"
+			],
+			"components": {
+				"block-editor:InnerBlocks": [
+					"save.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/query-pagination": {
+			"name": "core/query-pagination",
+			"title": "Pagination",
+			"description": "Displays a paginated navigation to next/previous set of posts, when applicable.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/query"
+			],
+			"components": {
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"query-pagination-arrow-controls.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"query-pagination-arrow-controls.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"query-pagination-label-control.jsx"
+				]
+			}
+		},
+		"core/query-pagination-next": {
+			"name": "core/query-pagination-next",
+			"title": "Next Page",
+			"description": "Displays the next posts page link.",
+			"category": "theme",
+			"keywords": [],
+			"parent": [
+				"core/query-pagination"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:PlainText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/query-pagination-numbers": {
+			"name": "core/query-pagination-numbers",
+			"title": "Page Numbers",
+			"description": "Displays a list of page numbers for pagination.",
+			"category": "theme",
+			"keywords": [],
+			"parent": [
+				"core/query-pagination"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/query-pagination-previous": {
+			"name": "core/query-pagination-previous",
+			"title": "Previous Page",
+			"description": "Displays the previous posts page link.",
+			"category": "theme",
+			"keywords": [],
+			"parent": [
+				"core/query-pagination"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:PlainText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/query-title": {
+			"name": "core/query-title",
+			"title": "Query Title",
+			"description": "Display the query title.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:HeadingLevelDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:Warning": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/query-total": {
+			"name": "core/query-total",
+			"title": "Query Total",
+			"description": "Display the total number of results in a query.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/query"
+			],
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Path": [
+					"icons.jsx"
+				],
+				"components:SVG": [
+					"icons.jsx"
+				],
+				"components:ToolbarDropdownMenu": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/quote": {
+			"name": "core/quote",
+			"title": "Quote",
+			"description": "Give quoted text visual emphasis. \"In quoting others, we cite ourselves.\" — Julio Cortázar",
+			"category": "text",
+			"keywords": [
+				"blockquote",
+				"cite"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:AlignmentControl": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"save.jsx",
+					"transforms.js"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:BlockQuotation": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/read-more": {
+			"name": "core/read-more",
+			"title": "Read More",
+			"description": "Displays the link of a post, page, or any other content-type.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/rss": {
+			"name": "core/rss",
+			"title": "RSS",
+			"description": "Display entries from any RSS or Atom feed.",
+			"category": "widgets",
+			"keywords": [
+				"atom",
+				"feed"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalInputControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:ExternalLink": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/search": {
+			"name": "core/search",
+			"title": "Search",
+			"description": "Help visitors find your content.",
+			"category": "widgets",
+			"keywords": [
+				"find"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetElementClassName": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseColorProps": [
+					"edit.jsx"
+				],
+				"block-editor:getDimensionsClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:getTypographyClassesAndStyles": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBackgroundProps": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:__experimentalUnitControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalUseCustomUnits": [
+					"edit.jsx"
+				],
+				"components:__experimentalVStack": [
+					"edit.jsx"
+				],
+				"components:ResizableBox": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/separator": {
+			"name": "core/separator",
+			"title": "Separator",
+			"description": "Create a break between ideas or sections with a horizontal separator.",
+			"category": "design",
+			"keywords": [
+				"horizontal-line",
+				"hr",
+				"divider"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetColorClassesAndStyles": [
+					"save.jsx"
+				],
+				"block-editor:__experimentalUseColorProps": [
+					"edit.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:HorizontalRule": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/shortcode": {
+			"name": "core/shortcode",
+			"title": "Shortcode",
+			"description": "Insert additional custom elements with a WordPress shortcode.",
+			"category": "widgets",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:PlainText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/site-logo": {
+			"name": "core/site-logo",
+			"title": "Site Logo",
+			"description": "Display an image to represent this site. Update this block and the changes apply everywhere.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:DropZone": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:ResizableBox": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/site-tagline": {
+			"name": "core/site-tagline",
+			"title": "Site Tagline",
+			"description": "Describe in a few words what this site is about. This is important for search results, sharing on social media, and gives overall clarity to visitors.",
+			"category": "theme",
+			"keywords": [
+				"description"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:HeadingLevelDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Path": [
+					"icon.jsx"
+				],
+				"components:SVG": [
+					"icon.jsx"
+				]
+			}
+		},
+		"core/site-title": {
+			"name": "core/site-title",
+			"title": "Site Title",
+			"description": "Displays the name of this site. Update the block, and the changes apply everywhere it’s used. This will also appear in the browser title bar and in search results.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:HeadingLevelDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/social-link": {
+			"name": "core/social-link",
+			"title": "Social Icon",
+			"description": "Display an icon linking to a social profile or site.",
+			"category": "widgets",
+			"keywords": [],
+			"parent": [
+				"core/social-links"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:URLInput": [
+					"edit.jsx"
+				],
+				"block-editor:URLPopover": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalInputControlSuffixWrapper": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:Dropdown": [
+					"edit.jsx"
+				],
+				"components:ExternalLink": [
+					"edit.jsx"
+				],
+				"components:Icon": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/social-links": {
+			"name": "core/social-links",
+			"title": "Social Icons",
+			"description": "Display icons linking to your social profiles or sites.",
+			"category": "widgets",
+			"keywords": [
+				"links"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalColorGradientSettingsDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseMultipleOriginColorsAndGradients": [
+					"edit.jsx"
+				],
+				"block-editor:ContrastChecker": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"deprecated.jsx",
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:withColors": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/spacer": {
+			"name": "core/spacer",
+			"title": "Spacer",
+			"description": "Add white space between blocks and customize its height.",
+			"category": "design",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalSpacingSizesControl": [
+					"controls.jsx"
+				],
+				"block-editor:getCustomValueFromPreset": [
+					"edit.jsx"
+				],
+				"block-editor:getSpacingPresetCssVar": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"controls.jsx"
+				],
+				"block-editor:isValueSpacingPreset": [
+					"controls.jsx"
+				],
+				"block-editor:privateApis": [
+					"controls.jsx",
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useSettings": [
+					"controls.jsx"
+				],
+				"components:__experimentalParseQuantityAndUnitFromRawValue": [
+					"controls.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"controls.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"controls.jsx"
+				],
+				"components:__experimentalUnitControl": [
+					"controls.jsx"
+				],
+				"components:__experimentalUseCustomUnits": [
+					"controls.jsx"
+				],
+				"components:ResizableBox": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/tab-list": {
+			"name": "core/tab-list",
+			"title": "Tab List",
+			"description": "Display the tab buttons for a tabbed interface.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/tabs"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetBorderClassesAndStyles": [
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetColorClassesAndStyles": [
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetSpacingClassesAndStyles": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseColorProps": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"tab-movers.jsx"
+				],
+				"block-editor:getBackgroundClassesAndStyles": [
+					"save.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx",
+					"tab-movers.jsx"
+				],
+				"block-editor:useBackgroundProps": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"tab-movers.jsx"
+				]
+			}
+		},
+		"core/tab-panel": {
+			"name": "core/tab-panel",
+			"title": "Tab Panel",
+			"description": "Content for a tab in a tabbed interface.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/tab-panels"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"controls.jsx"
+				],
+				"block-editor:store": [
+					"controls.jsx",
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"controls.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"controls.jsx"
+				],
+				"components:CheckboxControl": [
+					"controls.jsx"
+				]
+			}
+		},
+		"core/tab-panels": {
+			"name": "core/tab-panels",
+			"title": "Tab Panels",
+			"description": "Container for tab panel content in a tabbed interface.",
+			"category": "design",
+			"keywords": [],
+			"parent": [
+				"core/tabs"
+			],
+			"ancestor": null,
+			"components": {
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		},
+		"core/table": {
+			"name": "core/table",
+			"title": "Table",
+			"description": "Create structured content in rows and columns to display information.",
+			"category": "text",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetBorderClassesAndStyles": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetColorClassesAndStyles": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetElementClassName": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalUseBorderProps": [
+					"edit.jsx"
+				],
+				"block-editor:__experimentalUseColorProps": [
+					"edit.jsx"
+				],
+				"block-editor:AlignmentControl": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:getBackgroundClassesAndStyles": [
+					"save.jsx"
+				],
+				"block-editor:getColorClassName": [
+					"deprecated.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useBackgroundProps": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalHasSplitBorders": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Button": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarDropdownMenu": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/table-of-contents": {
+			"name": "core/table-of-contents",
+			"title": "Table of Contents",
+			"description": "Summarize your post with a list of headings. Add HTML anchors to Heading blocks to link them here.",
+			"category": "design",
+			"keywords": [
+				"document outline",
+				"summary"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx"
+				],
+				"components:__experimentalConfirmDialog": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/tabs": {
+			"name": "core/tabs",
+			"title": "Tabs",
+			"description": "Display content in a tabbed interface to help users navigate detailed content with ease.",
+			"category": "design",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"tab-toolbar-controls.jsx"
+				],
+				"block-editor:store": [
+					"tab-toolbar-controls.jsx",
+					"use-tab-actions.js",
+					"use-tab-list-items-sync.js"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:ToolbarButton": [
+					"tab-toolbar-controls.jsx"
+				],
+				"components:ToolbarGroup": [
+					"tab-toolbar-controls.jsx"
+				]
+			}
+		},
+		"core/tag-cloud": {
+			"name": "core/tag-cloud",
+			"title": "Tag Cloud",
+			"description": "A cloud of popular keywords, each sized by how often it appears.",
+			"category": "widgets",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit.jsx"
+				],
+				"components:__experimentalParseQuantityAndUnitFromRawValue": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:__experimentalUnitControl": [
+					"edit.jsx"
+				],
+				"components:__experimentalUseCustomUnits": [
+					"edit.jsx"
+				],
+				"components:Flex": [
+					"edit.jsx"
+				],
+				"components:FlexItem": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/template-part": {
+			"name": "core/template-part",
+			"title": "Template Part",
+			"description": "Edit the different global regions of your site, like the header, footer, sidebar, or create your own.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalBlockPatternsList": [
+					"edit/index.jsx",
+					"edit/selection-modal.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit/index.jsx"
+				],
+				"block-editor:BlockSettingsMenuControls": [
+					"edit/index.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"edit/inner-blocks.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit/index.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit/advanced-controls.jsx"
+				],
+				"block-editor:RecursionProvider": [
+					"edit/index.jsx"
+				],
+				"block-editor:store": [
+					"edit/index.jsx",
+					"edit/inner-blocks.jsx",
+					"edit/utils/hooks.js"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit/inner-blocks.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit/index.jsx"
+				],
+				"block-editor:useHasRecursion": [
+					"edit/index.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit/inner-blocks.jsx"
+				],
+				"block-editor:useSettings": [
+					"edit/inner-blocks.jsx"
+				],
+				"block-editor:Warning": [
+					"edit/index.jsx"
+				],
+				"components:__experimentalHStack": [
+					"edit/import-controls.jsx",
+					"edit/selection-modal.jsx",
+					"edit/title-modal.jsx"
+				],
+				"components:__experimentalSpacer": [
+					"edit/import-controls.jsx"
+				],
+				"components:__experimentalVStack": [
+					"edit/title-modal.jsx"
+				],
+				"components:Button": [
+					"edit/import-controls.jsx",
+					"edit/placeholder.jsx",
+					"edit/title-modal.jsx"
+				],
+				"components:FlexBlock": [
+					"edit/import-controls.jsx"
+				],
+				"components:FlexItem": [
+					"edit/import-controls.jsx"
+				],
+				"components:MenuItem": [
+					"edit/index.jsx"
+				],
+				"components:Modal": [
+					"edit/index.jsx",
+					"edit/title-modal.jsx"
+				],
+				"components:PanelBody": [
+					"edit/index.jsx"
+				],
+				"components:Placeholder": [
+					"edit/placeholder.jsx"
+				],
+				"components:SearchControl": [
+					"edit/selection-modal.jsx"
+				],
+				"components:SelectControl": [
+					"edit/advanced-controls.jsx",
+					"edit/import-controls.jsx"
+				],
+				"components:Spinner": [
+					"edit/index.jsx",
+					"edit/placeholder.jsx"
+				],
+				"components:TextControl": [
+					"edit/advanced-controls.jsx",
+					"edit/title-modal.jsx"
+				],
+				"components:ToolbarButton": [
+					"edit/index.jsx"
+				]
+			}
+		},
+		"core/term-count": {
+			"name": "core/term-count",
+			"title": "Term Count",
+			"description": "Displays the post count of a taxonomy term.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:Path": [
+					"icons.jsx"
+				],
+				"components:SVG": [
+					"icons.jsx"
+				],
+				"components:ToolbarDropdownMenu": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/term-description": {
+			"name": "core/term-description",
+			"title": "Term Description",
+			"description": "Display the description of categories, tags and custom taxonomies when viewing an archive.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/term-name": {
+			"name": "core/term-name",
+			"title": "Term Name",
+			"description": "Displays the name of a taxonomy term.",
+			"category": "theme",
+			"keywords": [
+				"term title"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:HeadingLevelDropdown": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit.jsx"
+				],
+				"components:ToggleControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/term-template": {
+			"name": "core/term-template",
+			"title": "Term Template",
+			"description": "Contains the block elements used to render a taxonomy term, like the name, description, and more.",
+			"category": "theme",
+			"keywords": [],
+			"parent": null,
+			"ancestor": [
+				"core/terms-query"
+			],
+			"components": {
+				"block-editor:__experimentalUseBlockPreview": [
+					"edit.jsx"
+				],
+				"block-editor:BlockContextProvider": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InnerBlocks": [
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit.jsx"
+				],
+				"components:ToolbarGroup": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/terms-query": {
+			"name": "core/terms-query",
+			"title": "Terms Query",
+			"description": "An advanced block that allows displaying taxonomy terms based on different query parameters and visual configurations.",
+			"category": "theme",
+			"keywords": [
+				"terms",
+				"taxonomy",
+				"categories",
+				"tags",
+				"list"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalBlockVariationPicker": [
+					"edit/terms-query-placeholder.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit/inspector-controls/advanced-controls.jsx",
+					"edit/inspector-controls/index.jsx"
+				],
+				"block-editor:privateApis": [
+					"edit/inspector-controls/advanced-controls.jsx"
+				],
+				"block-editor:store": [
+					"edit/index.jsx",
+					"edit/terms-query-placeholder.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit/terms-query-content.jsx",
+					"edit/terms-query-placeholder.jsx",
+					"save.jsx"
+				],
+				"block-editor:useInnerBlocksProps": [
+					"edit/terms-query-content.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalToggleGroupControl": [
+					"edit/inspector-controls/inherit-control.jsx"
+				],
+				"components:__experimentalToggleGroupControlOption": [
+					"edit/inspector-controls/inherit-control.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit/inspector-controls/index.jsx"
+				],
+				"components:FormTokenField": [
+					"edit/inspector-controls/include-control.jsx"
+				],
+				"components:Path": [
+					"variations.jsx"
+				],
+				"components:RangeControl": [
+					"edit/inspector-controls/max-terms-control.jsx"
+				],
+				"components:SelectControl": [
+					"edit/inspector-controls/order-control.jsx",
+					"edit/inspector-controls/taxonomy-control.jsx"
+				],
+				"components:SVG": [
+					"variations.jsx"
+				],
+				"components:ToggleControl": [
+					"edit/inspector-controls/empty-terms-control.jsx",
+					"edit/inspector-controls/nested-terms-control.jsx"
+				]
+			}
+		},
+		"core/text-columns": {
+			"name": "core/text-columns",
+			"title": "Text Columns (deprecated)",
+			"description": "This block is deprecated. Please use the Columns block instead.",
+			"category": "design",
+			"keywords": [],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:BlockAlignmentToolbar": [
+					"edit.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:RichText": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:PanelBody": [
+					"edit.jsx"
+				],
+				"components:RangeControl": [
+					"edit.jsx"
+				]
+			}
+		},
+		"core/verse": {
+			"name": "core/verse",
+			"title": "Poetry",
+			"description": "Insert poetry. Use special spacing formats. Or quote song lyrics.",
+			"category": "text",
+			"keywords": [
+				"poetry",
+				"poem",
+				"verse",
+				"stanza",
+				"song",
+				"lyrics"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		},
+		"core/video": {
+			"name": "core/video",
+			"title": "Video",
+			"description": "Embed a video from your media library or upload a new one.",
+			"category": "media",
+			"keywords": [
+				"movie"
+			],
+			"parent": null,
+			"ancestor": null,
+			"components": {
+				"block-editor:__experimentalGetDimensionsClassesAndStyles": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetElementClassName": [
+					"save.jsx"
+				],
+				"block-editor:__experimentalGetShadowClassesAndStyles": [
+					"edit.jsx",
+					"save.jsx"
+				],
+				"block-editor:BlockControls": [
+					"edit.jsx"
+				],
+				"block-editor:BlockIcon": [
+					"edit.jsx"
+				],
+				"block-editor:InspectorControls": [
+					"edit.jsx"
+				],
+				"block-editor:MediaPlaceholder": [
+					"edit.jsx"
+				],
+				"block-editor:MediaReplaceFlow": [
+					"edit.jsx"
+				],
+				"block-editor:MediaUpload": [
+					"tracks-editor.jsx"
+				],
+				"block-editor:MediaUploadCheck": [
+					"tracks-editor.jsx"
+				],
+				"block-editor:RichText": [
+					"deprecated.jsx",
+					"save.jsx"
+				],
+				"block-editor:store": [
+					"tracks-editor.jsx"
+				],
+				"block-editor:useBlockEditingMode": [
+					"edit.jsx"
+				],
+				"block-editor:useBlockProps": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				],
+				"components:__experimentalGrid": [
+					"tracks-editor.jsx"
+				],
+				"components:__experimentalHStack": [
+					"tracks-editor.jsx"
+				],
+				"components:__experimentalToolsPanel": [
+					"edit.jsx"
+				],
+				"components:__experimentalToolsPanelItem": [
+					"edit-common-settings.jsx"
+				],
+				"components:__experimentalVStack": [
+					"tracks-editor.jsx"
+				],
+				"components:Button": [
+					"tracks-editor.jsx"
+				],
+				"components:Dropdown": [
+					"tracks-editor.jsx"
+				],
+				"components:FormFileUpload": [
+					"tracks-editor.jsx"
+				],
+				"components:MenuGroup": [
+					"tracks-editor.jsx"
+				],
+				"components:MenuItem": [
+					"tracks-editor.jsx"
+				],
+				"components:NavigableMenu": [
+					"tracks-editor.jsx"
+				],
+				"components:Placeholder": [
+					"edit.jsx"
+				],
+				"components:SelectControl": [
+					"edit-common-settings.jsx",
+					"tracks-editor.jsx"
+				],
+				"components:Spinner": [
+					"edit.jsx"
+				],
+				"components:TextControl": [
+					"tracks-editor.jsx"
+				],
+				"components:ToggleControl": [
+					"edit-common-settings.jsx",
+					"tracks-editor.jsx"
+				],
+				"components:ToolbarButton": [
+					"tracks-editor.jsx"
+				],
+				"components:ToolbarGroup": [
+					"tracks-editor.jsx"
+				]
+			}
+		}
 	}
 }

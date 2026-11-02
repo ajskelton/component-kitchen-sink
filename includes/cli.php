@@ -312,3 +312,220 @@ class AJS_Components_Command {
 }
 
 WP_CLI::add_command( 'ajs components', 'AJS_Components_Command' );
+
+/**
+ * Manages the Core Block posts.
+ */
+class AJS_Core_Blocks_Command {
+
+	/**
+	 * Creates or updates one Core Block post per block in data/usage.json.
+	 *
+	 * ## OPTIONS
+	 *
+	 * [--reset]
+	 * : Rewrite the content of existing posts too, discarding editor changes.
+	 *
+	 * [--dry-run]
+	 * : Report what would change without writing anything.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     wp ajs core-blocks sync
+	 *
+	 * @param array $args       Positional arguments (unused).
+	 * @param array $assoc_args Named arguments.
+	 */
+	public function sync( array $args, array $assoc_args ): void {
+		$reset   = ! empty( $assoc_args['reset'] );
+		$dry_run = ! empty( $assoc_args['dry-run'] );
+
+		$usage = ajs_component_data_file( 'usage' );
+
+		if ( empty( $usage['blocks'] ) ) {
+			WP_CLI::error( 'data/usage.json has no blocks section. Run `npm run data:usage` first.' );
+		}
+
+		$existing = ajs_post_ids_by_meta( AJS_CORE_BLOCK_POST_TYPE, AJS_CORE_BLOCK_META_NAME );
+		$counts   = array(
+			'created'   => 0,
+			'updated'   => 0,
+			'unchanged' => 0,
+		);
+
+		foreach ( $usage['blocks'] as $name => $data ) {
+			$fields  = $this->post_fields( $name, $data );
+			$post_id = $existing[ $name ] ?? 0;
+
+			if ( $post_id ) {
+				$changed = $this->update_post( $post_id, $name, $data, $fields, $reset, $dry_run );
+				++$counts[ $changed ? 'updated' : 'unchanged' ];
+				continue;
+			}
+
+			if ( ! $dry_run ) {
+				$post_id = wp_insert_post( $fields, true );
+				if ( is_wp_error( $post_id ) ) {
+					WP_CLI::warning( sprintf( '%s: %s', $name, $post_id->get_error_message() ) );
+					continue;
+				}
+				$this->write_meta_and_terms( $post_id, $name, $data );
+			}
+
+			WP_CLI::log( sprintf( 'Created %s', $name ) );
+			++$counts['created'];
+		}
+
+		WP_CLI::success(
+			sprintf(
+				'%s%d created, %d updated, %d unchanged.',
+				$dry_run ? '[dry run] ' : '',
+				$counts['created'],
+				$counts['updated'],
+				$counts['unchanged']
+			)
+		);
+	}
+
+	/**
+	 * The post fields a block maps to.
+	 *
+	 * @param string $name Block name.
+	 * @param array  $data Block data from usage.json.
+	 * @return array Arguments for wp_insert_post().
+	 */
+	private function post_fields( string $name, array $data ): array {
+		return array(
+			'post_type'    => AJS_CORE_BLOCK_POST_TYPE,
+			'post_status'  => 'publish',
+			'post_title'   => (string) ( $data['title'] ?: $name ),
+			'post_name'    => $this->slug( $name ),
+			'post_excerpt' => (string) ( $data['description'] ?? '' ),
+			'post_content' => '<!-- wp:ajs/core-block-info /-->',
+			'post_author'  => $this->author_id(),
+			'meta_input'   => array(
+				AJS_CORE_BLOCK_META_NAME => $name,
+			),
+		);
+	}
+
+	/**
+	 * Updates an existing post's title, slug, excerpt, author, terms and, with --reset, content.
+	 *
+	 * @param int    $post_id Post ID.
+	 * @param string $name    Block name.
+	 * @param array  $data    Block data.
+	 * @param array  $fields  Fields from post_fields().
+	 * @param bool   $reset   Whether to rewrite the content.
+	 * @param bool   $dry_run Whether to skip writes.
+	 * @return bool Whether anything changed.
+	 */
+	private function update_post( int $post_id, string $name, array $data, array $fields, bool $reset, bool $dry_run ): bool {
+		$post    = get_post( $post_id );
+		$compare = array( 'post_title', 'post_name', 'post_excerpt', 'post_status', 'post_author' );
+
+		if ( $reset ) {
+			$compare[] = 'post_content';
+		}
+
+		$update = array();
+
+		foreach ( $compare as $field ) {
+			if ( (string) $post->$field !== (string) $fields[ $field ] ) {
+				$update[ $field ] = $fields[ $field ];
+			}
+		}
+
+		$current_terms = wp_get_object_terms( $post_id, AJS_CORE_BLOCK_TAX_CATEGORY, array( 'fields' => 'slugs' ) );
+		$terms_changed = is_wp_error( $current_terms ) || $this->category_terms( $data ) !== $current_terms;
+
+		if ( empty( $update ) && ! $terms_changed ) {
+			return false;
+		}
+
+		if ( ! $dry_run ) {
+			if ( ! empty( $update ) ) {
+				$update['ID'] = $post_id;
+				$result       = wp_update_post( $update, true );
+				if ( is_wp_error( $result ) ) {
+					WP_CLI::warning( sprintf( '%s: %s', $name, $result->get_error_message() ) );
+					return false;
+				}
+			}
+			$this->write_meta_and_terms( $post_id, $name, $data );
+		}
+
+		WP_CLI::log( sprintf( 'Updated %s (%s)', $name, implode( ', ', array_merge( array_keys( $update ), $terms_changed ? array( 'terms' ) : array() ) ) ) );
+
+		return true;
+	}
+
+	/**
+	 * The post slug for a block: its name without "core/", avoiding slugs that
+	 * WordPress reserves for feeds and oEmbed (rss, atom, embed, ...), which
+	 * wp_unique_post_slug() would otherwise suffix with "-2" on every sync.
+	 *
+	 * @param string $name Block name.
+	 * @return string Slug.
+	 */
+	private function slug( string $name ): string {
+		$slug     = sanitize_title( preg_replace( '/^core\//', '', $name ) );
+		$reserved = array_merge( (array) ( $GLOBALS['wp_rewrite']->feeds ?? array( 'feed', 'rdf', 'rss', 'rss2', 'atom' ) ), array( 'embed' ) );
+
+		return in_array( $slug, $reserved, true ) ? $slug . '-block' : $slug;
+	}
+
+	/**
+	 * The category term slugs for a block (one, or none when block.json has no category).
+	 *
+	 * @param array $data Block data.
+	 * @return string[] Term slugs.
+	 */
+	private function category_terms( array $data ): array {
+		return empty( $data['category'] ) ? array() : array( sanitize_title( (string) $data['category'] ) );
+	}
+
+	/**
+	 * Writes the meta and category term for a post.
+	 *
+	 * @param int    $post_id Post ID.
+	 * @param string $name    Block name.
+	 * @param array  $data    Block data.
+	 */
+	private function write_meta_and_terms( int $post_id, string $name, array $data ): void {
+		update_post_meta( $post_id, AJS_CORE_BLOCK_META_NAME, $name );
+
+		foreach ( $this->category_terms( $data ) as $slug ) {
+			if ( ! term_exists( $slug, AJS_CORE_BLOCK_TAX_CATEGORY ) ) {
+				wp_insert_term( $slug, AJS_CORE_BLOCK_TAX_CATEGORY, array( 'slug' => $slug ) );
+			}
+		}
+
+		wp_set_object_terms( $post_id, $this->category_terms( $data ), AJS_CORE_BLOCK_TAX_CATEGORY );
+	}
+
+	/**
+	 * The first administrator, so posts have an author on the front end.
+	 *
+	 * @return int User ID, or 0 when the site has no administrator.
+	 */
+	private function author_id(): int {
+		static $author = null;
+
+		if ( null === $author ) {
+			$admins = get_users(
+				array(
+					'role'    => 'administrator',
+					'orderby' => 'ID',
+					'number'  => 1,
+					'fields'  => 'ID',
+				)
+			);
+			$author = empty( $admins ) ? 0 : (int) $admins[0];
+		}
+
+		return $author;
+	}
+}
+
+WP_CLI::add_command( 'ajs core-blocks', 'AJS_Core_Blocks_Command' );

@@ -9,6 +9,8 @@
 .wp-block-ajs-block-variation-transforms .ajs-variation-swatch{color:#fff;padding:16px}
 /* ComponentInfo */
 .wp-block-ajs-component-info .components-placeholder{min-height:0}
+/* CoreBlockInfo */
+.wp-block-ajs-core-block-info .components-placeholder{min-height:0}
 /* CreateCustomColorsHOC */
 .wp-block-ajs-create-custom-colors-hoc pre{max-height:20em;overflow:auto}
 /* ImageSizeControl */

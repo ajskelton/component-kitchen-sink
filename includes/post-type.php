@@ -226,5 +226,168 @@ add_action( 'restrict_manage_posts', 'ajs_component_admin_filters' );
  */
 function ajs_component_flush_rewrites(): void {
 	ajs_component_register_post_type();
+	ajs_core_block_register_post_type();
 	flush_rewrite_rules();
 }
+
+/** Post type slug for core blocks. */
+const AJS_CORE_BLOCK_POST_TYPE = 'ajs_core_block';
+
+/** Taxonomy holding a core block's block.json category. */
+const AJS_CORE_BLOCK_TAX_CATEGORY = 'ajs_block_category';
+
+/**
+ * Registers the Core Block post type, its category taxonomy and its meta.
+ */
+function ajs_core_block_register_post_type(): void {
+	register_taxonomy(
+		AJS_CORE_BLOCK_TAX_CATEGORY,
+		AJS_CORE_BLOCK_POST_TYPE,
+		array(
+			'labels'            => array(
+				'name'          => __( 'Block categories', 'component-kitchen-sink' ),
+				'singular_name' => __( 'Block category', 'component-kitchen-sink' ),
+				'all_items'     => __( 'All block categories', 'component-kitchen-sink' ),
+			),
+			'public'            => true,
+			'hierarchical'      => false,
+			'show_in_rest'      => true,
+			'show_admin_column' => true,
+			'rewrite'           => array( 'slug' => 'core-blocks/category' ),
+		)
+	);
+
+	register_post_type(
+		AJS_CORE_BLOCK_POST_TYPE,
+		array(
+			'labels'        => array(
+				'name'              => __( 'Core Blocks', 'component-kitchen-sink' ),
+				'singular_name'     => __( 'Core Block', 'component-kitchen-sink' ),
+				'add_new_item'      => __( 'Add New Core Block', 'component-kitchen-sink' ),
+				'edit_item'         => __( 'Edit Core Block', 'component-kitchen-sink' ),
+				'view_item'         => __( 'View Core Block', 'component-kitchen-sink' ),
+				'search_items'      => __( 'Search Core Blocks', 'component-kitchen-sink' ),
+				'not_found'         => __( 'No core blocks found.', 'component-kitchen-sink' ),
+				'all_items'         => __( 'All Core Blocks', 'component-kitchen-sink' ),
+				'archives'          => __( 'Core Block Archives', 'component-kitchen-sink' ),
+				'filter_items_list' => __( 'Filter core blocks list', 'component-kitchen-sink' ),
+				'items_list'        => __( 'Core blocks list', 'component-kitchen-sink' ),
+			),
+			'description'   => __( 'One post per WordPress core block, listing the components it uses.', 'component-kitchen-sink' ),
+			'public'        => true,
+			'show_in_rest'  => true,
+			'has_archive'   => 'core-blocks',
+			'rewrite'       => array(
+				'slug'       => 'core-blocks',
+				'with_front' => false,
+			),
+			'menu_icon'     => 'dashicons-block-default',
+			'menu_position' => 22,
+			'supports'      => array( 'title', 'editor', 'excerpt', 'author', 'custom-fields', 'revisions' ),
+			'template'      => array(
+				array( 'ajs/core-block-info' ),
+			),
+		)
+	);
+
+	register_post_meta(
+		AJS_CORE_BLOCK_POST_TYPE,
+		AJS_CORE_BLOCK_META_NAME,
+		array(
+			'type'              => 'string',
+			'single'            => true,
+			'default'           => '',
+			'show_in_rest'      => true,
+			'sanitize_callback' => 'sanitize_text_field',
+			'auth_callback'     => static function (): bool {
+				return current_user_can( 'edit_posts' );
+			},
+		)
+	);
+}
+
+add_action( 'init', 'ajs_core_block_register_post_type' );
+
+/**
+ * Adds Block and Components columns to the Core Blocks list table.
+ *
+ * @param string[] $columns Column id => heading.
+ * @return string[] Columns with the extra ones after the title.
+ */
+function ajs_core_block_admin_columns( array $columns ): array {
+	$extra = array(
+		'ajs_block'      => __( 'Block', 'component-kitchen-sink' ),
+		'ajs_components' => __( 'Components', 'component-kitchen-sink' ),
+	);
+
+	$result = array();
+
+	foreach ( $columns as $id => $heading ) {
+		$result[ $id ] = $heading;
+		if ( 'title' === $id ) {
+			$result += $extra;
+		}
+	}
+
+	return $result + $extra;
+}
+
+add_filter( 'manage_' . AJS_CORE_BLOCK_POST_TYPE . '_posts_columns', 'ajs_core_block_admin_columns' );
+
+/**
+ * Prints the Block and Components columns.
+ *
+ * @param string $column  Column id.
+ * @param int    $post_id Post ID.
+ */
+function ajs_core_block_admin_column( string $column, int $post_id ): void {
+	if ( ! in_array( $column, array( 'ajs_block', 'ajs_components' ), true ) ) {
+		return;
+	}
+
+	$data = ajs_core_block_for_post( $post_id );
+
+	if ( null === $data ) {
+		echo '&mdash;';
+		return;
+	}
+
+	if ( 'ajs_block' === $column ) {
+		echo '<code>' . esc_html( $data['name'] ) . '</code>';
+	} else {
+		echo esc_html( (string) count( $data['components'] ) );
+	}
+}
+
+add_action( 'manage_' . AJS_CORE_BLOCK_POST_TYPE . '_posts_custom_column', 'ajs_core_block_admin_column', 10, 2 );
+
+/**
+ * Adds the block category dropdown above the Core Blocks list table.
+ *
+ * @param string $post_type The list table's post type.
+ */
+function ajs_core_block_admin_filters( string $post_type ): void {
+	if ( AJS_CORE_BLOCK_POST_TYPE !== $post_type ) {
+		return;
+	}
+
+	$object = get_taxonomy( AJS_CORE_BLOCK_TAX_CATEGORY );
+	if ( ! $object ) {
+		return;
+	}
+
+	wp_dropdown_categories(
+		array(
+			'taxonomy'        => AJS_CORE_BLOCK_TAX_CATEGORY,
+			'name'            => AJS_CORE_BLOCK_TAX_CATEGORY,
+			'value_field'     => 'slug',
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only list filter.
+			'selected'        => isset( $_GET[ AJS_CORE_BLOCK_TAX_CATEGORY ] ) ? sanitize_key( wp_unslash( $_GET[ AJS_CORE_BLOCK_TAX_CATEGORY ] ) ) : '',
+			'show_option_all' => $object->labels->all_items,
+			'hide_empty'      => false,
+			'hierarchical'    => false,
+		)
+	);
+}
+
+add_action( 'restrict_manage_posts', 'ajs_core_block_admin_filters' );

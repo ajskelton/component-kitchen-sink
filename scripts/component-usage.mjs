@@ -14,6 +14,8 @@
  * matches the `name` column of data/inventory.json. Imports in folders without
  * a block.json (utils/, ...) go under `shared`. test/, stories/ and __mocks__/
  * directories are skipped; `import *` and side-effect imports are ignored.
+ * The same data inverted, plus each block's title, description, category and
+ * keywords from its block.json, is written under `blocks`.
  */
 import {
 	existsSync,
@@ -115,10 +117,17 @@ function main() {
 	for ( const entry of readdirSync( SRC, { withFileTypes: true } ) ) {
 		const manifest = join( SRC, entry.name, 'block.json' );
 		if ( entry.isDirectory() && existsSync( manifest ) ) {
-			const { name, title } = JSON.parse(
-				readFileSync( manifest, 'utf8' )
-			);
-			blocks.set( entry.name, { name, title } );
+			const manifestData = JSON.parse( readFileSync( manifest, 'utf8' ) );
+			blocks.set( entry.name, {
+				name: manifestData.name,
+				title: manifestData.title,
+				description: manifestData.description ?? '',
+				category: manifestData.category ?? '',
+				keywords: manifestData.keywords ?? [],
+				parent: manifestData.parent ?? null,
+				ancestor: manifestData.ancestor ?? null,
+				components: {},
+			} );
 		}
 	}
 
@@ -144,6 +153,9 @@ function main() {
 				entry.files.push( path.slice( 1 ).join( '/' ) );
 				perComponent.set( block.name, entry );
 				byBlock.set( key, perComponent );
+				( block.components[ key ] ??= [] ).push(
+					path.slice( 1 ).join( '/' )
+				);
 			} else {
 				( shared[ key ] ??= [] ).push( path.join( '/' ) );
 			}
@@ -161,6 +173,21 @@ function main() {
 		)
 	);
 
+	// Core block -> its metadata and the components it imports, keyed by block name.
+	const blockEntries = [ ...blocks.values() ]
+		.sort( ( a, b ) => a.name.localeCompare( b.name ) )
+		.map( ( block ) => [
+			block.name,
+			{
+				...block,
+				components: Object.fromEntries(
+					Object.entries( block.components ).sort( ( [ a ], [ b ] ) =>
+						a.localeCompare( b )
+					)
+				),
+			},
+		] );
+
 	const target = join( ROOT, 'data', 'usage.json' );
 	mkdirSync( dirname( target ), { recursive: true } );
 	writeFileSync(
@@ -171,6 +198,7 @@ function main() {
 				generatedAt: new Date().toISOString(),
 				components,
 				shared: sortedShared,
+				blocks: Object.fromEntries( blockEntries ),
 			},
 			null,
 			'\t'

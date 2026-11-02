@@ -223,3 +223,115 @@ function ajs_component_inline_markdown( string $text ): string {
 
 	return $html;
 }
+
+/** Meta key holding a core block's name, for example core/paragraph. */
+const AJS_CORE_BLOCK_META_NAME = 'ajs_block_name';
+
+/**
+ * Everything known about one core block from data/usage.json.
+ *
+ * @param string $block_name Block name, for example core/paragraph.
+ * @return array|null Block metadata with its `components` map, or null.
+ */
+function ajs_core_block_data( string $block_name ): ?array {
+	$usage = ajs_component_data_file( 'usage' );
+
+	if ( empty( $usage['blocks'][ $block_name ] ) ) {
+		return null;
+	}
+
+	return array_merge(
+		$usage['blocks'][ $block_name ],
+		array(
+			'name'                => $block_name,
+			'blockLibraryVersion' => $usage['blockLibraryVersion'] ?? null,
+		)
+	);
+}
+
+/**
+ * The core block a post describes, from its meta.
+ *
+ * @param int $post_id Post ID.
+ * @return array|null Data from ajs_core_block_data(), or null.
+ */
+function ajs_core_block_for_post( int $post_id ): ?array {
+	$name = (string) get_post_meta( $post_id, AJS_CORE_BLOCK_META_NAME, true );
+
+	return '' === $name ? null : ajs_core_block_data( $name );
+}
+
+/**
+ * Published post IDs of a post type keyed by a meta value, loaded once per request.
+ *
+ * @param string $post_type Post type.
+ * @param string $meta_key  Meta key whose value becomes the array key.
+ * @param array  $key_parts For components, the meta keys whose values are joined with ":".
+ * @return array<string, int> Key => post ID.
+ */
+function ajs_post_ids_by_meta( string $post_type, string $meta_key, array $key_parts = array() ): array {
+	static $cache = array();
+
+	if ( isset( $cache[ $post_type ] ) ) {
+		return $cache[ $post_type ];
+	}
+
+	$ids = get_posts(
+		array(
+			'post_type'              => $post_type,
+			'post_status'            => 'publish',
+			'posts_per_page'         => -1,
+			'fields'                 => 'ids',
+			'no_found_rows'          => true,
+			'update_post_term_cache' => false,
+		)
+	);
+
+	update_meta_cache( 'post', $ids );
+
+	$map = array();
+
+	foreach ( $ids as $id ) {
+		if ( $key_parts ) {
+			$values = array();
+			foreach ( $key_parts as $part ) {
+				$values[] = (string) get_post_meta( $id, $part, true );
+			}
+			$key = implode( ':', $values );
+		} else {
+			$key = (string) get_post_meta( $id, $meta_key, true );
+		}
+
+		if ( '' !== trim( $key, ':' ) ) {
+			$map[ $key ] = (int) $id;
+		}
+	}
+
+	$cache[ $post_type ] = $map;
+
+	return $map;
+}
+
+/**
+ * Permalink of the Component post for a component key, if one exists.
+ *
+ * @param string $key "<package>:<export name>".
+ * @return string|null URL or null.
+ */
+function ajs_component_post_link( string $key ): ?string {
+	$ids = ajs_post_ids_by_meta( 'ajs_component', '', array( AJS_COMPONENT_META_PACKAGE, AJS_COMPONENT_META_EXPORT ) );
+
+	return isset( $ids[ $key ] ) ? (string) get_permalink( $ids[ $key ] ) : null;
+}
+
+/**
+ * Permalink of the Core Block post for a block name, if one exists.
+ *
+ * @param string $block_name Block name, for example core/paragraph.
+ * @return string|null URL or null.
+ */
+function ajs_core_block_post_link( string $block_name ): ?string {
+	$ids = ajs_post_ids_by_meta( 'ajs_core_block', AJS_CORE_BLOCK_META_NAME );
+
+	return isset( $ids[ $block_name ] ) ? (string) get_permalink( $ids[ $block_name ] ) : null;
+}

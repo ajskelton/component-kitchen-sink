@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/core-block-info",
+  "version": "0.1.0",
+  "title": "Core Block Info",
+  "category": "ajs-kitchen-sink",
+  "icon": "block-default",
+  "description": "Shows which components the core block this post describes imports, with links to their Component posts; the summary variant is a one-line card for archives",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "supports": {
+    "html": false,
+    "multiple": false,
+    "reusable": false
+  },
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "enum": [
+        "full",
+        "summary"
+      ],
+      "default": "full"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
