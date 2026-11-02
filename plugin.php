@@ -16,6 +16,15 @@
 
 defined( 'ABSPATH' ) || exit;
 
+require_once __DIR__ . '/includes/data.php';
+require_once __DIR__ . '/includes/post-type.php';
+
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	require_once __DIR__ . '/includes/cli.php';
+}
+
+register_activation_hook( __FILE__, 'ajs_component_flush_rewrites' );
+
 /** Handle of the stylesheet combining every block's editor.scss output. */
 const AJS_COMPONENT_KITCHEN_SINK_EDITOR_STYLE = 'ajs-component-kitchen-sink-editor';
 

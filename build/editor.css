@@ -7,6 +7,8 @@
 .wp-block-ajs-block-variation-picker .ajs-variation-swatch{color:#fff;padding:16px}
 /* BlockVariationTransforms */
 .wp-block-ajs-block-variation-transforms .ajs-variation-swatch{color:#fff;padding:16px}
+/* ComponentInfo */
+.wp-block-ajs-component-info .components-placeholder{min-height:0}
 /* CreateCustomColorsHOC */
 .wp-block-ajs-create-custom-colors-hoc pre{max-height:20em;overflow:auto}
 /* ImageSizeControl */
