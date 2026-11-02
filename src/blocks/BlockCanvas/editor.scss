@@ -8,6 +8,7 @@
 // loaded in the outer admin document, not in the editor canvas iframe this
 // block lives in, so the nested iframe would fall back to 300x150.
 .wp-block-ajs-block-canvas {
+
 	.block-editor-iframe__container,
 	.block-editor-iframe__scale-container {
 		width: 100%;
