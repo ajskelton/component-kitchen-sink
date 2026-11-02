@@ -1,0 +1,69 @@
+/* Combined from build/blocks/*/index.css by scripts/combine-styles.mjs. Do not edit. */
+/* BlockCanvas */
+.wp-block-ajs-block-canvas .block-editor-iframe__container,.wp-block-ajs-block-canvas .block-editor-iframe__scale-container{height:100%;width:100%}.wp-block-ajs-block-canvas iframe{border:1px solid #949494;display:block;height:100%;width:100%}
+/* BlockPatternSetup */
+.wp-block-ajs-block-pattern-setup .block-editor-block-pattern-setup{max-height:480px;overflow-y:auto}
+/* BlockVariationPicker */
+.wp-block-ajs-block-variation-picker .ajs-variation-swatch{color:#fff;padding:16px}
+/* BlockVariationTransforms */
+.wp-block-ajs-block-variation-transforms .ajs-variation-swatch{color:#fff;padding:16px}
+/* CreateCustomColorsHOC */
+.wp-block-ajs-create-custom-colors-hoc pre{max-height:20em;overflow:auto}
+/* ImageSizeControl */
+.wp-block-ajs-image-size-control .ajs-image-size-preview{align-items:center;background:#ddd;color:#1e1e1e;display:flex;justify-content:center;margin-top:8px}
+/* Library */
+.wp-block-ajs-library .ajs-library-frame{border:1px solid #ddd;height:420px;overflow:hidden}
+/* SnackbarList */
+.wp-block-ajs-snackbar-list .ajs-snackbar-list-stage{min-height:120px;position:relative}
+/* UseBackgroundProps */
+.wp-block-ajs-use-background-props pre{max-height:20em;overflow:auto}
+/* UseBlockBindingsUtils */
+.wp-block-ajs-use-block-bindings-utils pre{max-height:20em;overflow:auto}
+/* UseBlockCommands */
+.wp-block-ajs-use-block-commands pre{max-height:20em;overflow:auto}
+/* UseBlockDisplayInformation */
+.wp-block-ajs-use-block-display-information pre{max-height:20em;overflow:auto}
+/* UseBlockEditContext */
+.wp-block-ajs-use-block-edit-context pre{max-height:20em;overflow:auto}
+/* UseBlockEditingMode */
+.wp-block-ajs-use-block-editing-mode pre{max-height:20em;overflow:auto}
+/* UseBlockOverlayActive */
+.wp-block-ajs-use-block-overlay-active pre{max-height:20em;overflow:auto}
+/* UseBlockProps */
+.wp-block-ajs-use-block-props pre{max-height:20em;overflow:auto}
+/* UseBlockSelectionClearer */
+.wp-block-ajs-use-block-selection-clearer pre{max-height:20em;overflow:auto}
+/* UseBorderProps */
+.wp-block-ajs-use-border-props pre{max-height:20em;overflow:auto}
+/* UseCachedTruthy */
+.wp-block-ajs-use-cached-truthy pre{max-height:20em;overflow:auto}
+/* UseClipboardHandler */
+.wp-block-ajs-use-clipboard-handler pre{max-height:20em;overflow:auto}
+/* UseColorProps */
+.wp-block-ajs-use-color-props pre{max-height:20em;overflow:auto}
+/* UseCustomSides */
+.wp-block-ajs-use-custom-sides pre{max-height:20em;overflow:auto}
+/* UseGradient */
+.wp-block-ajs-use-gradient pre{max-height:20em;overflow:auto}
+/* UseMouseMoveTypingReset */
+.wp-block-ajs-use-mouse-move-typing-reset pre{max-height:20em;overflow:auto}
+/* UseMultipleOriginColorsAndGradients */
+.wp-block-ajs-use-multiple-origin-colors-and-gradients pre{max-height:20em;overflow:auto}
+/* UseResizeCanvas */
+.wp-block-ajs-use-resize-canvas pre{max-height:20em;overflow:auto}
+/* UseSetting */
+.wp-block-ajs-use-setting pre{max-height:20em;overflow:auto}
+/* UseSettings */
+.wp-block-ajs-use-settings pre{max-height:20em;overflow:auto}
+/* UseStyleOverride */
+.wp-block-ajs-use-style-override pre{max-height:20em;overflow:auto}
+/* UseTypewriter */
+.wp-block-ajs-use-typewriter pre{max-height:20em;overflow:auto}
+/* UseTypingObserver */
+.wp-block-ajs-use-typing-observer pre{max-height:20em;overflow:auto}
+/* WithColorContext */
+.wp-block-ajs-with-color-context pre{max-height:20em;overflow:auto}
+/* WithColors */
+.wp-block-ajs-with-colors pre{max-height:20em;overflow:auto}
+/* WithFontSizes */
+.wp-block-ajs-with-font-sizes pre{max-height:20em;overflow:auto}

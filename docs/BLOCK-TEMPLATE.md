@@ -25,6 +25,8 @@ The work list lives in [COMPONENTS.md](COMPONENTS.md). Regenerate it with `node 
 
 Blocks are discovered automatically. `plugin.php` registers every `build/blocks/*/block.json`, so PHP never needs editing.
 
+Styles are served from two shared files. `npm run build` ends by running `scripts/combine-styles.mjs`, which concatenates every block's `index.css` and `style-index.css` into `build/editor.css` and `build/style.css`, and `plugin.php` points each block at those instead of its own files. That keeps the editor to two stylesheet requests instead of two per block. Keep `editor.scss` and `style.scss` scoped to `.wp-block-ajs-<slug>` so the combined files cannot clash. `npm start` does not run the script, so after `start` the plugin falls back to per-block files until the next `npm run build`.
+
 ## File conventions
 
 The scaffold creates `src/blocks/<ExportName>/` with these files. The build copies them to `build/blocks/<ExportName>/`.
