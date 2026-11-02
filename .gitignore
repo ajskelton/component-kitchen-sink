@@ -34,3 +34,6 @@ bin/
 
 # Agent worktrees
 .claude/
+
+# Cached HTTP responses from scripts/component-history.mjs
+.cache/

@@ -3,7 +3,8 @@
 /**
  * Lists the component-like exports of `@wordpress/components` and
  * `@wordpress/block-editor` from the installed node_modules and writes
- * docs/COMPONENTS.md, one table per package.
+ * docs/COMPONENTS.md, one table per package, plus data/inventory.json with the
+ * same rows (and each block's name, title and description) for PHP to read.
  *
  * Usage: node scripts/inventory.mjs
  *
@@ -19,7 +20,7 @@ import {
 	readdirSync,
 	writeFileSync,
 } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { basename, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join( dirname( fileURLToPath( import.meta.url ) ), '..' );
@@ -176,6 +177,40 @@ function findBlocks() {
 	return blocks;
 }
 
+/**
+ * Rows for data/inventory.json, in the same order as the Markdown tables.
+ *
+ * @param {Array} results Output of `inventory()` per package.
+ * @return {Array<Object>} One object per inventory row.
+ */
+function toJson( results ) {
+	return results.flatMap( ( { pkg, rows } ) =>
+		rows.map( ( row ) => {
+			const blockDir = row.block ? basename( row.block ) : null;
+			const metadata = blockDir
+				? JSON.parse(
+						readFileSync(
+							join( ROOT, row.block, 'block.json' ),
+							'utf8'
+						)
+					)
+				: {};
+			return {
+				package: pkg,
+				name: row.name,
+				base: row.base,
+				kind: row.kind,
+				status: row.status,
+				blockDir,
+				blockName: metadata.name ?? null,
+				blockTitle: metadata.title ?? null,
+				blockDescription: metadata.description ?? null,
+				notes: row.notes,
+			};
+		} )
+	);
+}
+
 function inventory( pkg, blocks ) {
 	const mod = require( `@wordpress/${ pkg }` );
 	const version = require( `@wordpress/${ pkg }/package.json` ).version;
@@ -226,7 +261,14 @@ function inventory( pkg, blocks ) {
 		if ( SVG_PRIMITIVES.has( name ) ) {
 			notes.push( 'cover in one SvgPrimitives block' );
 		}
-		rows.push( { name, kind: info.kind, block, status, notes } );
+		rows.push( {
+			name,
+			base: info.base,
+			kind: info.kind,
+			block,
+			status,
+			notes,
+		} );
 	}
 	return { pkg, version, rows, skipped };
 }
@@ -318,7 +360,14 @@ function main() {
 	mkdirSync( dirname( target ), { recursive: true } );
 	writeFileSync( target, render( results ) );
 
-	console.log( `Wrote docs/COMPONENTS.md` );
+	const dataTarget = join( ROOT, 'data', 'inventory.json' );
+	mkdirSync( dirname( dataTarget ), { recursive: true } );
+	writeFileSync(
+		dataTarget,
+		JSON.stringify( toJson( results ), null, '\t' ) + '\n'
+	);
+
+	console.log( `Wrote docs/COMPONENTS.md and data/inventory.json` );
 	for ( const { pkg, rows, skipped } of results ) {
 		const by = ( key, value ) =>
 			rows.filter( ( r ) => r[ key ] === value ).length;

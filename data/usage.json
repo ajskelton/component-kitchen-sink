@@ -1,0 +1,9301 @@
+{
+	"blockLibraryVersion": "12.0.0",
+	"generatedAt": "2026-11-02T21:30:43.243Z",
+	"components": {
+		"block-editor:AlignmentControl": [
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"edit/comments-legacy.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/quote",
+				"title": "Quote",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:BlockAlignmentToolbar": [
+			{
+				"block": "core/text-columns",
+				"title": "Text Columns (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:BlockContextProvider": [
+			{
+				"block": "core/comment-template",
+				"title": "Comment Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/pattern-selection.jsx"
+				]
+			},
+			{
+				"block": "core/term-template",
+				"title": "Term Template",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:BlockControls": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"edit/comments-legacy.jsx"
+				]
+			},
+			{
+				"block": "core/comments-title",
+				"title": "Comments Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/block-controls.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-controls.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list-item",
+				"title": "List Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx",
+					"media-container.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/query-toolbar.jsx"
+				]
+			},
+			{
+				"block": "core/query-title",
+				"title": "Query Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-total",
+				"title": "Query Total",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/quote",
+				"title": "Quote",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-tagline",
+				"title": "Site Tagline",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"tab-movers.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tabs",
+				"title": "Tabs",
+				"files": [
+					"tab-toolbar-controls.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/term-count",
+				"title": "Term Count",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-name",
+				"title": "Term Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-template",
+				"title": "Term Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/text-columns",
+				"title": "Text Columns (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:BlockIcon": [
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/cover-placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-placeholder.jsx",
+					"embed-preview.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/footnotes",
+				"title": "Footnotes",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"shared-icon.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"media-container.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"shared/use-block-suggestions.js"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:BlockPreview": [
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/overlay-preview.jsx"
+				]
+			}
+		],
+		"block-editor:BlockSettingsMenuControls": [
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			}
+		],
+		"block-editor:BlockTitle": [
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/leaf-more-menu.jsx"
+				]
+			}
+		],
+		"block-editor:BlockVerticalAlignmentControl": [
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:BlockVerticalAlignmentToolbar": [
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:ColorPalette": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/index.jsx"
+				]
+			}
+		],
+		"block-editor:ContrastChecker": [
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:HeadingLevelDropdown": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-title",
+				"title": "Comments Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-title",
+				"title": "Query Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-tagline",
+				"title": "Site Tagline",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-name",
+				"title": "Term Name",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:InnerBlocks": [
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/buttons",
+				"title": "Buttons",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/comment-template",
+				"title": "Comment Template",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/list-item",
+				"title": "List Item",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"deprecated.jsx",
+					"edit/inner-blocks.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"deprecated.tsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/query-no-results",
+				"title": "No Results",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/quote",
+				"title": "Quote",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/inner-blocks.jsx"
+				]
+			},
+			{
+				"block": "core/term-template",
+				"title": "Term Template",
+				"files": [
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:InspectorControls": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-item",
+				"title": "Accordion Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/archives",
+				"title": "Archives",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/breadcrumbs",
+				"title": "Breadcrumbs",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-avatar",
+				"title": "Comment Author Avatar (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-name",
+				"title": "Comment Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-date",
+				"title": "Comment Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-edit-link",
+				"title": "Comment Edit Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"edit/comments-inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-title",
+				"title": "Comments Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-controls.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"inspector.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/latest-comments",
+				"title": "Latest Comments",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"ordered-list-settings.jsx"
+				]
+			},
+			{
+				"block": "core/loginout",
+				"title": "Login/out",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/more",
+				"title": "More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/menu-inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-overlay-close",
+				"title": "Navigation Overlay Close",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author-name",
+				"title": "Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-content",
+				"title": "Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-excerpt",
+				"title": "Excerpt",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-terms",
+				"title": "Post Terms",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-time-to-read",
+				"title": "Time to Read",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/query-content.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-numbers",
+				"title": "Page Numbers",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-title",
+				"title": "Query Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/read-more",
+				"title": "Read More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/separator",
+				"title": "Separator",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panel",
+				"title": "Tab Panel",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/term-name",
+				"title": "Term Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/advanced-controls.jsx",
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/text-columns",
+				"title": "Text Columns (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:LinkControl": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/index.jsx"
+				]
+			}
+		],
+		"block-editor:MediaPlaceholder": [
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/cover-placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"media-container.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:MediaReplaceFlow": [
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/block-controls.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"media-container.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:MediaUpload": [
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"block-editor:MediaUploadCheck": [
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"block-editor:PlainText": [
+			{
+				"block": "core/comments-pagination-next",
+				"title": "Comments Next Page",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination-previous",
+				"title": "Comments Previous Page",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/more",
+				"title": "More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-next",
+				"title": "Next Page",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-previous",
+				"title": "Previous Page",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/shortcode",
+				"title": "Shortcode",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:RecursionProvider": [
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/post-content",
+				"title": "Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			}
+		],
+		"block-editor:RichText": [
+			{
+				"block": "core/accordion-heading",
+				"title": "Accordion Heading",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/code",
+				"title": "Code",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/footnotes",
+				"title": "Footnotes",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/heading",
+				"title": "Heading",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/list-item",
+				"title": "List Item",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-overlay-close",
+				"title": "Navigation Overlay Close",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-excerpt",
+				"title": "Excerpt",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-terms",
+				"title": "Post Terms",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/preformatted",
+				"title": "Preformatted",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/pullquote",
+				"title": "Pullquote",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/quote",
+				"title": "Quote",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx",
+					"transforms.js"
+				]
+			},
+			{
+				"block": "core/read-more",
+				"title": "Read More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-tagline",
+				"title": "Site Tagline",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/text-columns",
+				"title": "Text Columns (deprecated)",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/verse",
+				"title": "Poetry",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:RichTextToolbarButton": [
+			{
+				"block": "core/footnotes",
+				"title": "Footnotes",
+				"files": [
+					"format.jsx"
+				]
+			}
+		],
+		"block-editor:URLInput": [
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:URLPopover": [
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:Warning": [
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"edit/comments-legacy.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/missing",
+				"title": "Unsupported",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/deleted-navigation-warning.jsx",
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/pattern",
+				"title": "Pattern Placeholder",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-comments-form",
+				"title": "Comments Form",
+				"files": [
+					"form.jsx"
+				]
+			},
+			{
+				"block": "core/post-content",
+				"title": "Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-excerpt",
+				"title": "Excerpt",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-title",
+				"title": "Query Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalBlockAlignmentMatrixControl": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/block-controls.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalBlockFullHeightAligmentControl": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/block-controls.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalBlockPatternsList": [
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/pattern-selection.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx",
+					"edit/selection-modal.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalBlockVariationPicker": [
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/query-placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/terms-query-placeholder.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalColorGradientSettingsDropdown": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"overlay-controls.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalDateFormatPicker": [
+			{
+				"block": "core/comment-date",
+				"title": "Comment Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalGetBorderClassesAndStyles": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalGetColorClassesAndStyles": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/separator",
+				"title": "Separator",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalGetDimensionsClassesAndStyles": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalGetElementClassName": [
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/post-comments-form",
+				"title": "Comments Form",
+				"files": [
+					"form.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalGetGapCSSValue": [
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"gallery-styles.js"
+				]
+			}
+		],
+		"block-editor:__experimentalGetGradientClass": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalGetShadowClassesAndStyles": [
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"image.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalGetSpacingClassesAndStyles": [
+			{
+				"block": "core/accordion-heading",
+				"title": "Accordion Heading",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-avatar",
+				"title": "Comment Author Avatar (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalImageSizeControl": [
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalImageURLInputUI": [
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalPublishDateTimePicker": [
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalSpacingSizesControl": [
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalUseBlockPreview": [
+			{
+				"block": "core/comment-template",
+				"title": "Comment Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx"
+				]
+			},
+			{
+				"block": "core/post-content",
+				"title": "Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-template",
+				"title": "Term Template",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalUseBorderProps": [
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"edit.jsx",
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx",
+					"overlay.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalUseColorProps": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/separator",
+				"title": "Separator",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalUseGradient": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/index.jsx",
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"overlay-controls.jsx",
+					"overlay.jsx"
+				]
+			}
+		],
+		"block-editor:__experimentalUseMultipleOriginColorsAndGradients": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"overlay-controls.jsx",
+					"overlay.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:getBackgroundClassesAndStyles": [
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:getColorClassName": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"deprecated.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/heading",
+				"title": "Heading",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/responsive-wrapper.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/pullquote",
+				"title": "Pullquote",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/separator",
+				"title": "Separator",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"deprecated.jsx"
+				]
+			}
+		],
+		"block-editor:getColorObjectByAttributeValues": [
+			{
+				"block": "core/pullquote",
+				"title": "Pullquote",
+				"files": [
+					"deprecated.jsx"
+				]
+			}
+		],
+		"block-editor:getCustomValueFromPreset": [
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:getDimensionsClassesAndStyles": [
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:getFontSizeClass": [
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"deprecated.jsx"
+				]
+			}
+		],
+		"block-editor:getSpacingPresetCssVar": [
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:getTypographyClassesAndStyles": [
+			{
+				"block": "core/accordion-heading",
+				"title": "Accordion Heading",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:isValueSpacingPreset": [
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			}
+		],
+		"block-editor:privateApis": [
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"edit/comments-inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/block-controls.jsx",
+					"edit/index.jsx",
+					"edit/inspector-controls.jsx",
+					"edit/resizable-cover-popover.jsx",
+					"transforms.js"
+				]
+			},
+			{
+				"block": "core/footnotes",
+				"title": "Footnotes",
+				"files": [
+					"format.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"gallery-styles.js"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx",
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx",
+					"use-open-image-media-editor-modal.js"
+				]
+			},
+			{
+				"block": "core/list-item",
+				"title": "List Item",
+				"files": [
+					"index.js"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/menu-inspector-controls.jsx",
+					"edit/navigation-list-view-header.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/block-inserter.jsx",
+					"shared/controls.jsx",
+					"shared/use-block-suggestions.js",
+					"shared/use-link-preview.js"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx",
+					"utils.js"
+				]
+			},
+			{
+				"block": "core/post-content",
+				"title": "Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"dimension-controls.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"deprecated.jsx",
+					"edit/query-content.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/advanced-controls.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/advanced-controls.jsx"
+				]
+			}
+		],
+		"block-editor:store": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-heading",
+				"title": "Accordion Heading",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-item",
+				"title": "Accordion Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-panel",
+				"title": "Accordion Panel",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-avatar",
+				"title": "Comment Author Avatar (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-template",
+				"title": "Comment Template",
+				"files": [
+					"edit.jsx",
+					"hooks.js"
+				]
+			},
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"edit/placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-title",
+				"title": "Comments Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/index.jsx",
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/footnotes",
+				"title": "Footnotes",
+				"files": [
+					"format.jsx"
+				]
+			},
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"convert-to-blocks-button.jsx",
+					"edit.jsx",
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx",
+					"gallery-styles.js",
+					"use-dynamic-gallery.js"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/heading",
+				"title": "Heading",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx",
+					"modal.jsx",
+					"preview.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"edit.jsx",
+					"image.jsx",
+					"use-open-image-media-editor-modal.js"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list-item",
+				"title": "List Item",
+				"files": [
+					"edit.jsx",
+					"hooks/use-enter.js",
+					"hooks/use-merge.js",
+					"hooks/use-multi-select-tab.js",
+					"hooks/use-tab.js",
+					"utils.js"
+				]
+			},
+			{
+				"block": "core/math",
+				"title": "Math",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx",
+					"media-container.jsx"
+				]
+			},
+			{
+				"block": "core/missing",
+				"title": "Unsupported",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/inner-blocks.jsx",
+					"edit/leaf-more-menu.jsx",
+					"edit/menu-inspector-controls.jsx",
+					"edit/navigation-link-ui.jsx",
+					"edit/use-create-overlay.js",
+					"edit/use-inner-blocks.js",
+					"use-template-part-area-label.js"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx",
+					"link-ui/block-inserter.jsx",
+					"shared/controls.jsx",
+					"shared/use-block-suggestions.js",
+					"shared/use-enable-link-status-validation.js",
+					"shared/use-handle-link-change.js"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx",
+					"use-convert-to-navigation-links.js"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"deprecated-attributes.js",
+					"edit.jsx",
+					"use-enter.js"
+				]
+			},
+			{
+				"block": "core/pattern",
+				"title": "Pattern Placeholder",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-comments-form",
+				"title": "Comments Form",
+				"files": [
+					"form.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/pullquote",
+				"title": "Pullquote",
+				"files": [
+					"deprecated.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/index.jsx",
+					"edit/pattern-selection.jsx",
+					"edit/query-content.jsx",
+					"edit/query-placeholder.jsx",
+					"edit/query-toolbar.jsx",
+					"utils.js"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/quote",
+				"title": "Quote",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx",
+					"tab-movers.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panel",
+				"title": "Tab Panel",
+				"files": [
+					"controls.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panels",
+				"title": "Tab Panels",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tabs",
+				"title": "Tabs",
+				"files": [
+					"tab-toolbar-controls.jsx",
+					"use-tab-actions.js",
+					"use-tab-list-items-sync.js"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx",
+					"edit/inner-blocks.jsx",
+					"edit/utils/hooks.js"
+				]
+			},
+			{
+				"block": "core/term-template",
+				"title": "Term Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/index.jsx",
+					"edit/terms-query-placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"block-editor:transformStyles": [
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"preview.jsx"
+				]
+			}
+		],
+		"block-editor:useBackgroundProps": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:useBlockBindingsUtils": [
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"shared/use-entity-binding.js"
+				]
+			}
+		],
+		"block-editor:useBlockDisplayInformation": [
+			{
+				"block": "core/post-terms",
+				"title": "Post Terms",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:useBlockEditingMode": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/index.jsx",
+					"shared/use-entity-binding.js",
+					"shared/use-is-invalid-link.js"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/inner-blocks.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"block-editor:useBlockProps": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-heading",
+				"title": "Accordion Heading",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-item",
+				"title": "Accordion Item",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-panel",
+				"title": "Accordion Panel",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/archives",
+				"title": "Archives",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/breadcrumbs",
+				"title": "Breadcrumbs",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/buttons",
+				"title": "Buttons",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/calendar",
+				"title": "Calendar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/code",
+				"title": "Code",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-avatar",
+				"title": "Comment Author Avatar (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-name",
+				"title": "Comment Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-content",
+				"title": "Comment Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-date",
+				"title": "Comment Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-edit-link",
+				"title": "Comment Edit Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-reply-link",
+				"title": "Comment Reply Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-template",
+				"title": "Comment Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"deprecated.jsx",
+					"edit/comments-legacy.jsx",
+					"edit/index.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination-next",
+				"title": "Comments Next Page",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination-numbers",
+				"title": "Comments Page Numbers",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination-previous",
+				"title": "Comments Previous Page",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-title",
+				"title": "Comments Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"deprecated.jsx",
+					"edit/index.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/footnotes",
+				"title": "Footnotes",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"placeholder.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/heading",
+				"title": "Heading",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/latest-comments",
+				"title": "Latest Comments",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/list-item",
+				"title": "List Item",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/loginout",
+				"title": "Login/out",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/math",
+				"title": "Math",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/missing",
+				"title": "Unsupported",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/more",
+				"title": "More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-overlay-close",
+				"title": "Navigation Overlay Close",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/nextpage",
+				"title": "Page Break",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list-item",
+				"title": "Page List Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/pattern",
+				"title": "Pattern Placeholder",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author-biography",
+				"title": "Author Biography",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author-name",
+				"title": "Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-comment",
+				"title": "Comment (deprecated)",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/post-comments-count",
+				"title": "Comments Count",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-comments-form",
+				"title": "Comments Form",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-comments-link",
+				"title": "Comments Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-content",
+				"title": "Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-excerpt",
+				"title": "Excerpt",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-terms",
+				"title": "Post Terms",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-time-to-read",
+				"title": "Time to Read",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/preformatted",
+				"title": "Preformatted",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/pullquote",
+				"title": "Pullquote",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"deprecated.jsx",
+					"edit/query-content.jsx",
+					"edit/query-placeholder.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/query-no-results",
+				"title": "No Results",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-next",
+				"title": "Next Page",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-numbers",
+				"title": "Page Numbers",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-previous",
+				"title": "Previous Page",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-title",
+				"title": "Query Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-total",
+				"title": "Query Total",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/quote",
+				"title": "Quote",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/read-more",
+				"title": "Read More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/separator",
+				"title": "Separator",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/shortcode",
+				"title": "Shortcode",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-tagline",
+				"title": "Site Tagline",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panel",
+				"title": "Tab Panel",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panels",
+				"title": "Tab Panels",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tabs",
+				"title": "Tabs",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/term-count",
+				"title": "Term Count",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-description",
+				"title": "Term Description",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-name",
+				"title": "Term Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-template",
+				"title": "Term Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/terms-query-content.jsx",
+					"edit/terms-query-placeholder.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/text-columns",
+				"title": "Text Columns (deprecated)",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/verse",
+				"title": "Poetry",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:useHasRecursion": [
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/post-content",
+				"title": "Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			}
+		],
+		"block-editor:useInnerBlocksProps": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-item",
+				"title": "Accordion Item",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-panel",
+				"title": "Accordion Panel",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/buttons",
+				"title": "Buttons",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/comment-template",
+				"title": "Comment Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"edit/index.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"deprecated.jsx",
+					"edit/index.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list-item",
+				"title": "List Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"deprecated.jsx",
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/inner-blocks.jsx",
+					"edit/unsaved-inner-blocks.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list-item",
+				"title": "Page List Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/post-comment",
+				"title": "Comment (deprecated)",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/post-content",
+				"title": "Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"deprecated.jsx",
+					"edit/query-content.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/query-no-results",
+				"title": "No Results",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/quote",
+				"title": "Quote",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panel",
+				"title": "Tab Panel",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panels",
+				"title": "Tab Panels",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/tabs",
+				"title": "Tabs",
+				"files": [
+					"edit.jsx",
+					"save.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/inner-blocks.jsx"
+				]
+			},
+			{
+				"block": "core/term-template",
+				"title": "Term Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/terms-query-content.jsx",
+					"save.jsx"
+				]
+			}
+		],
+		"block-editor:useSettings": [
+			{
+				"block": "core/accordion-heading",
+				"title": "Accordion Heading",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx",
+					"gallery-styles.js"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/use-layout-custom-properties.js"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"dimension-controls.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/inner-blocks.jsx"
+				]
+			}
+		],
+		"block-editor:useStyleOverride": [
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"gallery-styles.js"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/use-layout-custom-properties.js"
+				]
+			}
+		],
+		"block-editor:withColors": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"overlay-controls.jsx",
+					"overlay.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:BaseControl": [
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:BlockQuotation": [
+			{
+				"block": "core/quote",
+				"title": "Quote",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:Button": [
+			{
+				"block": "core/comments",
+				"title": "Comments",
+				"files": [
+					"edit/comments-legacy.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"edit.jsx",
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx",
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"components/custom-inserter/icon-grid.jsx"
+				]
+			},
+			{
+				"block": "core/missing",
+				"title": "Unsupported",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/deleted-navigation-warning.jsx",
+					"edit/deleted-overlay-warning.jsx",
+					"edit/manage-menus-button.jsx",
+					"edit/navigation-menu-delete-control.jsx",
+					"edit/overlay-menu-preview-button.jsx",
+					"edit/overlay-template-part-selector.jsx",
+					"edit/placeholder/index.jsx",
+					"edit/responsive-wrapper.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/dialog-wrapper.jsx",
+					"link-ui/index.jsx",
+					"link-ui/page-creator.jsx",
+					"shared/controls.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-comment",
+				"title": "Comment (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-comments-form",
+				"title": "Comments Form",
+				"files": [
+					"form.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/query-placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/import-controls.jsx",
+					"edit/placeholder.jsx",
+					"edit/title-modal.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:CheckboxControl": [
+			{
+				"block": "core/breadcrumbs",
+				"title": "Breadcrumbs",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/page-creator.jsx",
+					"shared/controls.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panel",
+				"title": "Tab Panel",
+				"files": [
+					"controls.jsx"
+				]
+			}
+		],
+		"components:ComboboxControl": [
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"user-control.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:Disabled": [
+			{
+				"block": "core/comment-content",
+				"title": "Comment Content",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/unsaved-inner-blocks.jsx",
+					"edit/use-generate-default-navigation-title.js"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:DropZone": [
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:Dropdown": [
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/query-toolbar.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:DropdownMenu": [
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/leaf-more-menu.jsx",
+					"edit/navigation-menu-selector.jsx"
+				]
+			}
+		],
+		"components:ExternalLink": [
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:Flex": [
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:FlexBlock": [
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/overlay-template-part-selector.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/import-controls.jsx"
+				]
+			}
+		],
+		"components:FlexItem": [
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/overlay-template-part-selector.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/import-controls.jsx"
+				]
+			}
+		],
+		"components:FocalPointPicker": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:FormFileUpload": [
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:FormTokenField": [
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/author-control.jsx",
+					"edit/inspector-controls/format-controls.jsx",
+					"edit/inspector-controls/parent-control.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/include-control.jsx"
+				]
+			}
+		],
+		"components:G": [
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"icons.jsx"
+				]
+			}
+		],
+		"components:HorizontalRule": [
+			{
+				"block": "core/separator",
+				"title": "Separator",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:Icon": [
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:MenuGroup": [
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/leaf-more-menu.jsx",
+					"edit/navigation-menu-selector.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:MenuItem": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/block-controls.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/leaf-more-menu.jsx",
+					"edit/manage-menus-button.jsx",
+					"edit/navigation-menu-selector.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:MenuItemsChoice": [
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/navigation-menu-selector.jsx"
+				]
+			}
+		],
+		"components:Modal": [
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"components/custom-inserter/index.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/pattern-selection.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx",
+					"edit/title-modal.jsx"
+				]
+			}
+		],
+		"components:NavigableMenu": [
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:Notice": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/embed-video-url-input.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/deleted-navigation-warning.jsx",
+					"edit/deleted-overlay-warning.jsx",
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/page-creator.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/index.jsx"
+				]
+			}
+		],
+		"components:PanelBody": [
+			{
+				"block": "core/comment-author-avatar",
+				"title": "Comment Author Avatar (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/menu-inspector-controls.jsx",
+					"edit/overlay-panel.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/text-columns",
+				"title": "Text Columns (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:Path": [
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"variations.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"icon.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/query-total",
+				"title": "Query Total",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/site-tagline",
+				"title": "Site Tagline",
+				"files": [
+					"icon.jsx"
+				]
+			},
+			{
+				"block": "core/term-count",
+				"title": "Term Count",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"variations.jsx"
+				]
+			}
+		],
+		"components:Placeholder": [
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/calendar",
+				"title": "Calendar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-placeholder.jsx",
+					"embed-preview.jsx"
+				]
+			},
+			{
+				"block": "core/footnotes",
+				"title": "Footnotes",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"edit.jsx",
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"media-container.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/placeholder/index.jsx"
+				]
+			},
+			{
+				"block": "core/post-comment",
+				"title": "Comment (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/query-placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/shortcode",
+				"title": "Shortcode",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:Popover": [
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/math",
+				"title": "Math",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/index.jsx"
+				]
+			}
+		],
+		"components:QueryControls": [
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:RadioControl": [
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:RangeControl": [
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-avatar",
+				"title": "Comment Author Avatar (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"inspector.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-comments",
+				"title": "Latest Comments",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-excerpt",
+				"title": "Excerpt",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"overlay-controls.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/per-page-control.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-numbers",
+				"title": "Page Numbers",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/max-terms-control.jsx"
+				]
+			},
+			{
+				"block": "core/text-columns",
+				"title": "Text Columns (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:ResizableBox": [
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-avatar",
+				"title": "Comment Author Avatar (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"media-container.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:SVG": [
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"variations.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/group",
+				"title": "Group",
+				"files": [
+					"placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"icon.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/query-total",
+				"title": "Query Total",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/site-tagline",
+				"title": "Site Tagline",
+				"files": [
+					"icon.jsx"
+				]
+			},
+			{
+				"block": "core/term-count",
+				"title": "Term Count",
+				"files": [
+					"icons.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"variations.jsx"
+				]
+			}
+		],
+		"components:SandBox": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-preview.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"preview.jsx"
+				]
+			}
+		],
+		"components:SearchControl": [
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"components/custom-inserter/index.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/pattern-selection.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/selection-modal.jsx"
+				]
+			}
+		],
+		"components:SelectControl": [
+			{
+				"block": "core/archives",
+				"title": "Archives",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"inspector.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx",
+					"order-controls.tsx"
+				]
+			},
+			{
+				"block": "core/latest-comments",
+				"title": "Latest Comments",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"ordered-list-settings.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/overlay-template-part-selector.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/index.jsx",
+					"edit/inspector-controls/order-control.jsx",
+					"edit/inspector-controls/sticky-control.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/separator",
+				"title": "Separator",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/advanced-controls.jsx",
+					"edit/import-controls.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/order-control.jsx",
+					"edit/inspector-controls/taxonomy-control.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit-common-settings.jsx",
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:Spinner": [
+			{
+				"block": "core/archives",
+				"title": "Archives",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/breadcrumbs",
+				"title": "Breadcrumbs",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/calendar",
+				"title": "Calendar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-template",
+				"title": "Comment Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-loading.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"components/custom-inserter/index.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/latest-comments",
+				"title": "Latest Comments",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"media-container.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/menu-inspector-controls.jsx",
+					"edit/overlay-preview.jsx",
+					"edit/placeholder/index.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-terms",
+				"title": "Post Terms",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx",
+					"edit/placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:TextControl": [
+			{
+				"block": "core/breadcrumbs",
+				"title": "Breadcrumbs",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/embed-video-url-input.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"ordered-list-settings.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/navigation-menu-name-control.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/page-creator.jsx",
+					"shared/controls.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-comment",
+				"title": "Comment (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-terms",
+				"title": "Post Terms",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/advanced-controls.jsx",
+					"edit/title-modal.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:TextareaControl": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"shared/controls.jsx"
+				]
+			},
+			{
+				"block": "core/playlist-track",
+				"title": "Playlist track",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:ToggleControl": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-item",
+				"title": "Accordion Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/archives",
+				"title": "Archives",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/breadcrumbs",
+				"title": "Breadcrumbs",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-name",
+				"title": "Comment Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-date",
+				"title": "Comment Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-edit-link",
+				"title": "Comment Edit Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-title",
+				"title": "Comments Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-controls.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"inspector.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-comments",
+				"title": "Latest Comments",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"ordered-list-settings.jsx"
+				]
+			},
+			{
+				"block": "core/loginout",
+				"title": "Login/out",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/more",
+				"title": "More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/overlay-menu-preview-controls.jsx",
+					"edit/overlay-menu-preview.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author-name",
+				"title": "Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-excerpt",
+				"title": "Excerpt",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-time-to-read",
+				"title": "Time to Read",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/enhanced-pagination-control.jsx",
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"query-pagination-label-control.jsx"
+				]
+			},
+			{
+				"block": "core/query-title",
+				"title": "Query Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/read-more",
+				"title": "Read More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-name",
+				"title": "Term Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/empty-terms-control.jsx",
+					"edit/inspector-controls/nested-terms-control.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit-common-settings.jsx",
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:ToolbarButton": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/button",
+				"title": "Button",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/block-controls.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-controls.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"convert-to-blocks-button.jsx",
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list-item",
+				"title": "List Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/query-toolbar.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"tab-movers.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tabs",
+				"title": "Tabs",
+				"files": [
+					"tab-toolbar-controls.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:ToolbarDropdownMenu": [
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-total",
+				"title": "Query Total",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-count",
+				"title": "Term Count",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:ToolbarGroup": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/block",
+				"title": "Pattern",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-controls.jsx"
+				]
+			},
+			{
+				"block": "core/freeform",
+				"title": "Classic",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-submenu",
+				"title": "Submenu",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-template",
+				"title": "Post Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-total",
+				"title": "Query Total",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tabs",
+				"title": "Tabs",
+				"files": [
+					"tab-toolbar-controls.jsx"
+				]
+			},
+			{
+				"block": "core/term-template",
+				"title": "Term Template",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:ToolbarItem": [
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			}
+		],
+		"components:__experimentalConfirmDialog": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/embed-video-url-input.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"dynamic-gallery.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/navigation-menu-delete-control.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalDropdownContentWrapper": [
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/query-toolbar.jsx"
+				]
+			}
+		],
+		"components:__experimentalGrid": [
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:__experimentalHStack": [
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/navigation-list-view-header.jsx",
+					"edit/overlay-template-part-selector.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/page-creator.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/import-controls.jsx",
+					"edit/selection-modal.jsx",
+					"edit/title-modal.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:__experimentalHasSplitBorders": [
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalHeading": [
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/navigation-list-view-header.jsx"
+				]
+			}
+		],
+		"components:__experimentalInputControl": [
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-placeholder.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalInputControlSuffixWrapper": [
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalNumberControl": [
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/offset-controls.jsx",
+					"edit/inspector-controls/pages-control.jsx"
+				]
+			}
+		],
+		"components:__experimentalParseQuantityAndUnitFromRawValue": [
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalSpacer": [
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/import-controls.jsx"
+				]
+			}
+		],
+		"components:__experimentalText": [
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalToggleGroupControl": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"comments-pagination-arrow-controls.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/overlay-menu-preview-controls.jsx",
+					"edit/overlay-menu-preview.jsx",
+					"edit/overlay-visibility-control.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-overlay-close",
+				"title": "Navigation Overlay Close",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"query-pagination-arrow-controls.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/inherit-control.jsx"
+				]
+			}
+		],
+		"components:__experimentalToggleGroupControlOption": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"comments-pagination-arrow-controls.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/overlay-menu-preview-controls.jsx",
+					"edit/overlay-menu-preview.jsx",
+					"edit/overlay-visibility-control.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-overlay-close",
+				"title": "Navigation Overlay Close",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"query-pagination-arrow-controls.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/inherit-control.jsx"
+				]
+			}
+		],
+		"components:__experimentalToggleGroupControlOptionIcon": [
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalToolsPanel": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-item",
+				"title": "Accordion Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/archives",
+				"title": "Archives",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/breadcrumbs",
+				"title": "Breadcrumbs",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-name",
+				"title": "Comment Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-date",
+				"title": "Comment Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-edit-link",
+				"title": "Comment Edit Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-title",
+				"title": "Comments Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-controls.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"inspector.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/latest-comments",
+				"title": "Latest Comments",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"ordered-list-settings.jsx"
+				]
+			},
+			{
+				"block": "core/loginout",
+				"title": "Login/out",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/more",
+				"title": "More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"shared/controls.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-overlay-close",
+				"title": "Navigation Overlay Close",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author-name",
+				"title": "Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-excerpt",
+				"title": "Excerpt",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-time-to-read",
+				"title": "Time to Read",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-numbers",
+				"title": "Page Numbers",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-title",
+				"title": "Query Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/read-more",
+				"title": "Read More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panel",
+				"title": "Tab Panel",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-name",
+				"title": "Term Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalToolsPanelItem": [
+			{
+				"block": "core/accordion",
+				"title": "Accordion",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/accordion-item",
+				"title": "Accordion Item",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/archives",
+				"title": "Archives",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/audio",
+				"title": "Audio",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/avatar",
+				"title": "Avatar",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/breadcrumbs",
+				"title": "Breadcrumbs",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/categories",
+				"title": "Terms List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/columns",
+				"title": "Columns",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-author-name",
+				"title": "Comment Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-date",
+				"title": "Comment Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comment-edit-link",
+				"title": "Comment Edit Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-pagination",
+				"title": "Comments Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/comments-title",
+				"title": "Comments Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/details",
+				"title": "Details",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/embed",
+				"title": "Embed",
+				"files": [
+					"embed-controls.jsx"
+				]
+			},
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"inspector.jsx"
+				]
+			},
+			{
+				"block": "core/gallery",
+				"title": "Gallery",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/home-link",
+				"title": "Home Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/icon",
+				"title": "Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/latest-comments",
+				"title": "Latest Comments",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/latest-posts",
+				"title": "Latest Posts",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/list",
+				"title": "List",
+				"files": [
+					"ordered-list-settings.jsx"
+				]
+			},
+			{
+				"block": "core/loginout",
+				"title": "Login/out",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/media-text",
+				"title": "Media & Text",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/more",
+				"title": "More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/index.jsx",
+					"edit/overlay-menu-preview.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"shared/controls.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-overlay-close",
+				"title": "Navigation Overlay Close",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/page-list",
+				"title": "Page List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/paragraph",
+				"title": "Paragraph",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/playlist",
+				"title": "Playlist",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-author-name",
+				"title": "Author Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-date",
+				"title": "Date",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-excerpt",
+				"title": "Excerpt",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"edit.jsx",
+					"overlay-controls.jsx"
+				]
+			},
+			{
+				"block": "core/post-navigation-link",
+				"title": "Post Navigation Link",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-time-to-read",
+				"title": "Time to Read",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/post-title",
+				"title": "Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination",
+				"title": "Pagination",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-pagination-numbers",
+				"title": "Page Numbers",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query-title",
+				"title": "Query Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/read-more",
+				"title": "Read More",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/rss",
+				"title": "RSS",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-logo",
+				"title": "Site Logo",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/site-title",
+				"title": "Site Title",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-link",
+				"title": "Social Icon",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/social-links",
+				"title": "Social Icons",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/tab-list",
+				"title": "Tab List",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tab-panel",
+				"title": "Tab Panel",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/table",
+				"title": "Table",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/table-of-contents",
+				"title": "Table of Contents",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/term-name",
+				"title": "Term Name",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/terms-query",
+				"title": "Terms Query",
+				"files": [
+					"edit/inspector-controls/index.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"edit-common-settings.jsx"
+				]
+			}
+		],
+		"components:__experimentalUnitControl": [
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalUseCustomUnits": [
+			{
+				"block": "core/column",
+				"title": "Column",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/cover",
+				"title": "Cover",
+				"files": [
+					"edit/inspector-controls.jsx"
+				]
+			},
+			{
+				"block": "core/image",
+				"title": "Image",
+				"files": [
+					"image.jsx"
+				]
+			},
+			{
+				"block": "core/post-featured-image",
+				"title": "Featured Image",
+				"files": [
+					"dimension-controls.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/spacer",
+				"title": "Spacer",
+				"files": [
+					"controls.jsx"
+				]
+			},
+			{
+				"block": "core/tag-cloud",
+				"title": "Tag Cloud",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:__experimentalVStack": [
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"edit.jsx",
+					"modal.jsx"
+				]
+			},
+			{
+				"block": "core/navigation",
+				"title": "Navigation",
+				"files": [
+					"edit/overlay-menu-preview-button.jsx",
+					"edit/overlay-menu-preview-controls.jsx",
+					"edit/overlay-panel.jsx"
+				]
+			},
+			{
+				"block": "core/navigation-link",
+				"title": "Navigation Link",
+				"files": [
+					"link-ui/index.jsx",
+					"link-ui/page-creator.jsx"
+				]
+			},
+			{
+				"block": "core/post-author",
+				"title": "Author (deprecated)",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/query",
+				"title": "Query Loop",
+				"files": [
+					"edit/inspector-controls/index.jsx",
+					"edit/inspector-controls/taxonomy-controls.jsx"
+				]
+			},
+			{
+				"block": "core/search",
+				"title": "Search",
+				"files": [
+					"edit.jsx"
+				]
+			},
+			{
+				"block": "core/template-part",
+				"title": "Template Part",
+				"files": [
+					"edit/title-modal.jsx"
+				]
+			},
+			{
+				"block": "core/video",
+				"title": "Video",
+				"files": [
+					"tracks-editor.jsx"
+				]
+			}
+		],
+		"components:__unstableGetAnimateClassName": [
+			{
+				"block": "core/file",
+				"title": "File",
+				"files": [
+					"edit.jsx"
+				]
+			}
+		],
+		"components:privateApis": [
+			{
+				"block": "core/html",
+				"title": "Custom HTML",
+				"files": [
+					"modal.jsx"
+				]
+			}
+		]
+	},
+	"shared": {
+		"block-editor:__experimentalGetElementClassName": [
+			"utils/caption.jsx"
+		],
+		"block-editor:BlockControls": [
+			"utils/caption.jsx"
+		],
+		"block-editor:getStyleForState": [
+			"utils/style-state.js"
+		],
+		"block-editor:MediaReplaceFlow": [
+			"utils/media-control.jsx"
+		],
+		"block-editor:MediaUpload": [
+			"utils/poster-image.jsx"
+		],
+		"block-editor:MediaUploadCheck": [
+			"utils/poster-image.jsx"
+		],
+		"block-editor:privateApis": [
+			"utils/edit-original-inspector-button.tsx",
+			"utils/migrate-font-family.js",
+			"utils/search-patterns.js",
+			"utils/style-state.js"
+		],
+		"block-editor:RichText": [
+			"utils/caption.jsx"
+		],
+		"block-editor:setStyleForState": [
+			"utils/style-state.js"
+		],
+		"block-editor:store": [
+			"utils/deprecated-text-align-attributes.js",
+			"utils/edit-original-inspector-button.tsx",
+			"utils/hooks.js",
+			"utils/media-control.jsx",
+			"utils/poster-image.jsx"
+		],
+		"block-editor:useBlockProps": [
+			"index.jsx"
+		],
+		"components:__experimentalHStack": [
+			"utils/media-control.jsx",
+			"utils/poster-image.jsx"
+		],
+		"components:__experimentalItemGroup": [
+			"utils/media-control.jsx"
+		],
+		"components:__experimentalToolsPanelItem": [
+			"utils/poster-image.jsx"
+		],
+		"components:__experimentalTruncate": [
+			"utils/media-control.jsx"
+		],
+		"components:BaseControl": [
+			"utils/poster-image.jsx"
+		],
+		"components:Button": [
+			"utils/edit-original-inspector-button.tsx",
+			"utils/media-control.jsx",
+			"utils/poster-image.jsx"
+		],
+		"components:DropZone": [
+			"utils/media-control.jsx",
+			"utils/poster-image.jsx"
+		],
+		"components:FlexBlock": [
+			"utils/media-control.jsx"
+		],
+		"components:Spinner": [
+			"utils/media-control.jsx",
+			"utils/poster-image.jsx"
+		],
+		"components:ToolbarButton": [
+			"utils/caption.jsx"
+		]
+	}
+}

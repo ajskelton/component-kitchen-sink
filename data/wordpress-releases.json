@@ -1,0 +1,128 @@
+[
+	{
+		"blockEditor": null,
+		"blockLibrary": "2.2.20",
+		"components": "7.0.10",
+		"wordpress": "5.0"
+	},
+	{
+		"blockEditor": null,
+		"blockLibrary": "2.2.20",
+		"components": "7.0.10",
+		"wordpress": "5.1"
+	},
+	{
+		"blockEditor": "2.0.6",
+		"blockLibrary": "2.4.13",
+		"components": "7.3.5",
+		"wordpress": "5.2"
+	},
+	{
+		"blockEditor": "3.2.7",
+		"blockLibrary": "2.9.13",
+		"components": "8.3.4",
+		"wordpress": "5.3"
+	},
+	{
+		"blockEditor": "3.7.9",
+		"blockLibrary": "2.14.11",
+		"components": "9.2.7",
+		"wordpress": "5.4"
+	},
+	{
+		"blockEditor": "4.3.10",
+		"blockLibrary": "2.22.12",
+		"components": "10.0.8",
+		"wordpress": "5.5"
+	},
+	{
+		"blockEditor": "5.1.8",
+		"blockLibrary": "2.26.11",
+		"components": "11.1.6",
+		"wordpress": "5.6"
+	},
+	{
+		"blockEditor": "5.2.13",
+		"blockLibrary": "2.28.13",
+		"components": "12.0.9",
+		"wordpress": "5.7"
+	},
+	{
+		"blockEditor": "6.1.15",
+		"blockLibrary": "3.2.22",
+		"components": "14.1.11",
+		"wordpress": "5.8"
+	},
+	{
+		"blockEditor": "8.0.18",
+		"blockLibrary": "6.0.33",
+		"components": "19.2.3",
+		"wordpress": "5.9"
+	},
+	{
+		"blockEditor": "8.5.11",
+		"blockLibrary": "7.3.21",
+		"components": "19.8.6",
+		"wordpress": "6.0"
+	},
+	{
+		"blockEditor": "10.0.10",
+		"blockLibrary": "7.14.17",
+		"components": "21.0.7",
+		"wordpress": "6.1"
+	},
+	{
+		"blockEditor": "11.3.11",
+		"blockLibrary": "8.3.18",
+		"components": "23.3.8",
+		"wordpress": "6.2"
+	},
+	{
+		"blockEditor": "12.3.15",
+		"blockLibrary": "8.12.22",
+		"components": "25.1.12",
+		"wordpress": "6.3"
+	},
+	{
+		"blockEditor": "12.10.14",
+		"blockLibrary": "8.19.20",
+		"components": "25.8.14",
+		"wordpress": "6.4"
+	},
+	{
+		"blockEditor": "12.19.9",
+		"blockLibrary": "8.28.14",
+		"components": "26.0.6",
+		"wordpress": "6.5"
+	},
+	{
+		"blockEditor": "13.0.7",
+		"blockLibrary": "9.0.10",
+		"components": "28.0.3",
+		"wordpress": "6.6"
+	},
+	{
+		"blockEditor": "14.3.16",
+		"blockLibrary": "9.8.19",
+		"components": "28.8.12",
+		"wordpress": "6.7"
+	},
+	{
+		"blockEditor": "14.14.6",
+		"blockLibrary": "9.19.8",
+		"components": "29.5.4",
+		"wordpress": "6.8"
+	},
+	{
+		"blockEditor": "15.13.2",
+		"blockLibrary": "9.40.2",
+		"components": "32.2.1",
+		"wordpress": "7.0"
+	},
+	{
+		"blockEditor": "16.0.0",
+		"blockLibrary": "10.2.0",
+		"components": "37.0.0",
+		"wordpress": "7.1"
+	}
+]

@@ -14,10 +14,15 @@
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start --webpack-copy-php",
 		"create-block": "cd ./src/blocks/ && npx @wordpress/create-block --namespace=ajs --no-plugin --variant=dynamic",
-		"combine-styles": "node scripts/combine-styles.mjs"
+		"combine-styles": "node scripts/combine-styles.mjs",
+		"inventory": "node scripts/inventory.mjs",
+		"data:usage": "node scripts/component-usage.mjs",
+		"data:history": "node scripts/component-history.mjs",
+		"data": "npm run inventory && npm run data:usage && npm run data:history"
 	},
 	"devDependencies": {
 		"@wordpress/block-editor": "^19.0.0",
+		"@wordpress/block-library": "^12.0.0",
 		"@wordpress/blocks": "^17.0.0",
 		"@wordpress/components": "^43.0.0",
 		"@wordpress/compose": "^9.0.0",
@@ -25,6 +30,7 @@
 		"@wordpress/element": "^10.0.0",
 		"@wordpress/i18n": "^7.0.0",
 		"@wordpress/icons": "^19.0.0",
-		"@wordpress/scripts": "^37.0.0"
+		"@wordpress/scripts": "^37.0.0",
+		"@wordpress/server-side-render": "^7.0.0"
 	}
 }
