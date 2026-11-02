@@ -31,6 +31,23 @@ customised in the Site Editor like theme templates. The archive cards use
 the info block's **summary** variant (`"variant":"summary"`), a one-line
 package / kind / added / usage strip.
 
+## Front page and navigation
+
+The plugin registers a `front-page` block template (so it is used for the
+site's home whatever the reading settings say) with a short introduction and
+the `ajs/site-overview` block, which renders two cards linking to the
+Component and Core Block archives with live counts and their taxonomy
+filters, followed by every page that contains one of this plugin's blocks
+(the test pages). The introduction can be edited in the Site Editor like
+any template.
+
+The header's Navigation block has no `ref`, so it shows the most recent
+`wp_navigation` post. That post (ID 4 on the local site, "Primary") holds
+Home, Components, Core Blocks and a Test pages submenu; edit it in the Site
+Editor under Navigation. The starter content WordPress ships with (the
+"Hello world!" post, its comment, the Sample Page and the Privacy Policy
+draft) is in the trash.
+
 ## How it fits together
 
 | Piece | Role |
@@ -42,9 +59,10 @@ package / kind / added / usage strip.
 | `includes/data.php` | Reads the JSON files (once per request) and merges them for one component key, `"<package>:<export>"`. |
 | `includes/post-type.php` | Registers both post types: `ajs_component` with the `ajs_package` and `ajs_component_kind` taxonomies and the `ajs_package` / `ajs_export_name` / `ajs_sort_name` meta, and `ajs_core_block` with the `ajs_block_category` taxonomy and the `ajs_block_name` meta, plus admin columns and filters for each. |
 | `src/blocks/ComponentInfo` | The `ajs/component-info` block. Its `render.php` prints the Added, Used by core blocks and History sections from the data files; in the editor it renders the same output through `ServerSideRender`. |
+| `src/blocks/SiteOverview` | The `ajs/site-overview` block used on the front page: archive cards with counts and filters, and the list of test pages. |
 | `src/blocks/CoreBlockInfo` | The `ajs/core-block-info` block: block.json metadata and the components the block imports, linked to their posts. Both info blocks share `src/blocks/shared/_info.scss`. |
 | `includes/cli.php` | `wp ajs components sync` and `wp ajs core-blocks sync`, which create or update the posts. |
-| `includes/templates.php` | The single and archive block templates for both post types, and the `pre_get_posts` hook that sets 24 per page and the sort order. |
+| `includes/templates.php` | The front page template, the single and archive block templates for both post types, and the `pre_get_posts` hook that sets 24 per page and the sort order. |
 
 Posts store only the package and export name. Everything else is looked up
 from `data/` when the post renders, so regenerating the data never requires

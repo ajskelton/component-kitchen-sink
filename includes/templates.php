@@ -90,6 +90,65 @@ function ajs_component_register_templates(): void {
 add_action( 'init', 'ajs_component_register_templates' );
 
 /**
+ * Registers the front page template: a short introduction and the
+ * ajs/site-overview block.
+ */
+function ajs_component_register_front_page(): void {
+	if ( ! function_exists( 'register_block_template' ) ) {
+		return;
+	}
+
+	register_block_template(
+		'component-kitchen-sink//front-page',
+		array(
+			'title'       => __( 'Kitchen Sink Front Page', 'component-kitchen-sink' ),
+			'description' => __( 'Introduces the plugin and links to the component and core block archives and the test pages.', 'component-kitchen-sink' ),
+			'content'     => ajs_component_front_page_template(),
+		)
+	);
+}
+
+add_action( 'init', 'ajs_component_register_front_page' );
+
+/**
+ * The front page template.
+ *
+ * @return string Block markup.
+ */
+function ajs_component_front_page_template(): string {
+	$heading = esc_html__( 'Every @wordpress component, exercised in a real editor.', 'component-kitchen-sink' );
+	$intro   = esc_html__( 'Component Kitchen Sink is a WordPress plugin with one test block for every export of @wordpress/components and @wordpress/block-editor. Each component has a post with its history and the core blocks that use it, each core block has a post with the components it uses, and the test pages put whole families of blocks on one screen.', 'component-kitchen-sink' );
+
+	return <<<HTML
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull">
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
+	<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:heading {"level":1,"fontSize":"xx-large","style":{"typography":{"lineHeight":"1.1"}}} -->
+		<h1 class="wp-block-heading has-xx-large-font-size" style="line-height:1.1">{$heading}</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"fontSize":"large","style":{"dimensions":{"maxWidth":"46rem"}}} -->
+		<p class="has-large-font-size">{$intro}</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide" style="padding-bottom:var(--wp--preset--spacing--60)">
+		<!-- wp:ajs/site-overview {"align":"wide"} /-->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->
+HTML;
+}
+
+/**
  * Sets the archive page size and order for the component and core block archives.
  *
  * Components order by the prefix-free export name stored in meta; core

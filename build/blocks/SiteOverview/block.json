@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/site-overview",
+  "version": "0.1.0",
+  "title": "Site Overview",
+  "category": "ajs-kitchen-sink",
+  "icon": "layout",
+  "description": "Links to the component and core block archives with live counts, their filters, and the test pages",
+  "supports": {
+    "html": false,
+    "multiple": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {},
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
