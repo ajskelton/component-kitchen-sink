@@ -26,6 +26,41 @@ const AJS_COMPONENT_TAX_KIND = 'ajs_component_kind';
  * Registers the post type, its taxonomies and its meta.
  */
 function ajs_component_register_post_type(): void {
+	// Taxonomies first, so their components/package/<term> rules outrank the post type's attachment rule.
+	register_taxonomy(
+		AJS_COMPONENT_TAX_PACKAGE,
+		AJS_COMPONENT_POST_TYPE,
+		array(
+			'labels'            => array(
+				'name'          => __( 'Packages', 'component-kitchen-sink' ),
+				'singular_name' => __( 'Package', 'component-kitchen-sink' ),
+				'all_items'     => __( 'All packages', 'component-kitchen-sink' ),
+			),
+			'public'            => true,
+			'hierarchical'      => false,
+			'show_in_rest'      => true,
+			'show_admin_column' => true,
+			'rewrite'           => array( 'slug' => 'components/package' ),
+		)
+	);
+
+	register_taxonomy(
+		AJS_COMPONENT_TAX_KIND,
+		AJS_COMPONENT_POST_TYPE,
+		array(
+			'labels'            => array(
+				'name'          => __( 'Kinds', 'component-kitchen-sink' ),
+				'singular_name' => __( 'Kind', 'component-kitchen-sink' ),
+				'all_items'     => __( 'All kinds', 'component-kitchen-sink' ),
+			),
+			'public'            => true,
+			'hierarchical'      => false,
+			'show_in_rest'      => true,
+			'show_admin_column' => true,
+			'rewrite'           => array( 'slug' => 'components/kind' ),
+		)
+	);
+
 	register_post_type(
 		AJS_COMPONENT_POST_TYPE,
 		array(
@@ -61,41 +96,7 @@ function ajs_component_register_post_type(): void {
 		)
 	);
 
-	register_taxonomy(
-		AJS_COMPONENT_TAX_PACKAGE,
-		AJS_COMPONENT_POST_TYPE,
-		array(
-			'labels'            => array(
-				'name'          => __( 'Packages', 'component-kitchen-sink' ),
-				'singular_name' => __( 'Package', 'component-kitchen-sink' ),
-				'all_items'     => __( 'All packages', 'component-kitchen-sink' ),
-			),
-			'public'            => true,
-			'hierarchical'      => false,
-			'show_in_rest'      => true,
-			'show_admin_column' => true,
-			'rewrite'           => array( 'slug' => 'components/package' ),
-		)
-	);
-
-	register_taxonomy(
-		AJS_COMPONENT_TAX_KIND,
-		AJS_COMPONENT_POST_TYPE,
-		array(
-			'labels'            => array(
-				'name'          => __( 'Kinds', 'component-kitchen-sink' ),
-				'singular_name' => __( 'Kind', 'component-kitchen-sink' ),
-				'all_items'     => __( 'All kinds', 'component-kitchen-sink' ),
-			),
-			'public'            => true,
-			'hierarchical'      => false,
-			'show_in_rest'      => true,
-			'show_admin_column' => true,
-			'rewrite'           => array( 'slug' => 'components/kind' ),
-		)
-	);
-
-	foreach ( array( AJS_COMPONENT_META_PACKAGE, AJS_COMPONENT_META_EXPORT ) as $meta_key ) {
+	foreach ( array( AJS_COMPONENT_META_PACKAGE, AJS_COMPONENT_META_EXPORT, AJS_COMPONENT_META_SORT ) as $meta_key ) {
 		register_post_meta(
 			AJS_COMPONENT_POST_TYPE,
 			$meta_key,

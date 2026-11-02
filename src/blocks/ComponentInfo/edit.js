@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import { PanelBody } from '@wordpress/components';
+import { PanelBody, SelectControl } from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
 import metadata from './block.json';
 import './editor.scss';
@@ -13,11 +13,14 @@ import './editor.scss';
  * simply renders the same output as the front end through the REST
  * block-renderer endpoint.
  *
- * @param {Object} props         Block props.
- * @param {Object} props.context Block context (postId, postType).
+ * @param {Object}                 props               Block props.
+ * @param {Object}                 props.attributes    Block attributes.
+ * @param {(next: Object) => void} props.setAttributes Attribute setter.
+ * @param {Object}                 props.context       Block context (postId, postType).
  * @return {Element} The block.
  */
-export default function Edit( { context } ) {
+export default function Edit( { attributes, setAttributes, context } ) {
+	const { variant } = attributes;
 	const blockProps = useBlockProps();
 
 	return (
@@ -26,6 +29,28 @@ export default function Edit( { context } ) {
 				<PanelBody
 					title={ __( 'Component Info', 'component-kitchen-sink' ) }
 				>
+					<SelectControl
+						label={ __( 'Variant', 'component-kitchen-sink' ) }
+						value={ variant }
+						options={ [
+							{
+								label: __( 'Full', 'component-kitchen-sink' ),
+								value: 'full',
+							},
+							{
+								label: __(
+									'Summary (one line, for archives)',
+									'component-kitchen-sink'
+								),
+								value: 'summary',
+							},
+						] }
+						onChange={ ( value ) =>
+							setAttributes( { variant: value } )
+						}
+						__nextHasNoMarginBottom
+						__next40pxDefaultSize
+					/>
 					<p>
 						{ __(
 							'Read-only. The usage and history shown here are generated from data/usage.json and data/history.json; run `npm run data` to refresh them.',
@@ -37,7 +62,7 @@ export default function Edit( { context } ) {
 			<div { ...blockProps }>
 				<ServerSideRender
 					block={ metadata.name }
-					attributes={ {} }
+					attributes={ attributes }
 					urlQueryArgs={
 						context?.postId ? { post_id: context.postId } : {}
 					}

@@ -6,14 +6,26 @@
 	"title": "Component Info",
 	"category": "ajs-kitchen-sink",
 	"icon": "info-outline",
-	"description": "Shows where the component this post describes is used by core blocks and how it has changed over time",
-	"usesContext": [ "postId", "postType" ],
+	"description": "Shows where the component this post describes is used by core blocks and how it has changed over time; the summary variant is a one-line card for archives",
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"supports": {
 		"html": false,
 		"multiple": false,
 		"reusable": false
 	},
-	"attributes": {},
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"enum": [
+				"full",
+				"summary"
+			],
+			"default": "full"
+		}
+	},
 	"textdomain": "component-kitchen-sink",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

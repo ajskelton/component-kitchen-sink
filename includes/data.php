@@ -19,6 +19,9 @@ const AJS_COMPONENT_META_PACKAGE = 'ajs_package';
 /** Meta key holding the export name exactly as the package exports it. */
 const AJS_COMPONENT_META_EXPORT = 'ajs_export_name';
 
+/** Meta key holding the export name without its __experimental/__unstable prefix, lower-cased, for sorting. */
+const AJS_COMPONENT_META_SORT = 'ajs_sort_name';
+
 /**
  * Loads one data/<name>.json file once per request.
  *

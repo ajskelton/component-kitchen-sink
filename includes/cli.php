@@ -152,8 +152,19 @@ class AJS_Components_Command {
 			'meta_input'   => array(
 				AJS_COMPONENT_META_PACKAGE => $row['package'],
 				AJS_COMPONENT_META_EXPORT  => $row['name'],
+				AJS_COMPONENT_META_SORT    => $this->sort_name( $row ),
 			),
 		);
+	}
+
+	/**
+	 * The lower-cased base name, so archives sort experimental exports with their stable peers.
+	 *
+	 * @param array $row Inventory row.
+	 * @return string Sort key.
+	 */
+	private function sort_name( array $row ): string {
+		return strtolower( (string) ( $row['base'] ?? $row['name'] ) );
 	}
 
 	/**
@@ -223,8 +234,9 @@ class AJS_Components_Command {
 		}
 
 		$terms_changed = $this->terms_differ( $post_id, $row );
+		$meta_changed  = (string) get_post_meta( $post_id, AJS_COMPONENT_META_SORT, true ) !== $this->sort_name( $row );
 
-		if ( empty( $update ) && ! $terms_changed ) {
+		if ( empty( $update ) && ! $terms_changed && ! $meta_changed ) {
 			return false;
 		}
 
@@ -288,6 +300,7 @@ class AJS_Components_Command {
 	private function write_meta_and_terms( int $post_id, array $row ): void {
 		update_post_meta( $post_id, AJS_COMPONENT_META_PACKAGE, $row['package'] );
 		update_post_meta( $post_id, AJS_COMPONENT_META_EXPORT, $row['name'] );
+		update_post_meta( $post_id, AJS_COMPONENT_META_SORT, $this->sort_name( $row ) );
 
 		foreach ( $this->terms( $row ) as $taxonomy => $slug ) {
 			if ( ! term_exists( $slug, $taxonomy ) ) {

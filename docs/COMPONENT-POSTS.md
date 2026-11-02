@@ -5,10 +5,21 @@ The `ajs_component` post type holds one post per `@wordpress/components` and
 the component is used by core blocks, when it was added and how it changed
 over time, followed by the component's test block.
 
-Front end: `/components/` lists every post, `/components/<block-slug>/` shows
-one, for example `/components/toggle-group-control/`. Admin: **Components**
-in the sidebar, with Package and Kind filters and Export / Added / Core
-blocks columns.
+Front end: `/components/` lists every post in a three-column grid, 24 per
+page, ordered by export name without its `__experimental` / `__unstable`
+prefix (the `ajs_sort_name` meta). `/components/package/<package>/` and
+`/components/kind/<kind>/` filter it, and `/components/<block-slug>/` shows
+one component, for example `/components/toggle-group-control/`. Admin:
+**Components** in the sidebar, with Package and Kind filters and Export /
+Added / Core blocks columns.
+
+The layouts come from block templates registered by `includes/templates.php`
+(`single-ajs_component`, `archive-ajs_component`, `taxonomy-ajs_package`,
+`taxonomy-ajs_component_kind`). They reuse the active theme's `header` and
+`footer` template parts, so they work with any block theme and can be
+customised in the Site Editor like theme templates. The archive cards use
+the info block's **summary** variant (`"variant":"summary"`), a one-line
+package / kind / added / usage strip.
 
 ## How it fits together
 
@@ -22,6 +33,7 @@ blocks columns.
 | `includes/post-type.php` | Registers the post type, the `ajs_package` and `ajs_component_kind` taxonomies, the `ajs_package` / `ajs_export_name` meta, and the admin columns and filters. |
 | `src/blocks/ComponentInfo` | The `ajs/component-info` block. Its `render.php` prints the Added, Used by core blocks and History sections from the data files; in the editor it renders the same output through `ServerSideRender`. |
 | `includes/cli.php` | `wp ajs components sync`, which creates or updates the posts. |
+| `includes/templates.php` | The single and archive block templates, and the `pre_get_posts` hook that sets 24 per page and the sort order. |
 
 Posts store only the package and export name. Everything else is looked up
 from `data/` when the post renders, so regenerating the data never requires

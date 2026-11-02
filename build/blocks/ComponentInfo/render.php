@@ -13,9 +13,46 @@
 
 $ajs_post_id = (int) ( $block->context['postId'] ?? get_the_ID() );
 $ajs_data    = $ajs_post_id ? ajs_component_for_post( $ajs_post_id ) : null;
+$ajs_variant = ( $attributes['variant'] ?? 'full' ) === 'summary' ? 'summary' : 'full';
+
+if ( 'summary' === $ajs_variant ) :
+	$ajs_summary = array();
+
+	if ( null !== $ajs_data ) {
+		$ajs_summary[] = '<span class="ajs-component-info__badge ajs-component-info__badge--' . esc_attr( $ajs_data['package'] ) . '">' . esc_html( $ajs_data['package'] ) . '</span>';
+		$ajs_summary[] = '<span class="ajs-component-info__badge">' . esc_html( $ajs_data['inventory']['kind'] ?? '' ) . '</span>';
+
+		if ( ! empty( $ajs_data['history']['addedVersion'] ) ) {
+			$ajs_added = $ajs_data['history']['addedVersion'];
+			if ( ! empty( $ajs_data['history']['firstWordPress'] ) ) {
+				$ajs_added .= ' · WP ' . $ajs_data['history']['firstWordPress'];
+			}
+			/* translators: %s: package version and WordPress release. */
+			$ajs_summary[] = '<span>' . esc_html( sprintf( __( 'Added %s', 'component-kitchen-sink' ), $ajs_added ) ) . '</span>';
+		}
+
+		$ajs_count = count( $ajs_data['blocks'] );
+		$ajs_summary[] = '<span>' . esc_html(
+			$ajs_count
+				/* translators: %d: number of core blocks. */
+				? sprintf( _n( 'Used by %d core block', 'Used by %d core blocks', $ajs_count, 'component-kitchen-sink' ), $ajs_count )
+				: __( 'No core block uses it', 'component-kitchen-sink' )
+		) . '</span>';
+
+		if ( ! empty( $ajs_data['history']['deprecation'] ) ) {
+			$ajs_summary[] = '<span class="ajs-component-info__badge ajs-component-info__badge--warn">' . esc_html__( 'deprecation', 'component-kitchen-sink' ) . '</span>';
+		}
+	}
+	?>
+	<div <?php echo get_block_wrapper_attributes( array( 'class' => 'is-variant-summary' ) ); ?>>
+		<?php echo implode( "\n", $ajs_summary ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from escaped parts above. ?>
+	</div>
+	<?php
+	return;
+endif;
 
 ?>
-<div <?php echo get_block_wrapper_attributes(); ?>>
+<div <?php echo get_block_wrapper_attributes( array( 'class' => 'is-variant-full' ) ); ?>>
 	<?php if ( null === $ajs_data ) : ?>
 		<p class="ajs-component-info__note">
 			<?php
@@ -129,8 +166,8 @@ $ajs_data    = $ajs_post_id ? ajs_component_for_post( $ajs_post_id ) : null;
 		<?php else : ?>
 			<ul class="ajs-component-info__blocks">
 				<?php foreach ( $ajs_data['blocks'] as $ajs_block ) : ?>
-					<li>
-						<?php echo esc_html( $ajs_block['title'] ?? $ajs_block['block'] ); ?>
+					<li class="ajs-component-info__block" title="<?php echo esc_attr( implode( ', ', (array) ( $ajs_block['files'] ?? array() ) ) ); ?>">
+						<span class="ajs-component-info__block-title"><?php echo esc_html( $ajs_block['title'] ?? $ajs_block['block'] ); ?></span>
 						<code><?php echo esc_html( $ajs_block['block'] ); ?></code>
 					</li>
 				<?php endforeach; ?>
@@ -165,6 +202,7 @@ $ajs_data    = $ajs_post_id ? ajs_component_for_post( $ajs_post_id ) : null;
 			foreach ( $ajs_entries as $ajs_entry ) {
 				$ajs_grouped[ (string) $ajs_entry['version'] ][] = $ajs_entry;
 			}
+			echo '<div class="ajs-component-info__timeline">';
 			foreach ( $ajs_grouped as $ajs_version => $ajs_group ) :
 				$ajs_date    = ajs_component_format_date( $ajs_group[0]['date'] ?? null );
 				$ajs_release = 'unreleased' === $ajs_version ? null : ajs_component_wordpress_for_version( $ajs_data['package'], $ajs_version );
@@ -197,6 +235,7 @@ $ajs_data    = $ajs_post_id ? ajs_component_for_post( $ajs_post_id ) : null;
 					<?php endforeach; ?>
 				</ul>
 			<?php endforeach; ?>
+			</div>
 		<?php endif; ?>
 	<?php endif; ?>
 </div>
