@@ -8,7 +8,7 @@ The plugin registers one test block per export, 312 in all, each with a sidebar 
 
 Nothing to install. WordPress Playground boots the plugin, seeds the posts and pages, and logs you in as admin:
 
-**https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/feature/component-test-blocks/playground/blueprint.json**
+**https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/main/playground/blueprint.json**
 
 It lands on the Components list in wp-admin. From there:
 
