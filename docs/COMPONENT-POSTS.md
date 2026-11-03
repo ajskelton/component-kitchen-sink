@@ -44,6 +44,18 @@ customised in the Site Editor like theme templates. The archive cards use
 the info block's **summary** variant (`"variant":"summary"`), a one-line
 package / kind / added / usage strip.
 
+## From a test block to its post
+
+Every test block links to the Component post for its export. On the front
+end the block's heading is the link (`render_block` filter in
+`includes/component-links.php`, skipped on the Component post itself). In
+the editor, every `ajs/*` block gets a "Component post" panel at the bottom
+of its inspector with View and Edit buttons, added by
+`assets/component-links.js` through the `editor.BlockEdit` filter; the
+block-to-post map is printed inline by the same PHP file. Neither touches
+the blocks' own source, so new blocks get the link as soon as their post
+exists.
+
 ## Front page and navigation
 
 The plugin registers a `front-page` block template (so it is used for the
@@ -75,6 +87,7 @@ draft) is in the trash.
 | `src/blocks/ArchiveTools` | The `ajs/archive-tools` block: the search, filter and order form at the top of each archive. |
 | `src/blocks/SiteOverview` | The `ajs/site-overview` block used on the front page: archive cards with counts and filters, and the list of test pages. |
 | `src/blocks/CoreBlockInfo` | The `ajs/core-block-info` block: block.json metadata and the components the block imports, linked to their posts. Both info blocks share `src/blocks/shared/_info.scss`. |
+| `includes/component-links.php` and `assets/component-links.js` | The links from each test block to its Component post, on the front end and in the editor inspector. |
 | `includes/sync.php` | The `AJS_Component_Sync` and `AJS_Core_Block_Sync` classes that create or update the posts; no WP-CLI dependency. |
 | `includes/setup.php` | `ajs_site_setup()`: both syncs, the Primary navigation menu and a rewrite flush in one call. Used by `wp ajs setup` and by the Playground blueprint. |
 | `includes/cli.php` | `wp ajs components sync`, `wp ajs core-blocks sync` and `wp ajs setup`, thin wrappers over the two files above. |
