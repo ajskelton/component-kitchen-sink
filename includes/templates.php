@@ -115,23 +115,36 @@ add_action( 'init', 'ajs_component_register_front_page' );
 function ajs_component_front_page_template(): string {
 	$heading = esc_html__( 'Every @wordpress component, exercised in a real editor.', 'component-kitchen-sink' );
 	$intro   = esc_html__( 'Component Kitchen Sink is a WordPress plugin with one test block for every export of @wordpress/components and @wordpress/block-editor. Each component has a post with its history and the core blocks that use it, each core block has a post with the components it uses, and the test pages put whole families of blocks on one screen.', 'component-kitchen-sink' );
+	$art     = ajs_component_front_page_art();
 
 	return <<<HTML
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
 
 <!-- wp:group {"tagName":"main","align":"full","layout":{"type":"constrained"}} -->
 <main class="wp-block-group alignfull">
-	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
-	<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--40)">
-		<!-- wp:heading {"level":1,"fontSize":"xx-large","style":{"typography":{"lineHeight":"1.1"}}} -->
-		<h1 class="wp-block-heading has-xx-large-font-size" style="line-height:1.1">{$heading}</h1>
-		<!-- /wp:heading -->
+	<!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40"},"blockGap":{"left":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:column {"verticalAlignment":"center","width":"58%","style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%">
+			<!-- wp:heading {"level":1,"fontSize":"xx-large","style":{"typography":{"lineHeight":"1.1"}}} -->
+			<h1 class="wp-block-heading has-xx-large-font-size" style="line-height:1.1">{$heading}</h1>
+			<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"fontSize":"large","style":{"dimensions":{"maxWidth":"46rem"}}} -->
-		<p class="has-large-font-size">{$intro}</p>
-		<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"fontSize":"large"} -->
+			<p class="has-large-font-size">{$intro}</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
+			<!-- wp:html -->
+			{$art}
+			<!-- /wp:html -->
+		</div>
+		<!-- /wp:column -->
 	</div>
-	<!-- /wp:group -->
+	<!-- /wp:columns -->
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide" style="padding-bottom:var(--wp--preset--spacing--60)">
@@ -289,4 +302,17 @@ function ajs_component_archive_template( string $post_type, array $taxonomies, s
 
 <!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->
 HTML;
+}
+
+/**
+ * The kitchen sink illustration shown beside the front page introduction.
+ *
+ * Inlined from assets/kitchen-sink.svg so it takes the theme's text colour.
+ *
+ * @return string SVG markup, or an empty string when the file is missing.
+ */
+function ajs_component_front_page_art(): string {
+	$path = dirname( __DIR__ ) . '/assets/kitchen-sink.svg';
+
+	return is_readable( $path ) ? trim( (string) file_get_contents( $path ) ) : '';
 }
