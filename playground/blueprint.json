@@ -5,7 +5,7 @@
 		"description": "Every @wordpress/components and @wordpress/block-editor export as a test block, with a post per component and per core block.",
 		"author": "ajskelton"
 	},
-	"landingPage": "/wp-admin/edit.php?post_type=ajs_component",
+	"landingPage": "/",
 	"login": true,
 	"preferredVersions": {
 		"php": "8.3",

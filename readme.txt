@@ -27,7 +27,7 @@ Nothing to install:
 
 https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/main/playground/blueprint.json
 
-The blueprint installs Twenty Twenty-Four and the plugin, imports the test pages, seeds the posts, menu and footer, and logs you in as admin on the Components list. To run it against a local checkout instead, from the plugin folder:
+The blueprint installs Twenty Twenty-Four and the plugin, imports the test pages, seeds the posts, menu and footer, and logs you in as admin on the front page. To run it against a local checkout instead, from the plugin folder:
 
 `npx @wp-playground/cli@latest server --blueprint=playground/blueprint-local.json --mount=.:/wordpress/wp-content/plugins/component-kitchen-sink`
 

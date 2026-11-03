@@ -34,7 +34,8 @@ for Playground to fetch it.
    (Home, Components, Core Blocks, Test pages), saves a small Footer
    template part in place of the theme's demo footer and flushes the
    rewrite rules. The same function backs `wp ajs setup` for a local site.
-6. Logs in as `admin` and lands on the Components list in wp-admin.
+6. Logs in as `admin` and lands on the front page, with the admin bar for
+   jumping into the editor.
 
 Playground is slower than a local site: with 300-odd block scripts the
 editor takes a few seconds to open.
