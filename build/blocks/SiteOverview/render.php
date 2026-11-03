@@ -37,9 +37,10 @@ foreach ( get_pages( array( 'post_status' => 'publish' ) ) as $ajs_page ) {
 	$ajs_blocks = substr_count( $ajs_page->post_content, '<!-- wp:ajs/' );
 	if ( $ajs_blocks > 0 ) {
 		$ajs_pages[] = array(
-			'title' => $ajs_page->post_title,
-			'url'   => get_permalink( $ajs_page ),
-			'count' => $ajs_blocks,
+			'title'    => $ajs_page->post_title,
+			'url'      => get_permalink( $ajs_page ),
+			'edit_url' => current_user_can( 'edit_post', $ajs_page->ID ) ? get_edit_post_link( $ajs_page->ID ) : '',
+			'count'    => $ajs_blocks,
 		);
 	}
 }
@@ -103,7 +104,11 @@ usort(
 
 	<?php if ( $ajs_pages ) : ?>
 		<h2><?php esc_html_e( 'Test pages', 'component-kitchen-sink' ); ?></h2>
-		<p><?php esc_html_e( 'Pages that put a whole family of test blocks on one screen, used to verify every block in the editor.', 'component-kitchen-sink' ); ?></p>
+		<div class="ajs-overview__howto">
+			<p><?php esc_html_e( 'Each test page puts a whole family of test blocks on one screen: form controls, overlays and menus, colour and layout tools, block editor controls, and so on. The front end of a page only prints each block\'s saved attributes; the components themselves live in the editor.', 'component-kitchen-sink' ); ?></p>
+			<p><?php esc_html_e( 'To try a component, open one of these pages in the editor and select a block. Its sidebar lists every prop the block exercises as a control: change the variant, size or label of a Button, type into a ComboboxControl, drag a RangeControl, open a Modal or a Popover. The component on the canvas updates as you go, and the JSON under it shows the attributes the block would save. At the bottom of the sidebar, the Component post panel links to the component\'s own page with its history and the core blocks that use it.', 'component-kitchen-sink' ); ?></p>
+			<p><?php esc_html_e( 'Some blocks keep a copy of their demo in the sidebar as well, for components that bind keys or trap focus inside the canvas. Nothing here needs saving: close the page without saving and it is back to how it was.', 'component-kitchen-sink' ); ?></p>
+		</div>
 		<ul class="ajs-overview__pages">
 			<?php foreach ( $ajs_pages as $ajs_page ) : ?>
 				<li>
@@ -112,6 +117,9 @@ usort(
 						<?php
 						/* translators: %d: number of test blocks. */
 						echo esc_html( sprintf( _n( '%d block', '%d blocks', $ajs_page['count'], 'component-kitchen-sink' ), $ajs_page['count'] ) );
+						if ( $ajs_page['edit_url'] ) {
+							echo ' &middot; <a href="' . esc_url( $ajs_page['edit_url'] ) . '">' . esc_html__( 'Edit', 'component-kitchen-sink' ) . '</a>';
+						}
 						?>
 					</small>
 				</li>

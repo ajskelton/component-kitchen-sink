@@ -80,6 +80,15 @@
 		font-weight: 600;
 	}
 
+	.ajs-overview__howto {
+		max-width: 46rem;
+		margin-bottom: 1.5rem;
+
+		p {
+			margin: 0 0 0.75em;
+		}
+	}
+
 	.ajs-overview__pages {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
