@@ -96,7 +96,7 @@ function ajs_component_register_post_type(): void {
 		)
 	);
 
-	foreach ( array( AJS_COMPONENT_META_PACKAGE, AJS_COMPONENT_META_EXPORT, AJS_COMPONENT_META_SORT ) as $meta_key ) {
+	foreach ( array( AJS_COMPONENT_META_PACKAGE, AJS_COMPONENT_META_EXPORT, AJS_COMPONENT_META_SORT, AJS_COMPONENT_META_ADDED ) as $meta_key ) {
 		register_post_meta(
 			AJS_COMPONENT_POST_TYPE,
 			$meta_key,
@@ -112,6 +112,20 @@ function ajs_component_register_post_type(): void {
 			)
 		);
 	}
+
+	register_post_meta(
+		AJS_COMPONENT_POST_TYPE,
+		AJS_COMPONENT_META_USAGE,
+		array(
+			'type'          => 'integer',
+			'single'        => true,
+			'default'       => 0,
+			'show_in_rest'  => true,
+			'auth_callback' => static function (): bool {
+				return current_user_can( 'edit_posts' );
+			},
+		)
+	);
 }
 
 add_action( 'init', 'ajs_component_register_post_type' );
@@ -300,6 +314,20 @@ function ajs_core_block_register_post_type(): void {
 			'show_in_rest'      => true,
 			'sanitize_callback' => 'sanitize_text_field',
 			'auth_callback'     => static function (): bool {
+				return current_user_can( 'edit_posts' );
+			},
+		)
+	);
+
+	register_post_meta(
+		AJS_CORE_BLOCK_POST_TYPE,
+		AJS_CORE_BLOCK_META_COMPONENTS,
+		array(
+			'type'          => 'integer',
+			'single'        => true,
+			'default'       => 0,
+			'show_in_rest'  => true,
+			'auth_callback' => static function (): bool {
 				return current_user_can( 'edit_posts' );
 			},
 		)

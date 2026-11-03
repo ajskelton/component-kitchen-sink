@@ -153,8 +153,34 @@ class AJS_Components_Command {
 				AJS_COMPONENT_META_PACKAGE => $row['package'],
 				AJS_COMPONENT_META_EXPORT  => $row['name'],
 				AJS_COMPONENT_META_SORT    => $this->sort_name( $row ),
+				AJS_COMPONENT_META_ADDED   => $this->added_date( $row ),
+				AJS_COMPONENT_META_USAGE   => $this->usage_count( $row ),
 			),
 		);
+	}
+
+	/**
+	 * The ISO date the component was first exported, from data/history.json.
+	 *
+	 * @param array $row Inventory row.
+	 * @return string YYYY-MM-DD, or an empty string without history data.
+	 */
+	private function added_date( array $row ): string {
+		$data = ajs_component_data( $row['package'], $row['name'] );
+
+		return (string) ( $data['history']['addedDate'] ?? '' );
+	}
+
+	/**
+	 * How many core blocks import the component, from data/usage.json.
+	 *
+	 * @param array $row Inventory row.
+	 * @return int Count.
+	 */
+	private function usage_count( array $row ): int {
+		$data = ajs_component_data( $row['package'], $row['name'] );
+
+		return count( $data['blocks'] ?? array() );
 	}
 
 	/**
@@ -234,7 +260,9 @@ class AJS_Components_Command {
 		}
 
 		$terms_changed = $this->terms_differ( $post_id, $row );
-		$meta_changed  = (string) get_post_meta( $post_id, AJS_COMPONENT_META_SORT, true ) !== $this->sort_name( $row );
+		$meta_changed  = (string) get_post_meta( $post_id, AJS_COMPONENT_META_SORT, true ) !== $this->sort_name( $row )
+			|| (string) get_post_meta( $post_id, AJS_COMPONENT_META_ADDED, true ) !== $this->added_date( $row )
+			|| (int) get_post_meta( $post_id, AJS_COMPONENT_META_USAGE, true ) !== $this->usage_count( $row );
 
 		if ( empty( $update ) && ! $terms_changed && ! $meta_changed ) {
 			return false;
@@ -301,6 +329,8 @@ class AJS_Components_Command {
 		update_post_meta( $post_id, AJS_COMPONENT_META_PACKAGE, $row['package'] );
 		update_post_meta( $post_id, AJS_COMPONENT_META_EXPORT, $row['name'] );
 		update_post_meta( $post_id, AJS_COMPONENT_META_SORT, $this->sort_name( $row ) );
+		update_post_meta( $post_id, AJS_COMPONENT_META_ADDED, $this->added_date( $row ) );
+		update_post_meta( $post_id, AJS_COMPONENT_META_USAGE, $this->usage_count( $row ) );
 
 		foreach ( $this->terms( $row ) as $taxonomy => $slug ) {
 			if ( ! term_exists( $slug, $taxonomy ) ) {
@@ -404,7 +434,8 @@ class AJS_Core_Blocks_Command {
 			'post_content' => '<!-- wp:ajs/core-block-info /-->',
 			'post_author'  => $this->author_id(),
 			'meta_input'   => array(
-				AJS_CORE_BLOCK_META_NAME => $name,
+				AJS_CORE_BLOCK_META_NAME       => $name,
+				AJS_CORE_BLOCK_META_COMPONENTS => count( $data['components'] ?? array() ),
 			),
 		);
 	}
@@ -438,8 +469,9 @@ class AJS_Core_Blocks_Command {
 
 		$current_terms = wp_get_object_terms( $post_id, AJS_CORE_BLOCK_TAX_CATEGORY, array( 'fields' => 'slugs' ) );
 		$terms_changed = is_wp_error( $current_terms ) || $this->category_terms( $data ) !== $current_terms;
+		$meta_changed  = (int) get_post_meta( $post_id, AJS_CORE_BLOCK_META_COMPONENTS, true ) !== count( $data['components'] ?? array() );
 
-		if ( empty( $update ) && ! $terms_changed ) {
+		if ( empty( $update ) && ! $terms_changed && ! $meta_changed ) {
 			return false;
 		}
 
@@ -494,6 +526,7 @@ class AJS_Core_Blocks_Command {
 	 */
 	private function write_meta_and_terms( int $post_id, string $name, array $data ): void {
 		update_post_meta( $post_id, AJS_CORE_BLOCK_META_NAME, $name );
+		update_post_meta( $post_id, AJS_CORE_BLOCK_META_COMPONENTS, count( $data['components'] ?? array() ) );
 
 		foreach ( $this->category_terms( $data ) as $slug ) {
 			if ( ! term_exists( $slug, AJS_CORE_BLOCK_TAX_CATEGORY ) ) {

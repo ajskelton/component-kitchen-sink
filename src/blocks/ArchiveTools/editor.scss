@@ -1,0 +1,8 @@
+/**
+ * Archive Tools block: styles applied inside the editor only.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ */
+.wp-block-ajs-archive-tools .components-placeholder {
+	min-height: 0;
+}

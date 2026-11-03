@@ -6,15 +6,12 @@
  * The templates are registered from the plugin (WordPress 6.7+), so any
  * block theme gets the same single page and archive grid. They reuse the
  * active theme's header and footer template parts. Archives show 24 posts
- * per page.
+ * per page; search, filters and ordering live in includes/archive-tools.php.
  *
  * @package ajs
  */
 
 defined( 'ABSPATH' ) || exit;
-
-/** Posts shown per archive page. */
-const AJS_COMPONENT_ARCHIVE_PER_PAGE = 24;
 
 /**
  * The post types that get templates, with their taxonomies and summary block.
@@ -149,41 +146,6 @@ HTML;
 }
 
 /**
- * Sets the archive page size and order for the component and core block archives.
- *
- * Components order by the prefix-free export name stored in meta; core
- * blocks order by title.
- *
- * @param WP_Query $query The query being run.
- */
-function ajs_component_archive_query( WP_Query $query ): void {
-	if ( is_admin() || ! $query->is_main_query() ) {
-		return;
-	}
-
-	if (
-		$query->is_post_type_archive( AJS_COMPONENT_POST_TYPE )
-		|| $query->is_tax( array( AJS_COMPONENT_TAX_PACKAGE, AJS_COMPONENT_TAX_KIND ) )
-	) {
-		$query->set( 'posts_per_page', AJS_COMPONENT_ARCHIVE_PER_PAGE );
-		$query->set( 'meta_key', AJS_COMPONENT_META_SORT ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- 309 posts, indexed meta.
-		$query->set( 'orderby', array( 'meta_value' => 'ASC', 'title' => 'ASC' ) );
-		return;
-	}
-
-	if (
-		$query->is_post_type_archive( AJS_CORE_BLOCK_POST_TYPE )
-		|| $query->is_tax( AJS_CORE_BLOCK_TAX_CATEGORY )
-	) {
-		$query->set( 'posts_per_page', AJS_COMPONENT_ARCHIVE_PER_PAGE );
-		$query->set( 'orderby', 'title' );
-		$query->set( 'order', 'ASC' );
-	}
-}
-
-add_action( 'pre_get_posts', 'ajs_component_archive_query' );
-
-/**
  * The archive URL of a post type, as an escaped attribute.
  *
  * @param string $post_type Post type.
@@ -269,29 +231,13 @@ HTML;
  * The archive template for a post type, shared by its taxonomy archives.
  *
  * @param string                $post_type  Post type.
- * @param array<string, string> $taxonomies Taxonomy => filter label.
+ * @param array<string, string> $taxonomies Taxonomy => filter label (used by the archive-tools block).
  * @param string                $summary    Block that renders the one-line card summary.
  * @return string Block markup.
  */
 function ajs_component_archive_template( string $post_type, array $taxonomies, string $summary ): string {
-	$config   = ajs_templated_post_types()[ $post_type ];
 	$per_page = AJS_COMPONENT_ARCHIVE_PER_PAGE;
-	$url      = ajs_component_archive_url( $post_type );
-	/* translators: %s: post type name. */
-	$all     = esc_html( sprintf( __( 'All %s', 'component-kitchen-sink' ), strtolower( $config['name'] ) ) );
-	$filters = array();
-
-	foreach ( $taxonomies as $taxonomy => $label ) {
-		$filters[] = sprintf(
-			'<!-- wp:paragraph {"fontSize":"small"} --><p class="has-small-font-size"><strong>%1$s</strong></p><!-- /wp:paragraph -->' . "\n\t\t\t" .
-			'<!-- wp:tag-cloud {"taxonomy":"%2$s","showTagCounts":true,"smallestFontSize":"0.85rem","largestFontSize":"0.85rem"} /-->',
-			esc_html( $label ),
-			esc_attr( $taxonomy )
-		);
-	}
-
-	$filters = implode( "\n\t\t\t", $filters );
-	$summary = esc_attr( $summary );
+	$summary  = esc_attr( $summary );
 
 	return <<<HTML
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
@@ -304,12 +250,7 @@ function ajs_component_archive_template( string $post_type, array $taxonomies, s
 
 		<!-- wp:term-description {"align":"wide"} /-->
 
-		<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"top"}} -->
-		<div class="wp-block-group alignwide">
-			<!-- wp:paragraph {"fontSize":"small"} --><p class="has-small-font-size"><a href="{$url}">{$all}</a></p><!-- /wp:paragraph -->
-			{$filters}
-		</div>
-		<!-- /wp:group -->
+		<!-- wp:ajs/archive-tools {"postType":"{$post_type}","align":"wide"} /-->
 	</div>
 	<!-- /wp:group -->
 

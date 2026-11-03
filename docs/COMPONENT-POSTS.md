@@ -23,6 +23,19 @@ one component, for example `/components/toggle-group-control/`. Admin:
 **Components** in the sidebar, with Package and Kind filters and Export /
 Added / Core blocks columns.
 
+Each archive starts with the `ajs/archive-tools` block: a search box, one
+select per taxonomy with term counts, and an ordering select, submitted as a
+GET form to the archive. Search uses the `ajs_q` query var (not `s`, so the
+archive template keeps rendering), ordering uses `ajs_orderby`, and the
+taxonomy selects use the taxonomies' own query vars, so
+`/components/?ajs_q=toggle&ajs_package=components&ajs_orderby=most-used` is
+a shareable URL. Orderings: components by name, newest or oldest added, and
+most or least used by core blocks; core blocks by name or by how many
+components they use. The non-name orderings sort on meta written at sync
+time (`ajs_added_date`, `ajs_usage_count`, `ajs_component_count`), so after
+`npm run data` run the sync commands again to refresh them. All of this is
+in `includes/archive-tools.php`.
+
 The layouts come from block templates registered by `includes/templates.php`
 (`single-ajs_component`, `archive-ajs_component`, `taxonomy-ajs_package`,
 `taxonomy-ajs_component_kind`). They reuse the active theme's `header` and
@@ -59,10 +72,12 @@ draft) is in the trash.
 | `includes/data.php` | Reads the JSON files (once per request) and merges them for one component key, `"<package>:<export>"`. |
 | `includes/post-type.php` | Registers both post types: `ajs_component` with the `ajs_package` and `ajs_component_kind` taxonomies and the `ajs_package` / `ajs_export_name` / `ajs_sort_name` meta, and `ajs_core_block` with the `ajs_block_category` taxonomy and the `ajs_block_name` meta, plus admin columns and filters for each. |
 | `src/blocks/ComponentInfo` | The `ajs/component-info` block. Its `render.php` prints the Added, Used by core blocks and History sections from the data files; in the editor it renders the same output through `ServerSideRender`. |
+| `src/blocks/ArchiveTools` | The `ajs/archive-tools` block: the search, filter and order form at the top of each archive. |
 | `src/blocks/SiteOverview` | The `ajs/site-overview` block used on the front page: archive cards with counts and filters, and the list of test pages. |
 | `src/blocks/CoreBlockInfo` | The `ajs/core-block-info` block: block.json metadata and the components the block imports, linked to their posts. Both info blocks share `src/blocks/shared/_info.scss`. |
 | `includes/cli.php` | `wp ajs components sync` and `wp ajs core-blocks sync`, which create or update the posts. |
-| `includes/templates.php` | The front page template, the single and archive block templates for both post types, and the `pre_get_posts` hook that sets 24 per page and the sort order. |
+| `includes/templates.php` | The front page template and the single and archive block templates for both post types. |
+| `includes/archive-tools.php` | Query vars, orderings and the `pre_get_posts` hook behind the archive tools: 24 per page, search, filters and ordering. |
 
 Posts store only the package and export name. Everything else is looked up
 from `data/` when the post renders, so regenerating the data never requires

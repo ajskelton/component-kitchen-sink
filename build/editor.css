@@ -1,4 +1,6 @@
 /* Combined from build/blocks/*/index.css by scripts/combine-styles.mjs. Do not edit. */
+/* ArchiveTools */
+.wp-block-ajs-archive-tools .components-placeholder{min-height:0}
 /* BlockCanvas */
 .wp-block-ajs-block-canvas .block-editor-iframe__container,.wp-block-ajs-block-canvas .block-editor-iframe__scale-container{height:100%;width:100%}.wp-block-ajs-block-canvas iframe{border:1px solid #949494;display:block;height:100%;width:100%}
 /* BlockPatternSetup */

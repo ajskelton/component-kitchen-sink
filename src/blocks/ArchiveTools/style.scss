@@ -1,0 +1,71 @@
+/**
+ * Archive Tools block: styles applied on the front end and in the editor.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ */
+.wp-block-ajs-archive-tools {
+	--ajs-tools-line: rgba(0, 0, 0, 0.2);
+	--ajs-tools-soft: rgba(0, 0, 0, 0.05);
+
+	.ajs-tools__form {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		gap: 0.75rem 1rem;
+		margin: 0 0 0.75rem;
+	}
+
+	.ajs-tools__field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		font-size: 0.85em;
+	}
+
+	.ajs-tools__field--search {
+		flex: 1 1 14rem;
+	}
+
+	label {
+		font-weight: 600;
+	}
+
+	input[type="search"],
+	select {
+		min-height: 2.5rem;
+		padding: 0.4em 0.75em;
+		border: 1px solid var(--ajs-tools-line);
+		border-radius: 6px;
+		background: #fff;
+		font: inherit;
+	}
+
+	input[type="search"] {
+		width: 100%;
+	}
+
+	.ajs-tools__submit {
+		min-height: 2.5rem;
+		padding: 0.4em 1.25em;
+		border: 1px solid currentcolor;
+		border-radius: 6px;
+		background: transparent;
+		font: inherit;
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	.ajs-tools__submit:hover {
+		background: var(--ajs-tools-soft);
+	}
+
+	.ajs-tools__results {
+		margin: 0;
+		font-size: 0.9em;
+		opacity: 0.85;
+
+		a {
+			margin-left: 0.75em;
+		}
+	}
+}
