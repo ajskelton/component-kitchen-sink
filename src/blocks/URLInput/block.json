@@ -1,0 +1,64 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/url-input",
+	"version": "0.1.0",
+	"title": "URLInput",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the URLInput component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"default": "URL"
+		},
+		"placeholder": {
+			"type": "string",
+			"default": "Paste or type a URL"
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"disableSuggestions": {
+			"type": "boolean",
+			"default": false
+		},
+		"useStaticSuggestions": {
+			"type": "boolean",
+			"default": true
+		},
+		"showInitialSuggestions": {
+			"type": "boolean",
+			"default": false
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"required": {
+			"type": "boolean",
+			"default": false
+		},
+		"selectedTitle": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

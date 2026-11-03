@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/card-footer",
+	"version": "0.1.0",
+	"title": "CardFooter",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the CardFooter component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"size": {
+			"type": "string",
+			"enum": [ "none", "xSmall", "small", "medium", "large" ],
+			"default": "medium"
+		},
+		"isBorderless": {
+			"type": "boolean",
+			"default": false
+		},
+		"isShady": {
+			"type": "boolean",
+			"default": false
+		},
+		"justify": {
+			"type": "string",
+			"enum": [
+				"flex-start",
+				"center",
+				"flex-end",
+				"space-between",
+				"space-around",
+				"space-evenly"
+			],
+			"default": "flex-end"
+		},
+		"gap": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

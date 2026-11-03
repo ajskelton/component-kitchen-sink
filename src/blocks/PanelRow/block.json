@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/panel-row",
+	"version": "0.1.0",
+	"title": "PanelRow",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the PanelRow component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"childCount": {
+			"type": "number",
+			"default": 2
+		},
+		"label": {
+			"type": "string",
+			"default": "Row field"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

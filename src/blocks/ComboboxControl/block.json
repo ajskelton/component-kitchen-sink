@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/combobox-control",
+	"version": "0.1.0",
+	"title": "ComboboxControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ComboboxControl component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": "string",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"default": "Font size"
+		},
+		"help": {
+			"type": "string",
+			"default": ""
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"placeholder": {
+			"type": "string",
+			"default": ""
+		},
+		"allowReset": {
+			"type": "boolean",
+			"default": true
+		},
+		"expandOnFocus": {
+			"type": "boolean",
+			"default": true
+		},
+		"isLoading": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

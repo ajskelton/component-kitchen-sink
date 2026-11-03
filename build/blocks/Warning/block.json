@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/warning",
+  "version": "0.1.0",
+  "title": "Warning",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Warning component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "message": {
+      "type": "string",
+      "default": "This block ran into an issue."
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "withActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "actionLabel": {
+      "type": "string",
+      "default": "Fix issue"
+    },
+    "withSecondaryActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

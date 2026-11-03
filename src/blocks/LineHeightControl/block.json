@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/line-height-control",
+	"version": "0.1.0",
+	"title": "LineHeightControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the LineHeightControl component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": "string",
+			"default": ""
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "default", "small", "compact" ],
+			"default": "default"
+		},
+		"inputWidth": {
+			"type": "string",
+			"default": "60px"
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

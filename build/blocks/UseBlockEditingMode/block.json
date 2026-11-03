@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/use-block-editing-mode",
+  "version": "0.1.0",
+  "title": "useBlockEditingMode",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the useBlockEditingMode component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "default",
+        "contentOnly",
+        "disabled"
+      ],
+      "default": "contentOnly"
+    },
+    "applySeconds": {
+      "type": "number",
+      "default": 6
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

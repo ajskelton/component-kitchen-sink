@@ -1,0 +1,12 @@
+/**
+ * BlockPatternSetup block: styles applied inside the editor only.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ */
+
+// The setup renders one preview iframe per pattern. Cap the height so a large
+// pattern set scrolls inside the block instead of stretching the canvas.
+.wp-block-ajs-block-pattern-setup .block-editor-block-pattern-setup {
+	max-height: 480px;
+	overflow-y: auto;
+}

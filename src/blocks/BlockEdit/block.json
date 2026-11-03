@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-edit",
+	"version": "0.1.0",
+	"title": "BlockEdit",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BlockEdit component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"blockName": {
+			"type": "string",
+			"enum": [
+				"core/paragraph",
+				"core/heading",
+				"core/separator",
+				"core/spacer"
+			],
+			"default": "core/paragraph"
+		},
+		"isSelected": {
+			"type": "boolean",
+			"default": false
+		},
+		"setAttributesCalls": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

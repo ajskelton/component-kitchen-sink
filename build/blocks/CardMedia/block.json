@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/card-media",
+  "version": "0.1.0",
+  "title": "CardMedia",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the CardMedia component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "mediaKind": {
+      "type": "string",
+      "enum": [
+        "image",
+        "color"
+      ],
+      "default": "image"
+    },
+    "height": {
+      "type": "number",
+      "default": 140
+    },
+    "placement": {
+      "type": "string",
+      "enum": [
+        "top",
+        "bottom"
+      ],
+      "default": "top"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

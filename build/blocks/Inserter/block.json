@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/inserter",
+  "version": "0.1.0",
+  "title": "Inserter",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Inserter component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "position": {
+      "type": "string",
+      "enum": [
+        "bottom center",
+        "bottom left",
+        "bottom right",
+        "top center",
+        "middle right"
+      ],
+      "default": "bottom center"
+    },
+    "isAppender": {
+      "type": "boolean",
+      "default": true
+    },
+    "isQuick": {
+      "type": "boolean",
+      "default": false
+    },
+    "selectBlockOnInsert": {
+      "type": "boolean",
+      "default": true
+    },
+    "showInserterHelpPanel": {
+      "type": "boolean",
+      "default": true
+    },
+    "shouldDirectInsert": {
+      "type": "boolean",
+      "default": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "toggleLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "selections": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

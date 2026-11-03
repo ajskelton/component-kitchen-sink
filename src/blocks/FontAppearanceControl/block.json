@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/font-appearance-control",
+	"version": "0.1.0",
+	"title": "FontAppearanceControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the FontAppearanceControl component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"fontStyle": {
+			"type": "string",
+			"default": ""
+		},
+		"fontWeight": {
+			"type": "string",
+			"default": ""
+		},
+		"hasFontStyles": {
+			"type": "boolean",
+			"default": true
+		},
+		"hasFontWeights": {
+			"type": "boolean",
+			"default": true
+		},
+		"useSampleFaces": {
+			"type": "boolean",
+			"default": false
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "default", "compact", "small" ],
+			"default": "default"
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

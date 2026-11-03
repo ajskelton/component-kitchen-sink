@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/panel",
+  "version": "0.1.0",
+  "title": "Panel",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Panel component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "header": {
+      "type": "string",
+      "default": "Panel header"
+    },
+    "bodyCount": {
+      "type": "number",
+      "default": 2
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

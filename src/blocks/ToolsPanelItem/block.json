@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/tools-panel-item",
+	"version": "0.1.0",
+	"title": "ToolsPanelItem",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ToolsPanelItem component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"itemLabel": {
+			"type": "string",
+			"default": "Item"
+		},
+		"isShownByDefault": {
+			"type": "boolean",
+			"default": false
+		},
+		"defaultShown": {
+			"type": "boolean",
+			"default": false
+		},
+		"value": {
+			"type": "string",
+			"default": ""
+		},
+		"selectCount": {
+			"type": "number",
+			"default": 0
+		},
+		"deselectCount": {
+			"type": "number",
+			"default": 0
+		},
+		"shown": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

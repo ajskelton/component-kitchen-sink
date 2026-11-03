@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/duotone-control",
+  "version": "0.1.0",
+  "title": "DuotoneControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the DuotoneControl component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": [
+        "array",
+        "string"
+      ],
+      "default": ""
+    },
+    "disableCustomColors": {
+      "type": "boolean",
+      "default": false
+    },
+    "disableCustomDuotone": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

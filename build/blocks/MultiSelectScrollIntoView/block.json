@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/multi-select-scroll-into-view",
+  "version": "0.1.0",
+  "title": "MultiSelectScrollIntoView",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the MultiSelectScrollIntoView component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "blockCount": {
+      "type": "number",
+      "default": 3
+    },
+    "mounted": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

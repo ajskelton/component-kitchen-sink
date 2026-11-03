@@ -1,0 +1,24 @@
+/**
+ * BlockCanvas block: styles applied inside the editor only.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ */
+
+// The block-editor package stylesheet that sizes the iframe wrappers is only
+// loaded in the outer admin document, not in the editor canvas iframe this
+// block lives in, so the nested iframe would fall back to 300x150.
+.wp-block-ajs-block-canvas {
+
+	.block-editor-iframe__container,
+	.block-editor-iframe__scale-container {
+		width: 100%;
+		height: 100%;
+	}
+
+	iframe {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 1px solid #949494;
+	}
+}

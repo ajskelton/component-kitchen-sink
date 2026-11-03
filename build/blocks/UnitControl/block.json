@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/unit-control",
+  "version": "0.1.0",
+  "title": "UnitControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the UnitControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "default": "10px"
+    },
+    "label": {
+      "type": "string",
+      "default": "Width"
+    },
+    "unitSet": {
+      "type": "string",
+      "enum": [
+        "px, em, rem, %",
+        "px only",
+        "vw, vh"
+      ],
+      "default": "px, em, rem, %"
+    },
+    "disableUnits": {
+      "type": "boolean",
+      "default": false
+    },
+    "isUnitSelectTabbable": {
+      "type": "boolean",
+      "default": true
+    },
+    "isResetValueOnUnitChange": {
+      "type": "boolean",
+      "default": false
+    },
+    "min": {
+      "type": "number",
+      "default": 0
+    },
+    "max": {
+      "type": "number",
+      "default": 1000
+    },
+    "step": {
+      "type": "number",
+      "default": 1
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "default",
+        "small",
+        "compact"
+      ],
+      "default": "default"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

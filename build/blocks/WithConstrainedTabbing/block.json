@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/with-constrained-tabbing",
+  "version": "0.1.0",
+  "title": "withConstrainedTabbing",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the withConstrainedTabbing component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "constrained": {
+      "type": "boolean",
+      "default": false
+    },
+    "first": {
+      "type": "string",
+      "default": ""
+    },
+    "second": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

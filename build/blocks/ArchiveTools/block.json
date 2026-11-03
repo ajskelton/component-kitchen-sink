@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/archive-tools",
+  "version": "0.1.0",
+  "title": "Archive Tools",
+  "category": "ajs-kitchen-sink",
+  "icon": "search",
+  "description": "Search, filter and order form for the Component and Core Block archives",
+  "supports": {
+    "html": false,
+    "multiple": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "postType": {
+      "type": "string",
+      "enum": [
+        "ajs_component",
+        "ajs_core_block"
+      ],
+      "default": "ajs_component"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,100 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-variation-picker",
+	"version": "0.1.0",
+	"title": "BlockVariationPicker",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BlockVariationPicker component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"variations": [
+		{
+			"name": "red",
+			"title": "Red",
+			"description": "Red accent",
+			"icon": "star-filled",
+			"attributes": {
+				"accent": "red"
+			},
+			"scope": [ "block" ]
+		},
+		{
+			"name": "green",
+			"title": "Green",
+			"description": "Green accent",
+			"icon": "yes-alt",
+			"attributes": {
+				"accent": "green"
+			},
+			"scope": [ "block" ]
+		},
+		{
+			"name": "blue",
+			"title": "Blue",
+			"description": "Blue accent",
+			"icon": "cloud",
+			"attributes": {
+				"accent": "blue"
+			},
+			"scope": [ "block" ]
+		},
+		{
+			"name": "orange",
+			"title": "Orange",
+			"description": "Orange accent",
+			"icon": "warning",
+			"attributes": {
+				"accent": "orange"
+			},
+			"scope": [ "block" ]
+		},
+		{
+			"name": "purple",
+			"title": "Purple",
+			"description": "Purple accent",
+			"icon": "heart",
+			"attributes": {
+				"accent": "purple"
+			},
+			"scope": [ "block" ]
+		}
+	],
+	"attributes": {
+		"variation": {
+			"type": "string",
+			"default": ""
+		},
+		"accent": {
+			"type": "string",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"default": "Choose variation"
+		},
+		"instructions": {
+			"type": "string",
+			"default": "Select a variation to start with:"
+		},
+		"allowSkip": {
+			"type": "boolean",
+			"default": true
+		},
+		"showPicker": {
+			"type": "boolean",
+			"default": true
+		},
+		"hasIcon": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-quotation",
+  "version": "0.1.0",
+  "title": "BlockQuotation",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockQuotation component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "quote": {
+      "type": "string",
+      "default": "Code is poetry."
+    },
+    "cite": {
+      "type": "string",
+      "default": "The WordPress community"
+    },
+    "showCite": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

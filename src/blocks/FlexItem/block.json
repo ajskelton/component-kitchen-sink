@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/flex-item",
+	"version": "0.1.0",
+	"title": "FlexItem",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the FlexItem component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"display": {
+			"type": "string",
+			"enum": [ "", "block", "inline-block", "flex", "inline-flex" ],
+			"default": ""
+		},
+		"isBlock": {
+			"type": "boolean",
+			"default": false
+		},
+		"text": {
+			"type": "string",
+			"default": "FlexItem"
+		},
+		"gap": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

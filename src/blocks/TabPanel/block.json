@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/tab-panel",
+	"version": "0.1.0",
+	"title": "TabPanel",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the TabPanel component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"orientation": {
+			"type": "string",
+			"enum": [ "horizontal", "vertical" ],
+			"default": "horizontal"
+		},
+		"selectOnMove": {
+			"type": "boolean",
+			"default": true
+		},
+		"initialTabName": {
+			"type": "string",
+			"enum": [ "tab1", "tab2", "tab3" ],
+			"default": "tab1"
+		},
+		"activeClass": {
+			"type": "string",
+			"default": "is-active"
+		},
+		"selectedTab": {
+			"type": "string",
+			"default": ""
+		},
+		"disableThird": {
+			"type": "boolean",
+			"default": false
+		},
+		"useIcons": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

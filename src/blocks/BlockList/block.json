@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-list",
+	"version": "0.1.0",
+	"title": "BlockList",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BlockList component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"blockCount": {
+			"type": "number",
+			"default": 2
+		},
+		"appender": {
+			"type": "string",
+			"enum": [ "default", "none", "custom" ],
+			"default": "default"
+		},
+		"layoutType": {
+			"type": "string",
+			"enum": [ "default", "constrained", "flex" ],
+			"default": "default"
+		},
+		"className": {
+			"type": "string",
+			"default": "ajs-block-list"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

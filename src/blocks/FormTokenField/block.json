@@ -1,0 +1,83 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/form-token-field",
+	"version": "0.1.0",
+	"title": "FormTokenField",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the FormTokenField component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"tokens": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"default": [ "Apple" ]
+		},
+		"label": {
+			"type": "string",
+			"default": "Fruits"
+		},
+		"help": {
+			"type": "string",
+			"default": ""
+		},
+		"placeholder": {
+			"type": "string",
+			"default": "Add a fruit"
+		},
+		"maxSuggestions": {
+			"type": "number",
+			"default": 5
+		},
+		"maxLength": {
+			"type": "number",
+			"default": 0
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"isBorderless": {
+			"type": "boolean",
+			"default": false
+		},
+		"tokenizeOnSpace": {
+			"type": "boolean",
+			"default": false
+		},
+		"tokenizeOnBlur": {
+			"type": "boolean",
+			"default": false
+		},
+		"expandOnFocus": {
+			"type": "boolean",
+			"default": false
+		},
+		"showHowTo": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoSelectFirstMatch": {
+			"type": "boolean",
+			"default": false
+		},
+		"onlySuggestions": {
+			"type": "boolean",
+			"default": false
+		},
+		"uppercaseDisplay": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

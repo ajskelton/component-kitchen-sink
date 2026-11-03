@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-editor-font-size-picker",
+	"version": "0.1.0",
+	"title": "FontSizePicker",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the FontSizePicker component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": [ "number", "string" ],
+			"default": ""
+		},
+		"fallbackFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "default", "__unstable-large" ],
+			"default": "default"
+		},
+		"withSlider": {
+			"type": "boolean",
+			"default": false
+		},
+		"withReset": {
+			"type": "boolean",
+			"default": true
+		},
+		"unitsPreset": {
+			"type": "string",
+			"enum": [ "default", "px-rem" ],
+			"default": "default"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

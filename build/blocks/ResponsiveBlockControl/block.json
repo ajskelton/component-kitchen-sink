@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/responsive-block-control",
+  "version": "0.1.0",
+  "title": "ResponsiveBlockControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ResponsiveBlockControl component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Block padding"
+    },
+    "property": {
+      "type": "string",
+      "default": "padding"
+    },
+    "toggleLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "isResponsive": {
+      "type": "boolean",
+      "default": false
+    },
+    "useCustomViewports": {
+      "type": "boolean",
+      "default": false
+    },
+    "values": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

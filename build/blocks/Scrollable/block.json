@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/scrollable",
+  "version": "0.1.0",
+  "title": "Scrollable",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Scrollable component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "scrollDirection": {
+      "type": "string",
+      "enum": [
+        "x",
+        "y",
+        "auto"
+      ],
+      "default": "y"
+    },
+    "smoothScroll": {
+      "type": "boolean",
+      "default": false
+    },
+    "maxHeight": {
+      "type": "number",
+      "default": 140
+    },
+    "maxWidth": {
+      "type": "number",
+      "default": 320
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

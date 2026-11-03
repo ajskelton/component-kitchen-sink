@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/custom-gradient-picker",
+	"version": "0.1.0",
+	"title": "CustomGradientPicker",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the CustomGradientPicker component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": "string",
+			"default": "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)"
+		},
+		"enableAlpha": {
+			"type": "boolean",
+			"default": true
+		},
+		"isRenderedInSidebar": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

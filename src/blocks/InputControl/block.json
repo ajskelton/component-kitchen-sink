@@ -1,0 +1,84 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/input-control",
+	"version": "0.1.0",
+	"title": "InputControl",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the InputControl component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"value": {
+			"type": "string",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"default": "Input"
+		},
+		"help": {
+			"type": "string",
+			"default": ""
+		},
+		"placeholder": {
+			"type": "string",
+			"default": ""
+		},
+		"type": {
+			"type": "string",
+			"enum": [ "text", "email", "password", "search", "url" ],
+			"default": "text"
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "default", "small", "compact" ],
+			"default": "default"
+		},
+		"labelPosition": {
+			"type": "string",
+			"enum": [ "top", "bottom", "side", "edge" ],
+			"default": "top"
+		},
+		"hideLabelFromVision": {
+			"type": "boolean",
+			"default": false
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"isPressEnterToChange": {
+			"type": "boolean",
+			"default": false
+		},
+		"isDragEnabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"dragDirection": {
+			"type": "string",
+			"enum": [ "n", "s", "e", "w" ],
+			"default": "n"
+		},
+		"dragThreshold": {
+			"type": "number",
+			"default": 10
+		},
+		"prefix": {
+			"type": "string",
+			"default": ""
+		},
+		"suffix": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

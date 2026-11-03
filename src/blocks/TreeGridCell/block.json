@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/tree-grid-cell",
+	"version": "0.1.0",
+	"title": "TreeGridCell",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the TreeGridCell component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"withoutGridItem": {
+			"type": "boolean",
+			"default": false
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		},
+		"text": {
+			"type": "string",
+			"default": "Press me"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

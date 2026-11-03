@@ -1,0 +1,109 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/text",
+	"version": "0.1.0",
+	"title": "Text",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Text component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Text renders typography with sizes, weights, truncation and word highlighting. The quick brown fox jumps over the lazy dog."
+		},
+		"size": {
+			"type": "string",
+			"enum": [
+				"",
+				"body",
+				"caption",
+				"footnote",
+				"largeTitle",
+				"subheadline",
+				"title"
+			],
+			"default": ""
+		},
+		"variant": {
+			"type": "string",
+			"enum": [ "", "muted" ],
+			"default": ""
+		},
+		"align": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ],
+			"default": ""
+		},
+		"color": {
+			"type": "string",
+			"default": ""
+		},
+		"display": {
+			"type": "string",
+			"enum": [ "", "block", "inline", "inline-block" ],
+			"default": ""
+		},
+		"weight": {
+			"type": "string",
+			"default": ""
+		},
+		"lineHeight": {
+			"type": "string",
+			"default": ""
+		},
+		"letterSpacing": {
+			"type": "string",
+			"default": ""
+		},
+		"isBlock": {
+			"type": "boolean",
+			"default": false
+		},
+		"isDestructive": {
+			"type": "boolean",
+			"default": false
+		},
+		"upperCase": {
+			"type": "boolean",
+			"default": false
+		},
+		"truncate": {
+			"type": "boolean",
+			"default": false
+		},
+		"numberOfLines": {
+			"type": "number",
+			"default": 0
+		},
+		"ellipsizeMode": {
+			"type": "string",
+			"enum": [ "auto", "head", "tail", "middle", "none" ],
+			"default": "auto"
+		},
+		"limit": {
+			"type": "number",
+			"default": 0
+		},
+		"highlightWords": {
+			"type": "string",
+			"default": ""
+		},
+		"highlightCaseSensitive": {
+			"type": "boolean",
+			"default": false
+		},
+		"highlightEscape": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

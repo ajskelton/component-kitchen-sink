@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/navigator",
+  "version": "0.1.0",
+  "title": "Navigator",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Navigator component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "initialPath": {
+      "type": "string",
+      "enum": [
+        "/",
+        "/child"
+      ],
+      "default": "/"
+    },
+    "height": {
+      "type": "number",
+      "default": 160
+    },
+    "navigations": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

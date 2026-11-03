@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/inner-blocks",
+	"version": "0.1.0",
+	"title": "InnerBlocks",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the InnerBlocks component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"allowedBlocks": {
+			"type": "string",
+			"enum": [ "all", "text", "media", "none" ],
+			"default": "text"
+		},
+		"template": {
+			"type": "string",
+			"enum": [ "none", "paragraphs", "heading-and-paragraph" ],
+			"default": "heading-and-paragraph"
+		},
+		"templateLock": {
+			"type": "string",
+			"enum": [ "", "all", "insert", "contentOnly" ],
+			"default": ""
+		},
+		"orientation": {
+			"type": "string",
+			"enum": [ "vertical", "horizontal" ],
+			"default": "vertical"
+		},
+		"renderAppender": {
+			"type": "string",
+			"enum": [ "default", "button", "default-block", "none" ],
+			"default": "default"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

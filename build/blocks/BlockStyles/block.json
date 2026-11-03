@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-styles",
+  "version": "0.1.0",
+  "title": "BlockStyles",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockStyles component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "styles": [
+    {
+      "name": "default",
+      "label": "Default",
+      "isDefault": true
+    },
+    {
+      "name": "fancy",
+      "label": "Fancy"
+    },
+    {
+      "name": "outline",
+      "label": "Outline"
+    },
+    {
+      "name": "inverted",
+      "label": "Inverted"
+    }
+  ],
+  "attributes": {
+    "hoveredStyle": {
+      "type": "string",
+      "default": ""
+    },
+    "switches": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/border-control",
+  "version": "0.1.0",
+  "title": "BorderControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BorderControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "border": {
+      "type": "object",
+      "default": {}
+    },
+    "label": {
+      "type": "string",
+      "default": "Border"
+    },
+    "hideLabelFromVision": {
+      "type": "boolean",
+      "default": false
+    },
+    "enableStyle": {
+      "type": "boolean",
+      "default": true
+    },
+    "disableCustomColors": {
+      "type": "boolean",
+      "default": false
+    },
+    "enableAlpha": {
+      "type": "boolean",
+      "default": true
+    },
+    "disableUnits": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCompact": {
+      "type": "boolean",
+      "default": false
+    },
+    "withSlider": {
+      "type": "boolean",
+      "default": false
+    },
+    "shouldSanitizeBorder": {
+      "type": "boolean",
+      "default": true
+    },
+    "placeholder": {
+      "type": "string",
+      "default": ""
+    },
+    "width": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/inserter-menu-extension",
+	"version": "0.1.0",
+	"title": "InserterMenuExtension",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the InserterMenuExtension component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"enabled": {
+			"type": "boolean",
+			"default": true
+		},
+		"message": {
+			"type": "string",
+			"default": "Added by the InserterMenuExtension fill"
+		},
+		"showFilterValue": {
+			"type": "boolean",
+			"default": true
+		},
+		"lastSearch": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

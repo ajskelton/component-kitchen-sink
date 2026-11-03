@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/slot",
+	"version": "0.1.0",
+	"title": "Slot",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the Slot component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"slotName": {
+			"type": "string",
+			"default": "ajs-demo-slot"
+		},
+		"bubblesVirtually": {
+			"type": "boolean",
+			"default": false
+		},
+		"placeholder": {
+			"type": "boolean",
+			"default": true
+		},
+		"fillVisible": {
+			"type": "boolean",
+			"default": true
+		},
+		"fillText": {
+			"type": "string",
+			"default": "Hello from the Fill"
+		},
+		"fillPropValue": {
+			"type": "string",
+			"default": "from Slot"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

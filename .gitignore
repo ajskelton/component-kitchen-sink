@@ -28,3 +28,12 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# Local-only helper scripts
+bin/
+
+# Agent worktrees
+.claude/
+
+# Cached HTTP responses from scripts/component-history.mjs
+.cache/

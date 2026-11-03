@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/view",
+  "version": "0.1.0",
+  "title": "View",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the View component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "as": {
+      "type": "string",
+      "enum": [
+        "div",
+        "section",
+        "article",
+        "aside",
+        "span",
+        "p"
+      ],
+      "default": "div"
+    },
+    "text": {
+      "type": "string",
+      "default": "Code is Poetry"
+    },
+    "padded": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

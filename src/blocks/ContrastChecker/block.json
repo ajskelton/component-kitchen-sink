@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/contrast-checker",
+	"version": "0.1.0",
+	"title": "ContrastChecker",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ContrastChecker component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"textColor": {
+			"type": "string",
+			"default": "#777777"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#eeeeee"
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"isLargeText": {
+			"type": "boolean",
+			"default": false
+		},
+		"enableAlphaChecker": {
+			"type": "boolean",
+			"default": false
+		},
+		"messageOverride": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

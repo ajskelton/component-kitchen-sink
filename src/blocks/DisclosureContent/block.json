@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/disclosure-content",
+	"version": "0.1.0",
+	"title": "__unstableDisclosureContent",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the __unstableDisclosureContent component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"visible": {
+			"type": "boolean",
+			"default": true
+		},
+		"text": {
+			"type": "string",
+			"default": "This content is shown or hidden by the visible prop."
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

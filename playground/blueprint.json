@@ -1,0 +1,61 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Component Kitchen Sink",
+		"description": "Every @wordpress/components and @wordpress/block-editor export as a test block, with a post per component and per core block.",
+		"author": "ajskelton"
+	},
+	"landingPage": "/wp-admin/edit.php?post_type=ajs_component",
+	"login": true,
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": false
+	},
+	"steps": [
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Component Kitchen Sink",
+				"blogdescription": "Every @wordpress component, exercised in a real editor.",
+				"permalink_structure": "/%postname%/"
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyfour"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/ajskelton/component-kitchen-sink",
+				"ref": "feature/component-test-blocks",
+				"path": "/"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "component-kitchen-sink"
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "vfs",
+				"path": "/wordpress/wp-content/plugins/component-kitchen-sink/playground/test-pages.xml"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require_once '/wordpress/wp-load.php'; echo ajs_site_setup();"
+		}
+	]
+}

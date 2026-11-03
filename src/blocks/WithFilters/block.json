@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/with-filters",
+	"version": "0.1.0",
+	"title": "withFilters",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the withFilters component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"filterEnabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"mode": {
+			"type": "string",
+			"enum": [ "append", "override-prop" ],
+			"default": "append"
+		},
+		"filteredTitle": {
+			"type": "string",
+			"default": "Original title"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

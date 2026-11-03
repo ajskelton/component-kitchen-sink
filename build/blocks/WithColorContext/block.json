@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/with-color-context",
+  "version": "0.1.0",
+  "title": "withColorContext",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the withColorContext component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "colorsMode": {
+      "type": "string",
+      "enum": [
+        "inherit",
+        "override"
+      ],
+      "default": "inherit"
+    },
+    "disableCustomColors": {
+      "type": "string",
+      "enum": [
+        "inherit",
+        "true",
+        "false"
+      ],
+      "default": "inherit"
+    },
+    "color": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

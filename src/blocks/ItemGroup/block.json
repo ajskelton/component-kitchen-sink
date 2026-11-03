@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/item-group",
+	"version": "0.1.0",
+	"title": "ItemGroup",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the ItemGroup component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"isBordered": {
+			"type": "boolean",
+			"default": false
+		},
+		"isRounded": {
+			"type": "boolean",
+			"default": true
+		},
+		"isSeparated": {
+			"type": "boolean",
+			"default": false
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "small", "medium", "large" ],
+			"default": "medium"
+		},
+		"itemCount": {
+			"type": "number",
+			"default": 3
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

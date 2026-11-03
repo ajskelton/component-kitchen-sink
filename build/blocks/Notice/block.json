@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/notice",
+  "version": "0.1.0",
+  "title": "Notice",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Notice component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": "This is a Notice."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "info",
+        "success",
+        "warning",
+        "error"
+      ],
+      "default": "info"
+    },
+    "isDismissible": {
+      "type": "boolean",
+      "default": true
+    },
+    "politeness": {
+      "type": "string",
+      "enum": [
+        "default",
+        "polite",
+        "assertive"
+      ],
+      "default": "default"
+    },
+    "spokenMessage": {
+      "type": "string",
+      "default": ""
+    },
+    "actionLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "actionVariant": {
+      "type": "string",
+      "enum": [
+        "default",
+        "primary",
+        "secondary",
+        "link"
+      ],
+      "default": "default"
+    },
+    "useHTML": {
+      "type": "boolean",
+      "default": false
+    },
+    "dismissals": {
+      "type": "number",
+      "default": 0
+    },
+    "actionClicks": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

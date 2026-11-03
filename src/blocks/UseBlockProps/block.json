@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/use-block-props",
+	"version": "0.1.0",
+	"title": "useBlockProps",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the useBlockProps component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"extraClassName": {
+			"type": "string",
+			"default": "ajs-demo-class"
+		},
+		"dataDemo": {
+			"type": "string",
+			"default": "hello"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#fff3cd"
+		},
+		"outlineWidth": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

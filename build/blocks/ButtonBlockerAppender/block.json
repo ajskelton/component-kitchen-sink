@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/button-blocker-appender",
+  "version": "0.1.0",
+  "title": "ButtonBlockerAppender",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ButtonBlockerAppender component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "allowedBlocks": {
+      "type": "string",
+      "enum": [
+        "all",
+        "paragraph",
+        "text"
+      ],
+      "default": "all"
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "selections": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

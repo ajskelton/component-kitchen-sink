@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/tools-panel",
+  "version": "0.1.0",
+  "title": "ToolsPanel",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ToolsPanel component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Dimensions"
+    },
+    "headingLevel": {
+      "type": "number",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "default": 2
+    },
+    "hasInnerWrapper": {
+      "type": "boolean",
+      "default": false
+    },
+    "shouldRenderPlaceholderItems": {
+      "type": "boolean",
+      "default": false
+    },
+    "width": {
+      "type": "string",
+      "default": ""
+    },
+    "height": {
+      "type": "string",
+      "default": ""
+    },
+    "color": {
+      "type": "string",
+      "default": ""
+    },
+    "opacity": {
+      "type": "number",
+      "default": 0
+    },
+    "enabledItems": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

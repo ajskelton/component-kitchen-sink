@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/focal-point-picker",
+  "version": "0.1.0",
+  "title": "FocalPointPicker",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the FocalPointPicker component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "x": {
+      "type": "number",
+      "default": 0.5
+    },
+    "y": {
+      "type": "number",
+      "default": 0.5
+    },
+    "label": {
+      "type": "string",
+      "default": "Focal point"
+    },
+    "help": {
+      "type": "string",
+      "default": ""
+    },
+    "hideLabelFromVision": {
+      "type": "boolean",
+      "default": false
+    },
+    "snapToHalves": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

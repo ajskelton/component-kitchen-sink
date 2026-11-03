@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/navigator-to-parent-button",
+	"version": "0.1.0",
+	"title": "NavigatorToParentButton",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the NavigatorToParentButton component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Go to parent"
+		},
+		"variant": {
+			"type": "string",
+			"enum": [ "primary", "secondary", "tertiary", "link" ],
+			"default": "secondary"
+		},
+		"showIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/media-upload-check",
+  "version": "0.1.0",
+  "title": "MediaUploadCheck",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the MediaUploadCheck component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "simulateNoPermission": {
+      "type": "boolean",
+      "default": false
+    },
+    "withFallback": {
+      "type": "boolean",
+      "default": true
+    },
+    "fallbackMessage": {
+      "type": "string",
+      "default": "Fallback: you cannot upload media here."
+    },
+    "childLabel": {
+      "type": "string",
+      "default": "Upload is allowed"
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

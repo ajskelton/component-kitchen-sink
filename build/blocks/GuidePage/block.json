@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/guide-page",
+  "version": "0.1.0",
+  "title": "GuidePage",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the GuidePage component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "pageCount": {
+      "type": "number",
+      "default": 3
+    },
+    "pageText": {
+      "type": "string",
+      "default": "Guide page content"
+    },
+    "pageClassName": {
+      "type": "string",
+      "default": ""
+    },
+    "timesOpened": {
+      "type": "number",
+      "default": 0
+    },
+    "timesFinished": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

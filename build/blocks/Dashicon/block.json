@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/dashicon",
+  "version": "0.1.0",
+  "title": "Dashicon",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the Dashicon component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "enum": [
+        "admin-home",
+        "admin-users",
+        "format-image",
+        "heart",
+        "star-filled",
+        "trash",
+        "yes",
+        "warning"
+      ],
+      "default": "admin-home"
+    },
+    "size": {
+      "type": "number",
+      "default": 20
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

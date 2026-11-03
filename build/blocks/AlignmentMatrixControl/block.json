@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "ajs/alignment-matrix-control",
   "version": "0.1.0",
   "title": "Alignment Matrix Control",
-  "category": "widgets",
+  "category": "ajs-kitchen-sink",
   "icon": "smiley",
-  "description": "Testing the AlignmentMatrixControl Block",
+  "description": "Exercises the AlignmentMatrixControl component from @wordpress/components",
   "supports": {
     "html": false
   },

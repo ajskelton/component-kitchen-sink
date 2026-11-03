@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/use-navigate-regions",
+  "version": "0.1.0",
+  "title": "__unstableUseNavigateRegions",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the __unstableUseNavigateRegions component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "shortcutMode": {
+      "type": "string",
+      "enum": [
+        "default",
+        "custom"
+      ],
+      "default": "default"
+    },
+    "regionCount": {
+      "type": "number",
+      "default": 3
+    },
+    "lastFocused": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/rich-text",
+	"version": "0.1.0",
+	"title": "RichText",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the RichText component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": ""
+		},
+		"tagName": {
+			"type": "string",
+			"enum": [ "p", "h2", "h3", "div", "blockquote" ],
+			"default": "p"
+		},
+		"placeholder": {
+			"type": "string",
+			"default": "Type some rich text..."
+		},
+		"disableLineBreaks": {
+			"type": "boolean",
+			"default": false
+		},
+		"allowedFormats": {
+			"type": "string",
+			"enum": [ "all", "bold-italic", "none" ],
+			"default": "all"
+		},
+		"withoutInteractiveFormatting": {
+			"type": "boolean",
+			"default": false
+		},
+		"preserveWhiteSpace": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

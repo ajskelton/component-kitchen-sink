@@ -1,0 +1,11 @@
+/**
+ * Core Block Info block: styles applied on the front end and in the editor.
+ *
+ * Keep selectors scoped to .wp-block-ajs-*; never add global styles.
+ */
+@use "../shared/info";
+
+.wp-block-ajs-core-block-info {
+
+	@include info.ajs-info-block;
+}

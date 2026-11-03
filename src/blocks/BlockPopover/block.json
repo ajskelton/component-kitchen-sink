@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/block-popover",
+	"version": "0.1.0",
+	"title": "BlockPopover",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the BlockPopover component from @wordpress/block-editor",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"showPopover": {
+			"type": "boolean",
+			"default": true
+		},
+		"blockCount": {
+			"type": "number",
+			"default": 3
+		},
+		"index": {
+			"type": "number",
+			"default": 0
+		},
+		"spanToIndex": {
+			"type": "number",
+			"default": 0
+		},
+		"shift": {
+			"type": "boolean",
+			"default": true
+		},
+		"label": {
+			"type": "string",
+			"default": "BlockPopover content"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

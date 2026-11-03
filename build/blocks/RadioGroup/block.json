@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/radio-group",
+  "version": "0.1.0",
+  "title": "RadioGroup",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the RadioGroup component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "checked": {
+      "type": "string",
+      "default": "one"
+    },
+    "label": {
+      "type": "string",
+      "default": "Radio group"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

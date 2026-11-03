@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/use-gradient",
+	"version": "0.1.0",
+	"title": "__experimentalUseGradient",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the __experimentalUseGradient component from @wordpress/block-editor",
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": false,
+			"gradients": true,
+			"__experimentalSkipSerialization": true
+		}
+	},
+	"attributes": {
+		"customGradient": {
+			"type": "string"
+		},
+		"label": {
+			"type": "string",
+			"default": "Box styled by useGradient"
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

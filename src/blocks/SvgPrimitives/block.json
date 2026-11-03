@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/svg-primitives",
+	"version": "0.1.0",
+	"title": "SvgPrimitives",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the SVG, Path, Circle, G, Rect, Polygon and Line components from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"stroke": {
+			"type": "string",
+			"default": "#1e1e1e"
+		},
+		"fill": {
+			"type": "string",
+			"default": "#72aee6"
+		},
+		"strokeWidth": {
+			"type": "number",
+			"default": 3
+		},
+		"size": {
+			"type": "number",
+			"default": 240
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-alignment-matrix-control",
+  "version": "0.1.0",
+  "title": "BlockAlignmentMatrixControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockAlignmentMatrixControl component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "enum": [
+        "top left",
+        "top center",
+        "top right",
+        "center left",
+        "center center",
+        "center right",
+        "bottom left",
+        "bottom center",
+        "bottom right"
+      ],
+      "default": "center center"
+    },
+    "label": {
+      "type": "string",
+      "default": "Change matrix alignment"
+    },
+    "isDisabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

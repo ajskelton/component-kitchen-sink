@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/toggle-group-control",
+  "version": "0.1.0",
+  "title": "ToggleGroupControl",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the ToggleGroupControl component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string",
+      "default": "center"
+    },
+    "label": {
+      "type": "string",
+      "default": "Alignment"
+    },
+    "help": {
+      "type": "string",
+      "default": ""
+    },
+    "hideLabelFromVision": {
+      "type": "boolean",
+      "default": false
+    },
+    "isAdaptiveWidth": {
+      "type": "boolean",
+      "default": false
+    },
+    "isBlock": {
+      "type": "boolean",
+      "default": false
+    },
+    "isDeselectable": {
+      "type": "boolean",
+      "default": false
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "default",
+        "__unstable-large"
+      ],
+      "default": "default"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

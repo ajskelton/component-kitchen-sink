@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/duotone-picker",
+  "version": "0.1.0",
+  "title": "DuotonePicker",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the DuotonePicker component from @wordpress/components",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "colors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "isUnset": {
+      "type": "boolean",
+      "default": false
+    },
+    "selectedSlug": {
+      "type": "string",
+      "default": ""
+    },
+    "clearable": {
+      "type": "boolean",
+      "default": true
+    },
+    "unsetable": {
+      "type": "boolean",
+      "default": true
+    },
+    "disableCustomColors": {
+      "type": "boolean",
+      "default": false
+    },
+    "disableCustomDuotone": {
+      "type": "boolean",
+      "default": false
+    },
+    "presentation": {
+      "type": "string",
+      "enum": [
+        "listbox",
+        "toggle-buttons",
+        "command-buttons"
+      ],
+      "default": "listbox"
+    },
+    "loop": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

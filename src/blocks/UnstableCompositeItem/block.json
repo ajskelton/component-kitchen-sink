@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ajs/unstable-composite-item",
+	"version": "0.1.0",
+	"title": "__unstableCompositeItem",
+	"category": "ajs-kitchen-sink",
+	"icon": "smiley",
+	"description": "Exercises the __unstableCompositeItem component from @wordpress/components",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"disabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"focusable": {
+			"type": "boolean",
+			"default": false
+		},
+		"secondDisabled": {
+			"type": "boolean",
+			"default": true
+		},
+		"clicks": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "component-kitchen-sink",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

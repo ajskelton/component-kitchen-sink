@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ajs/block-breadcrumb",
+  "version": "0.1.0",
+  "title": "BlockBreadcrumb",
+  "category": "ajs-kitchen-sink",
+  "icon": "smiley",
+  "description": "Exercises the BlockBreadcrumb component from @wordpress/block-editor",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "rootLabelText": {
+      "type": "string",
+      "default": "Nested document"
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "target": {
+      "type": "string",
+      "enum": [
+        "inner",
+        "group",
+        "top",
+        "none"
+      ],
+      "default": "inner"
+    }
+  },
+  "textdomain": "component-kitchen-sink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
