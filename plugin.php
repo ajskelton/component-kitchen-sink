@@ -20,6 +20,8 @@ require_once __DIR__ . '/includes/data.php';
 require_once __DIR__ . '/includes/post-type.php';
 require_once __DIR__ . '/includes/templates.php';
 require_once __DIR__ . '/includes/archive-tools.php';
+require_once __DIR__ . '/includes/sync.php';
+require_once __DIR__ . '/includes/setup.php';
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	require_once __DIR__ . '/includes/cli.php';

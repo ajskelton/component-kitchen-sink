@@ -75,7 +75,9 @@ draft) is in the trash.
 | `src/blocks/ArchiveTools` | The `ajs/archive-tools` block: the search, filter and order form at the top of each archive. |
 | `src/blocks/SiteOverview` | The `ajs/site-overview` block used on the front page: archive cards with counts and filters, and the list of test pages. |
 | `src/blocks/CoreBlockInfo` | The `ajs/core-block-info` block: block.json metadata and the components the block imports, linked to their posts. Both info blocks share `src/blocks/shared/_info.scss`. |
-| `includes/cli.php` | `wp ajs components sync` and `wp ajs core-blocks sync`, which create or update the posts. |
+| `includes/sync.php` | The `AJS_Component_Sync` and `AJS_Core_Block_Sync` classes that create or update the posts; no WP-CLI dependency. |
+| `includes/setup.php` | `ajs_site_setup()`: both syncs, the Primary navigation menu and a rewrite flush in one call. Used by `wp ajs setup` and by the Playground blueprint. |
+| `includes/cli.php` | `wp ajs components sync`, `wp ajs core-blocks sync` and `wp ajs setup`, thin wrappers over the two files above. |
 | `includes/templates.php` | The front page template and the single and archive block templates for both post types. |
 | `includes/archive-tools.php` | Query vars, orderings and the `pre_get_posts` hook behind the archive tools: 24 per page, search, filters and ordering. |
 
@@ -128,6 +130,16 @@ does the same for core blocks from the `blocks` section of `data/usage.json`:
 title and excerpt from `block.json`, the category as a term, the block name as
 `ajs_block_name` meta, and `<!-- wp:ajs/core-block-info /-->` as the content
 of new posts. It takes the same `--reset` and `--dry-run` flags.
+
+On a fresh site, one command does all of it:
+
+```bash
+bin/wp ajs setup
+```
+
+It runs both syncs, creates the Primary navigation menu (or replaces a
+default page list) and flushes the rewrite rules. See `docs/PLAYGROUND.md`
+for running the whole thing in WordPress Playground.
 
 ## Caveats
 

@@ -10,7 +10,13 @@ Exploring all the component tooling available for blocks
 
 == Description ==
 
-This is a plugin for exploring and testing all the component tooling available for blocks.
+One test block for every export of @wordpress/components and @wordpress/block-editor, a Component post per export with its usage and history, and a Core Block post per core block with the components it uses.
+
+Try it without installing anything in WordPress Playground:
+
+https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/feature/component-test-blocks/playground/blueprint.json
+
+See docs/PLAYGROUND.md for how the blueprint works and docs/COMPONENT-POSTS.md for the post types.
 
 == Installation ==
 
