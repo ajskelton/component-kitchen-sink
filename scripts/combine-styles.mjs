@@ -44,7 +44,7 @@ const blockDirs = readdirSync( BLOCKS_DIR )
 	.sort( ( a, b ) => a.localeCompare( b, 'en', { sensitivity: 'base' } ) );
 
 for ( const { source, output } of BUNDLES ) {
-	let css = `/* Combined from build/blocks/*/${ source } by scripts/combine-styles.mjs. Do not edit. */\n`;
+	let css = `/* Combined from build/blocks/<Name>/${ source } by scripts/combine-styles.mjs. Do not edit. */\n`;
 	let nonEmpty = 0;
 
 	for ( const dir of blockDirs ) {

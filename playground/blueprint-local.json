@@ -24,6 +24,16 @@
 			}
 		},
 		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyfour"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
 			"step": "activatePlugin",
 			"pluginPath": "component-kitchen-sink/plugin.php"
 		},

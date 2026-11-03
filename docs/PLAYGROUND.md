@@ -17,21 +17,24 @@ for Playground to fetch it.
 ## What the blueprint does
 
 1. Sets the site title, tagline and `/%postname%/` permalinks.
-2. Installs the plugin from the GitHub repository (`git:directory`
+2. Installs and activates Twenty Twenty-Four, the theme the plugin's
+   templates and the local site are styled against (Playground would
+   otherwise use the current default theme, with different fonts).
+3. Installs the plugin from the GitHub repository (`git:directory`
    resource) and activates it. `build/` and `data/` are committed, so no
    build step is needed.
-3. Imports `playground/test-pages.xml`, a WordPress export of the nine test
+4. Imports `playground/test-pages.xml`, a WordPress export of the nine test
    pages. Regenerate it after changing them:
 
    ```bash
    bin/wp export --post_type=page --post_status=publish --dir=playground --filename_format=test-pages.xml --skip_comments
    ```
 
-4. Calls `ajs_site_setup()` (`includes/setup.php`), which seeds the
+5. Calls `ajs_site_setup()` (`includes/setup.php`), which seeds the
    Component and Core Block posts, creates the Primary navigation menu
    (Home, Components, Core Blocks, Test pages) and flushes the rewrite
    rules. The same function backs `wp ajs setup` for a local site.
-5. Logs in as `admin` and lands on the Components list in wp-admin.
+6. Logs in as `admin` and lands on the Components list in wp-admin.
 
 Playground is slower than a local site: with 300-odd block scripts the
 editor takes a few seconds to open.
