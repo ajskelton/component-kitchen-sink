@@ -32,8 +32,9 @@ for Playground to fetch it.
 
 5. Calls `ajs_site_setup()` (`includes/setup.php`), which seeds the
    Component and Core Block posts, creates the Primary navigation menu
-   (Home, Components, Core Blocks, Test pages) and flushes the rewrite
-   rules. The same function backs `wp ajs setup` for a local site.
+   (Home, Components, Core Blocks, Test pages), saves a small Footer
+   template part in place of the theme's demo footer and flushes the
+   rewrite rules. The same function backs `wp ajs setup` for a local site.
 6. Logs in as `admin` and lands on the Components list in wp-admin.
 
 Playground is slower than a local site: with 300-odd block scripts the

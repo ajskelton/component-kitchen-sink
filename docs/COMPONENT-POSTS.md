@@ -151,7 +151,9 @@ bin/wp ajs setup
 ```
 
 It runs both syncs, creates the Primary navigation menu (or replaces a
-default page list) and flushes the rewrite rules. See `docs/PLAYGROUND.md`
+default page list), saves a Footer template part for the active theme with
+the site title and archive links (unless the footer is already customised)
+and flushes the rewrite rules. See `docs/PLAYGROUND.md`
 for running the whole thing in WordPress Playground.
 
 ## Caveats
