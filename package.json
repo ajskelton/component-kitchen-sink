@@ -1,10 +1,20 @@
 {
 	"name": "component-kitchen-sink",
-	"version": "0.1.0",
+	"version": "2.0.0",
 	"description": "Exploring all the component tooling available for blocks",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
+	"files": [
+		"plugin.php",
+		"readme.txt",
+		"README.md",
+		"includes",
+		"build",
+		"data",
+		"assets",
+		"playground"
+	],
 	"scripts": {
 		"build": "wp-scripts build --webpack-copy-php && node scripts/combine-styles.mjs",
 		"format": "wp-scripts format",

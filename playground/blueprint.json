@@ -38,7 +38,7 @@
 			"pluginData": {
 				"resource": "git:directory",
 				"url": "https://github.com/ajskelton/component-kitchen-sink",
-				"ref": "feature/component-test-blocks",
+				"ref": "main",
 				"path": "/"
 			},
 			"options": {

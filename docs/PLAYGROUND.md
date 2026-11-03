@@ -6,11 +6,10 @@ so anyone can open the editor with every test block, the Component and Core
 Block posts and the test pages, without installing anything:
 
 ```
-https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/feature/component-test-blocks/playground/blueprint.json
+https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/main/playground/blueprint.json
 ```
 
-Change `feature/component-test-blocks` in both the link and the blueprint's
-`ref` once the branch is merged. The repository must be public (or the
+The repository must be public (or the
 `installPlugin` step pointed at a zip URL that allows cross-origin requests)
 for Playground to fetch it.
 

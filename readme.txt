@@ -4,7 +4,7 @@ Tags:              block, components, block-editor, developer
 Requires at least: 7.0
 Tested up to:      7.1
 Requires PHP:      7.4
-Stable tag:        0.1.0
+Stable tag:        2.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ Every test block links to its Component post, from the front end and from a pane
 
 Nothing to install:
 
-https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/feature/component-test-blocks/playground/blueprint.json
+https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/main/playground/blueprint.json
 
 The blueprint installs Twenty Twenty-Four and the plugin, imports the test pages, seeds the posts, menu and footer, and logs you in as admin on the Components list. To run it against a local checkout instead, from the plugin folder:
 
@@ -57,7 +57,7 @@ data/usage.json is scanned from the @wordpress/block-library source; data/histor
 
 == Changelog ==
 
-= 0.1.0 =
+= 2.0.0 =
 * 312 test blocks, one per @wordpress/components and @wordpress/block-editor export.
 * Component and Core Block post types with generated usage and history data.
 * Archives with search, filters and ordering; front page; navigation and footer.

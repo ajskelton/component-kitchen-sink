@@ -4,7 +4,7 @@
  * Description:       Exploring all the component tooling available for blocks
  * Requires at least: 7.0
  * Requires PHP:      7.4
- * Version:           0.1.0
+ * Version:           2.0.0
  * Author:            Anthony Skelton
  * Website:           https://www.anthonyskelton.com
  * License:           GPL-2.0-or-later
