@@ -10,9 +10,9 @@ Nothing to install. WordPress Playground boots the plugin, seeds the posts and p
 
 **https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/ajskelton/component-kitchen-sink/main/playground/blueprint.json**
 
-It lands on the Components list in wp-admin. From there:
+It lands on the front page, logged in, with the admin bar. From there:
 
-- open a **test page** from the Pages menu, select a block and work through its settings in the sidebar;
+- open a **test page** from the list at the bottom (each has an Edit link), select a block and work through its settings in the sidebar;
 - open a **Component post** to see when the export was added, how it changed, and which core blocks use it, with the test block underneath;
 - open a **Core Block post** to see which components a block imports, each linked to its post.
 
